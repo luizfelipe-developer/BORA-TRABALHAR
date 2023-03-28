@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+
+img {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+   margin-left: 100px;
+}
+
+/* #container{ */
+   
+   
+    
+/* } */
+
+.inputbox{
+    position: relative;
+    margin-top: 10px;
+   
+}
+
+.box{
+    font-size: 15px;
+    top: 0px;
+    left: 0px;
+
+    padding: 6px;
+    margin: 4px;
+}
+
+.box-cpf{
+    font-size: 15px;
+    font-size: 15px;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+    padding: 6px;
+    margin: 4px;
+}
+
+.bairros{
+    border: 1px black solid;
+    background-color: white;
+    height: 35px;
+    
+}
+
+fieldset{
+    border: 1px outset rgb(5, 5, 5);
+}
+
+.cadastre a{
+    border-radius: 30px;
+    border: 1px black solid;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+    margin-left: 300px;
+}

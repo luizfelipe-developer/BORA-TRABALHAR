@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    /* esse header está um pouco redundante, tanto faz usar esses parametros abaixo nele ou no id=#menu */
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+#menu{
+    height: 80px;
+    width: 100%;
+    padding: 1px;
+    border-bottom: #189eb9 1px solid;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.124);
+}
+.logo{
+    /* tamanho da caixa da logo */
+    display: flex;
+    height: 70px;
+    width: 130px;
+    border-radius: 45px;
+    float: left;
+    justify-content: flex-start;
+    margin: 5px 20px;
+  }
+.logo img{
+    /* imagem vai ocupar o tamanho da div em que ela está contida */
+    /* arredondei a imagem */
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    margin-top: 20px;
+}
+nav ul li{
+    /* estilização das letras e outros elementos da lista de navegacao */  
+    display: inline-block;   
+}
+  .opcoes{
+      /* CAIXA de texto INterior do top e do Z-index*/
+      display: flex;
+      gap: 3px;      
+      justify-content: end;  
+  }
+  
+  .opcoes li{
+      /*Caixa de texto dos botões superiores topo*/
+      display:list-item;  /* < --- codigo interessante para interações diferenciadas dos botões superiores*/
+      width: 120px;
+      height: 45px;
+      /*margin-top: 10px;*/
+      list-style: none;               
+      z-index: 1;
+      transition: all .10s linear; 
+  }
+    .opcoes li a{
+      /* CAIXA DE BOTÕES DE SERVIÇOS DO LOGIN*/
+  
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      color: #189eb9;
+      text-decoration: none;
+      font-size:0.8em;
+      transition: all .30s linear;
+      /*border-radius: 5px;*/
+      font-weight: bold;
+      background-color: #fff;
+  }   
+  .opcoes li:hover > a{
+      background-color: #189eb9;
+      color:#fff;
+  }
+  
+  .sub-opcao li {
+      /* CAIXA GERAL De sub-opções de serviços e login e
+      espaçamento entre os botões do Z-index 
+      border: 1px #189eb9 solid;*/
+      
+     /* border-radius: 5px;*/
+      display: none;
+      text-align: center;
+      /*margin-top: 8px;
+      margin-right: 5px;
+      margin-bottom: 5px;   */
+  }
+  
+.sub-opcao li a{
+    background-color: #eee;
+    color: #444;
+
+}
+  
+  .opcoes li:hover .sub-opcao li{
+      /*CAIXA GERAL  DOS HOVERS*/
+      display:inline-block;     
+  }
+  .cadastro{
+    border-radius: 5px;
+    display: none; 
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+.sub-opcao:hover .cadastro{
+  display: block;
+  z-index: 1;
+  margin-bottom: 59px;
+}
+.cadastro li a{
+  background-color: #aaa;
+  color: #fff;
+}
+
+
+   /* NAVBAR MENU RESPONSIVA*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+  display: none;
+ } 
+ /*HAMBURGER MENU*/
+ .hamburger {
+  display: none;
+  font-size: 30px;
+  user-select: none;
+  color: #189eb9;
+  cursor: pointer;
+ }
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  border-radius: 5px;
+  transition: 0.3s ease;
+ }
+@media (max-width: 600px) {
+
+ .menu { 
+      display:none;
+      position: absolute;
+      text-align: center;
+      margin-top: 64px;
+     }
+     #menu li{
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+     }
+     .menu li:hover {
+      /*display: inline-block;*/
+      display: inline-block;
+      transition: 0.3s ease;
+      margin-top: 0;
+     }
+     input[type=checkbox]:checked ~ .menu{
+      display: block;
+     }
+     .hamburger {
+      display: block;
+      margin-right: 20px;
+     }
+     .sub-opcao li:hover {
+      background-color: #4c9e9e;
+     }
+   
+     
+}
+
