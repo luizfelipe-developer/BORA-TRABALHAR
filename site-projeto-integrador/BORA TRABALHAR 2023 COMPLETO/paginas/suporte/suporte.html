@@ -9,19 +9,29 @@
     </head>
     <body>
         <div class="container">
-            <h1>Como posso ajudar?</h1>
-            <p>Você tem alguma pergunta ou está interessado com nossa equipe?</p>
-            <p>É só preencher o formulário abaixo</p><br>
-            <div class="input">
-            <p><b>Quero falar sobre</b></p> <input type="text" class="type">
-            </div>
-            <div class="input">
-                <p><b>Nome</b></p> <input type="text" class="type">
-            </div>
-            <div class="input">
-                <p><b>E-mail</b></p> <input type="email" class="type">
-            </div>
-                    <p><b>Mensagem</b></p> <input type="text" class="mensage">
+            <div class="card">
+                <span class="title">Como podemos ajuda-lo?
+                </span>
+                <p>Diga-nos, como poderiamos melhorar nosso aplicativo.
+                    seu feedback e muito importante!</p>
+                <form class="form">
+                  <div class="group">
+                  <input placeholder="‎" type="text" required="">
+                  <label for="name">Nome</label>
+                  </div>
+              <div class="group">
+                  <input placeholder="‎" type="email" id="email" name="email" required="">
+                  <label for="email">Email</label>
+                  </div>
+              <div class="group">
+                  <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
+                  <label for="comment">Comentário</label>
+              </div>
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+              
         </div>
+        
     </body>
 </html>
