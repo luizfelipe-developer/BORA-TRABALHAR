@@ -83,7 +83,6 @@ section p{
     list-style-position: inside;
 }
 .orcamento{
-    padding: 10px 40px;
     text-decoration: none;
     background-color: #73d4e8;
     color: black;
@@ -102,58 +101,63 @@ section p{
 
 
 .paragrafo {
-    padding: 200px;
+    padding-top: 200px;
     text-align: center;
     font-size: 30px;
     color: white;
 }
 
+p{
+    text-align: justify;
+}
+
 #img1{
-    background-image: url("https://img.wallpapic-br.com/i2491-537-811/medium/terra-planeta-mundo-espaco-imagem-de-fundo.jpg");
-    height: 500px;
+    background-image: url("../imgs/sobre/primeiro-lanche.jpeg");
+    height: 100vh;
+    text-align: center;
     background-size: cover;
     background-attachment: fixed;
    }
 
 
-   .quem-somos{
+    .quem-somos{
     width: 70%;
     max-width: 800px;
-    margin: 80px auto 0;
+    padding-top: 50px;
+    margin: 0 auto;
    }
 
    .quem-somos h2{
-    
     color: #1d1d1d;
     margin-bottom: 20px;
     font-size: 22px;
-    font-weight: 700;
    }
 
    .quem-somos p{
-    font-size: 18px;
+    font-size: 20px;
    }
 
    .fundadores-img{
-    width: 850px;
+    width: 100%;
    }
 
    .fundadores p{
     margin-top: 20px;
     font-size: 18px;
    }
-
-   .equipe-img{
-    width: 850px;
+   
+   .nossa-historia{
+    display: flex;
+    flex-direction: column;
    }
 
-   equipe p{
-    font-size: 18px;
+   .nossa-historia h2{
+    padding-top: 50px;
    }
 
 @media (max-width: 600px) {
 
-    .menu { 
+        .menu { 
          display:none;
          position: absolute;
          text-align: center;
@@ -179,4 +183,8 @@ section p{
          padding: 0;
          width: 100vw;
         }
-   }
+        .quem-somos{
+        display: flex;
+        flex-direction: column;
+        }
+}

@@ -1,95 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../icones/novaicone.ico"/>
-    <link rel="stylesheet" href="../../css/funcionario.css">
-    <title>Colaborador</title>
+    <link rel="stylesheet" href="../../css/colaborador.css">
+    <title>Cadastro do Colaborador</title>
 </head>
 <body>
-    <div id="container">
-        
-        <div class="imagem">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoW9qMceqdmGvJznHhqSOZbm1ZASvjBgMHUA&usqp=CAU" alt="">
-        </div>
+    <div class="container_form">
 
-        <div class="letras">
-            <input type="text" class="box" placeholder="Nome" /> <input type="text" class="box" placeholder="Sobrenome">
-        </div>
-    
-        <div class="letras">
-        <label for="telefone"></label>
-        <input type="tel" class="box" placeholder="+55">-<input type="tel"  class="box" required placeholder="(99) 94002-8922">
-        </div>
+        <h1>Formulário de Cadastro</h1>
 
-        <div class="letras">
-            <input type="text" class="box-cpf" placeholder="CPF"
-            title="Digite um CPF no formato: xxx.xxx.xxx-xx">
-        </div>
-
-        <div class="letras">
-            <input type="text" class="box-cpf" placeholder="CEP">
-        </div>
-
-        <div class="letras">
-            <input type="text" class="box" placeholder="City" /> <input type="text" class="box" placeholder="alguma coisa prox">
-        </div>
-
-        <div class="letras">
-            <input type="text" class="box" placeholder="estado" /> <select class="bairros" name="estado"> 
-                <option value="estado">Selecione o bairro</option> 
-                <option value="">Bom jesus</option> 
-                <option value="">Boca da Mata</option> 
-                <option value="">Beira Rio</option> 
-                <option value="">Centro</option> 
-                <option value="">Cidade jardim</option> 
-                <option value="">Cinco irmãos</option> 
-                <option value="">Distrito industrial</option> 
-                <option value="">Entrocamento</option> 
-                <option value="">Juçara</option> 
-                <option value="">Lagoinha</option> 
-                <option value="">Mercadinho</option> 
-                <option value="">Mutirão</option> 
-                <option value="">Nova imperatriz</option> 
-                <option value="">Ouro Verde</option> 
-                <option value="">Parque Alvorada</option> 
-                <option value="">Parque Alvorada II</option> 
-                <option value="">Parque Amazonas</option> 
-                <option value="">Parque Buriti</option> 
-                <option value="">Santa Rita</option> 
-                <option value="">Santa inès</option> 
-                <option value="">Santa Luzia</option> 
-                <option value="">Trés Poderes</option> 
-            </select>
+        <form class="form" action="#" method="post">
             
-        </div>
+            <div class="form_grupo">
+                <label for="nome" class="form_label">Nome</label>
+                <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="e-mail" class="form_label">Email</label>
+                <input type="email" name="email" class="form_input" id="email" placeholder="seu email@email.com" required>
+            </div>
+            
+            <div class="form_grupo">
+                <label for="datanascimento" class="form_label">Data de Nascimento</label>
+                <input type="date" name="datanascimento" class="form_input" id="datanascimento" placeholder="Data de Nascimento" required>
+            </div>        
 
-        <div class="letras">
-            <label for="date"></label>
-            <input type="date" class="box" placeholder="data" />
-        </div>
+            <div class="form_grupo">
+                
+                <label for="estadocivil" class="text">Estado civil</label>
+                <select name="estadocivil" class="dropdown" required>
+                    
+                    <option selected disabled class="form_select_option" value="">Selecione</option>
+                    <option value="Solteiro" class="form_select_option">Solteiro(a)</option>
+                    <option value="Casado" class="form_select_option">Casado(a) </option>
+                    <option value="Divorciado" class="form_select_option">Divorciado(a)</option>                    
+                    <option value="Viúvo" class="form_select_option">Viúvo(a)</option>                    
+                
+                </select>
 
-        <div class="letras">
-            <label for="text"></label>
-            <input type="email" class="box" placeholder="E-mail" />
-        </div>
+            </div>
 
-        <div class="letras">
-            <input type="password" class="box" name="password" placeholder="password"
-                   minlength="8" required>
-        </div>
-        
-        <div class="letras">
-            <input type="password" class="box" name="password" placeholder="password"
-                   minlength="8" required>
-        </div>
+            <div class="form_grupo">
 
-        <h4 class="cadastre"> <a href="#">Cadastre-se</a></h4>
+                <span class="legenda">Sexo:</span>
+                
+                <div class="radio-btn">
+                    <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino" required="required">
+                    <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span> Masculino</label>
+                </div>
 
-    </form>
-    </div>
+                <div class="radio-btn">
+                    <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino" required="required">
+                    <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span> Feminino</label>
+                </div>
 
+            </div>
+                  
+
+                <div class="submit">
+
+                  <input type="hidden" name="acao" value="enviar">
+                  <button type="submit" name="Submit" class="submit_btn" >Cadastrar</button>
+                
+                </div>
+        </form>
+
+</div><!--container_form-->
 </body>
 </html>
