@@ -27,8 +27,7 @@ body{
 h1, h2{
     color: #189eb9;
 }
-/* From uiverse.io by @satyamchaudharydev */
-/* removing default style of button */
+
 
 .form button {
     border: none;
