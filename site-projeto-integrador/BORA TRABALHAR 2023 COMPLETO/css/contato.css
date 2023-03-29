@@ -97,9 +97,5 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding-top: 75px;
-    padding-bottom: 75px;
-    padding-left: 200px;
-    padding-right: 200px;
-    text-align: center;
+    padding: 45px;
 }
