@@ -33,7 +33,8 @@ h1, h2{
 .form button {
     border: none;
     background: none;
-    color: #8b8ba7;
+    color: #000;
+    cursor: pointer;
   }
   /* styling of whole input container */
   .form {
@@ -45,7 +46,6 @@ h1, h2{
     --border-color: #2f2ee9;
     --border-radius: 30px;
     --after-border-radius: 1px;
-    position: relative;
     /* width: var(--width-of-input); */
     height: var(--height-of-input);
     display: flex;
@@ -54,7 +54,7 @@ h1, h2{
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
     background: var(--input-bg,#fff);
-    background-color: aliceblue;
+    border: solid 1px #189eb9;
   }
   /* styling of Input */
   .input {
@@ -110,6 +110,7 @@ h1, h2{
     width: 17px;
     margin-top: 3px;
   }
+  /* CAIXA DE SERVIÇOS */
 .box-categorias{
     display: flex;
     flex-wrap: wrap;

@@ -130,7 +130,7 @@ input[type=checkbox]{
  .hamburger {
   display: none;
   font-size: 30px;
-  user-select: none;
+  /* user-select: none; */
   color: #189eb9;
   cursor: pointer;
  }
