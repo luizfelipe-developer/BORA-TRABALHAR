@@ -3,31 +3,28 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-}
+  }
 
-body {
+body{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+   flex-direction: column;
+   justify-content: center;
 }
-
-/* CORPO DO SITE */
-#container {
+  /* CORPO DO SITE */
+  #container{
     /* container onde está abrigado todos os elementos do site */
     max-width: 1280px;
     margin: 0 auto;
 }
 
 
-.barra-pesquisa {
+.barra-pesquisa{
     display: block;
     width: 450px;
     height: 100px;
     margin: 100px auto 55px;
 }
-
-h1,
-h2 {
+h1, h2{
     color: #189eb9;
 }
 
@@ -37,10 +34,9 @@ h2 {
     background: none;
     color: #000;
     cursor: pointer;
-}
-
-/* styling of whole input container */
-.form {
+  }
+  /* styling of whole input container */
+  .form {
     --timing: 0.3s;
     --width-of-input: 200px;
     --height-of-input: 40px;
@@ -56,12 +52,11 @@ h2 {
     padding-inline: 0.8em;
     border-radius: var(--border-radius);
     transition: border-radius 0.5s ease;
-    background: var(--input-bg, #fff);
+    background: var(--input-bg,#fff);
     border: solid 1px #189eb9;
-}
-
-/* styling of Input */
-.input {
+  }
+  /* styling of Input */
+  .input {
     font-size: 0.9rem;
     background-color: transparent;
     width: 100%;
@@ -69,10 +64,9 @@ h2 {
     padding-inline: 0.5em;
     padding-block: 0.7em;
     border: none;
-}
-
-/* styling of animated border */
-.form:before {
+  }
+  /* styling of animated border */
+  .form:before {
     content: "";
     position: absolute;
     background: var(--border-color);
@@ -84,149 +78,127 @@ h2 {
     bottom: 0;
     border-radius: 1px;
     transition: transform var(--timing) ease;
-}
-
-/* Hover on Input */
-.form:focus-within {
+  }
+  /* Hover on Input */
+  .form:focus-within {
     border-radius: var(--after-border-radius);
-}
-
-input:focus {
+  }
+  
+  input:focus {
     outline: none;
-}
-
-/* here is code of animated border */
-.form:focus-within:before {
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
     transform: scale(1);
-}
-
-/* styling of close button */
-/* == you can click the close button to remove text == */
-.reset {
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
     border: none;
     background: none;
     opacity: 0;
     visibility: hidden;
-}
-
-/* close button shown when typing */
-input:not(:placeholder-shown)~.reset {
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
     opacity: 1;
     visibility: visible;
-}
-
-/* sizing svg icons */
-.form svg {
+  }
+  /* sizing svg icons */
+  .form svg {
     width: 17px;
     margin-top: 3px;
-}
-
-/* CAIXA DE SERVIÇOS */
-.box-categorias {
+  }
+  /* CAIXA DE SERVIÇOS */
+.box-categorias{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
-
-.categoria {
+.categoria{
     background-color: aliceblue;
-    margin: 0 auto;
+    margin:  0 auto;
     width: 150px;
     height: 150px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
-
-.txt-categoria {
+.txt-categoria{
     width: 100%;
     background-color: #189eb9;
     margin-top: 0;
 }
 
-.categoria h4 {
+.categoria h4{
     color: #fff;
 }
-
-.icone-categoria {
+.icone-categoria{
     height: 120px;
     width: 115px;
     margin-top: 5px;
 }
-
-.icone-categoria a {
+.icone-categoria a{
     display: block;
     width: 100%;
 }
-
-.categoria img {
-    width: 100%;
+.categoria img{
+    width: 100%;    
     text-align: center;
     padding: 15px;
     margin-left: 15px;
 }
-
-.area {
+.area{
     display: flex;
     width: auto;
     height: auto;
     margin: 80px auto 5px;
 
 }
-
-.slogan {
+.slogan{
     margin-top: 30px;
     width: 350px;
 }
-
-.apks {
+.apks{
     width: 300px;
     display: flex;
     margin-top: 15px;
 }
-
-.baixar {
+.baixar{
     width: 100%;
     margin-top: 10px;
     padding: 5px;
 }
-
-.imgcarinha {
-    width: 300px;
-    margin-left: 70px;
+.imgcarinha{
+width: 300px;
+margin-left: 70px;
 }
-
-.imgcarinha img {
+.imgcarinha img{
     width: 100%;
-    border-radius: 150px;
+    border-radius:150px;
     float: right;
 }
-
-.e {
+.e{
     display: flex;
     align-items: center;
 }
-
-footer {
+footer{
     width: 100%;
     height: 110px;
     background-color: #eee;
     bottom: 0;
 }
-
-.redes {
+.redes{
     text-align: end;
     padding: 10px;
 }
-
-.redes img {
+.redes img{
     width: 35px;
     padding: 2px;
     margin-left: 20px;
 }
-
-footer>a {
+footer > a{
     display: block;
     width: 90px;
     text-decoration: none;
@@ -236,53 +208,43 @@ footer>a {
     margin-right: 60px;
     color: red;
 }
-
-@media (max-width: 760px) {
-    .box-categorias {
+@media (max-width: 760px){
+    .box-categorias{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 15px;
         padding: 20px;
     }
-
-    h1,
-    .slogan {
+    h1, .slogan{
         padding-left: 10px;
         margin: auto;
     }
-
-    .area {
+    .area{
         margin-top: 60px;
     }
-
-    .imgcarinha {
+    .imgcarinha{
         margin-left: 0px;
         width: 230px;
     }
 }
-
-@media (max-width:600px) {
-    .barra-pesquisa {
+@media  (max-width:600px) {
+    .barra-pesquisa{
         width: 100%;
     }
-
-    .form {
+    .form{
         margin: 0 auto;
         width: 80%;
     }
-
-    #container {
-        margin: 0 auto;
+    #container{
+     margin: 0 auto;
     }
-
-    .area {
+    .area{
         margin: 40px auto;
         display: block;
         flex-direction: column;
     }
-
-    .imgcarinha {
+    .imgcarinha{
         margin: auto;
     }
 }
