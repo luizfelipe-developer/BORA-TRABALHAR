@@ -114,6 +114,7 @@ h1, h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 10px;
 
 }
 .categoria{
@@ -125,14 +126,15 @@ h1, h2{
     justify-content: center;
     text-align: center;
 }
-.txt-categoria{
-    width: 100%;
-    background-color: #189eb9;
-    margin-top: 0;
-}
 
 .categoria h4{
     color: #fff;
+}
+.txt-categoria{
+    display: block;
+    background-color: #189eb9;
+    color: #fff;
+    font-weight: bold;
 }
 .icone-categoria{
     height: 120px;
@@ -142,12 +144,21 @@ h1, h2{
 .icone-categoria a{
     display: block;
     width: 100%;
+    background-color: aquamarine;
 }
 .categoria img{
     width: 100%;    
     text-align: center;
     padding: 15px;
     margin-left: 15px;
+}
+.categoria a{
+    display: block;
+    width: 100%;
+    background-color: aquamarine;
+}
+.img-categorias{
+    width: 20px;
 }
 .area{
     display: flex;
