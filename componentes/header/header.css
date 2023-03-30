@@ -13,6 +13,8 @@ header{
   top: 0;
 }
 #menu{
+  display: flex;
+    justify-content: space-between;
     height: 80px;
     width: 100%;
     padding: 1px;
@@ -21,13 +23,10 @@ header{
 }
 .logo{
     /* tamanho da caixa da logo */
-    display: flex;
     height: 70px;
     width: 130px;
-    border-radius: 45px;
-    float: left;
-    justify-content: flex-start;
-    margin: 5px 20px;
+
+    margin: 0 15px;
   }
 .logo img{
     /* imagem vai ocupar o tamanho da div em que ela está contida */
@@ -37,22 +36,19 @@ header{
 }
 
 nav{
-    margin-top: 20px;
+    padding: 20px 0px ;
 }
-nav ul li{
-    /* estilização das letras e outros elementos da lista de navegacao */  
-    display: inline-block;   
-}
+/* nav ul li{
+
+    
+} */
   .opcoes{
       /* CAIXA de texto INterior do top e do Z-index*/
-      display: flex;
-      gap: 3px;      
+      display: flex;   
       justify-content: end;  
   }
   
   .opcoes li{
-      /*Caixa de texto dos botões superiores topo*/
-      display:list-item;  /* < --- codigo interessante para interações diferenciadas dos botões superiores*/
       width: 120px;
       height: 45px;
       /*margin-top: 10px;*/
@@ -72,7 +68,6 @@ nav ul li{
       text-decoration: none;
       font-size:0.8em;
       transition: all .30s linear;
-      /*border-radius: 5px;*/
       font-weight: bold;
       background-color: #fff;
   }   
@@ -82,16 +77,8 @@ nav ul li{
   }
   
   .sub-opcao li {
-      /* CAIXA GERAL De sub-opções de serviços e login e
-      espaçamento entre os botões do Z-index 
-      border: 1px #189eb9 solid;*/
-      
-     /* border-radius: 5px;*/
       display: none;
       text-align: center;
-      /*margin-top: 8px;
-      margin-right: 5px;
-      margin-bottom: 5px;   */
   }
   
 .sub-opcao li a{
@@ -101,19 +88,20 @@ nav ul li{
 }
   
   .opcoes li:hover .sub-opcao li{
-      /*CAIXA GERAL  DOS HOVERS*/
       display:inline-block;     
   }
+  .cad {
+    margin-top: 5px;
+  }
+
   .cadastro{
-    border-radius: 5px;
     display: none; 
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+
 }
 .sub-opcao:hover .cadastro{
   display: block;
   z-index: 1;
-  margin-bottom: 59px;
 }
 .cadastro li a{
   background-color: #aaa;
@@ -172,7 +160,10 @@ input[type=checkbox]{
      .sub-opcao li:hover {
       background-color: #4c9e9e;
      }
-   
+     .opcoes li {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.170);
+
+     }
      
 }
 
