@@ -86,11 +86,11 @@ section p{
 p{
     text-align: justify;
 }
-
 #img1{
     background-image: url("../imgs/sobre/primeiro-lanche.jpeg");
     height: 100vh;
-    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
    }

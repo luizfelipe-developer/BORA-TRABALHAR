@@ -131,7 +131,7 @@ input[type=checkbox]{
   border-radius: 5px;
   transition: 0.3s ease;
  }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
  .menu { 
       display:none;
