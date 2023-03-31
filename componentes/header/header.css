@@ -153,9 +153,13 @@ input[type=checkbox]{
      input[type=checkbox]:checked ~ .menu{
       display: block;
      }
+     nav {
+      height: 15%;
+      padding: 0px;
+  }
      .hamburger {
       display: block;
-      margin-right: 20px;
+      margin: 15px 20px;
      }
      .sub-opcao li:hover {
       background-color: #4c9e9e;
