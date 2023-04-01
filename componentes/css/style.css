@@ -247,9 +247,17 @@ footer > a{
     #container{
         margin: 0 auto;
     }
+       .box-categorias{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+        padding: 40px;
+       
+    }
     .categoria{
-        width: 120px;
-        height: 120px;
+        width: 125px;
+        height: 125px;
     }
     .area{
         margin: 40px auto;
