@@ -1,58 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../icones/novaicone.ico"/>
-    <link rel="stylesheet" href="../../css/usuario.css">
-    <title>Cliente</title>
+    <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/novaicone.ico" />
+    <link rel="stylesheet" href="../../css/colaborador.css">
+    <title>Cadastre-se</title>
 </head>
 <body>
-    <div id="container">
-        
-        <div class="imagem">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjQrVPU9-VWSYMxgmqVRBtYk2-qq726IB1w&usqp=CAU" alt="">
-        </div>
-
-        <div class="letras">
-            <input type="text" class="labelinput" placeholder="Nome" /> <input type="text" class="labelinput" placeholder="Sobrenome">
-        </div>
-    
-        <div class="letras">
-        <label for="telefone"></label>
-        <input type="tel" class="labelinput" placeholder="+55">-<input type="tel"  class="labelinput" required placeholder="(00) 0000-0000">
-        </div>
-
-        <div class="letras">
-            <input type="text" class="labelinput" placeholder="Genero">
-        </div>
-
-
-        <div class="letras">
-            <label for="date"></label>
-            <input type="date" class="labelinput" placeholder="data" />
-        </div>
-
-        <div class="letras">
-            <label for="text"></label>
-            <input type="email" class="labelinput" placeholder="E-mail" />
-        </div>
-
-        <div class="letras">
-            <input type="password" class="labelinput" name="password" placeholder="password"
-                   minlength="8" required>
-        </div>
-        
-        <div class="letras">
-            <input type="password" class="labelinput" name="password" placeholder="password"
-                   minlength="8" required>
-        </div>
-
-        <h4 class="cadastre"> <a href="#">Cadastre-se</a></h4>
-
-    </form>
+    <div class="container">
+        <form class="form_container">
+            <div class="title_container">
+              <p class="title">CADASTRE - SE</p>
+              <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a experiência.</span>
+            </div>
+            <div class="input_nome">
+              <div class="nome">
+                <label class="input_label" for="email_field">Nome:</label>
+                <input placeholder="Nome" title="Primeiro nome" name="input-name" type="text" class="input_name" required>
+              </div>
+              <div class="nome">
+                <label class="input_label" for="email_field">Sobrenome:</label>
+                <input placeholder="Sobrenome" title="Sobrenome completo" name="input-name" type="text" class="input_sname" required>
+              </div>
+            </div>
+            <div class="input_container_cpfdata">
+              <div class="nome">
+                <label class="input_label" for="password_field">CPF:</label>
+                <input placeholder="123.456.789-12" title="Informe seu CPF" name="input-name" type="text" class="input_cpf_d"  required>
+              </div>
+              <div class="nome">
+                <label class="input_label" for="password_field">Natalício:</label>
+                <input placeholder="" title="Data de Nascimento" name="input-name" type="date" class="input_cpf_data" required >
+              </div>
+            </div>
+            <div class="input_container_gener" title="Informe sua Gênero">
+              <label class="input_label" for="password_field">Gênero:</label>
+              <div class="input_contgener">
+                <input type="radio" name="sexo" value="M" checked>
+                <p>Masculino</p>
+              </div>
+              <div class="input_contgener">
+                <input type="radio" name="sexo" value="F">
+                <p>Feminino</p>
+              </div>
+              <div class="input_contgener">
+                <input type="radio" name="sexo" value="O">
+                <p>Outros</p>
+              </div>
+            </div>
+            <div class="input_container">
+              <label class="input_label" for="password_field">Endereço:</label>
+              <input placeholder="R. Rui Barbosa" title="Rua em que você mora" name="input-name" type="text" class="input_field" required>
+              <label class="input_label" for="password_field">CEP:</label>
+              <input placeholder="00000-000" title="CEP" name="input-name" type="text" class="input_cep" required>
+          </div>
+          <div class="input_contato">
+            <label class="input_label" for="password_field">Contato:</label>
+            <input placeholder="(ddd) 00000-0000" title="Número para Contato" name="input-name" type="text" class="input_field" >
+            <input placeholder="E-mail" title="E-Mail" name="input-name" type="text" class="input_field" id="email_field" required>
+          </div>
+          <div class="input_container">
+            <label class="input_label" for="password_field">Senha:</label>
+            <input placeholder="Senha" title="Senha" name="input-name" type="password" class="input_field" required>
+          </div>
+          <div class="input_container">
+            <label class="input_label" for="password_field">Confirme sua Senha:</label>
+            <input placeholder="" title="Insira sua senha novamente" name="input-name" type="password" class="input_field" required>
+          </div>
+            <button title="Sign In" type="submit" class="sign-in_btn">
+              <span>Cadastrar</span>
+            </button>
+        </form>
     </div>
-</fieldset>
+    
 </body>
 </html>
