@@ -45,7 +45,6 @@ body{
   text-align: justify;
   margin-top: 15px;
   margin-left: 30px;
- 
 }
 
 .user-image img{
@@ -77,6 +76,46 @@ gap: 8px;
   margin-top: 27px;
 }
 
+.rating{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+
+
 
 .comentario input{
   width: 300px;
@@ -89,6 +128,7 @@ gap: 8px;
 .name{
   font-size:0.8em;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 
