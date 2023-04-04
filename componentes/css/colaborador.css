@@ -20,7 +20,7 @@ body {
 
 .form_container {
     margin: auto;
-    width: 70%;
+    width:90%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -48,6 +48,7 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     color: #212121;
+    text-align: center;
   }
   
   .subtitle {
@@ -76,10 +77,10 @@ body {
   }
 
   .input_contgener{
-    margin: 5px;
     display: flex;
     font-weight: 700;
     color: #8B8E98;
+    margin: 0 10px;
   }
 
   .input_nome{
@@ -89,6 +90,7 @@ body {
     display: flex;
     flex-direction: initial;
     padding-top: 10px;
+    gap: 12px;
   }
 
 .input_container_cpfdata{
@@ -98,10 +100,11 @@ body {
   display: flex;
   flex-direction: initial;
   padding-top: 10px;
+  gap: 5px;
 }
 
 .input_cpf_d{
-    width: 80%;
+    width: 87%;
     height: 40px;
     padding: 0 0 0 20px;
     border-radius: 7px;
@@ -113,11 +116,12 @@ body {
 }
 
 .input_cpf_data{
-  width: 93%;
+    width: 95%;
     height: 40px;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 0px;
     border-radius: 7px;
     outline: none;
+     padding: 0 0 0 20px;
     border: 1px solid #e5e5e5;
     filter: drop-shadow(0px 1px 0px #efefef)
       drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
@@ -200,7 +204,7 @@ body {
   }
 
   .input_name{
-    width: 80%;
+    width: 90%;
     height: 40px;
     padding: 0 0 0 20px;
     border-radius: 7px;
@@ -212,7 +216,7 @@ body {
   }
 
   .input_sname {
-    width: 93%;
+    width: 95%;
     height: 40px;
     padding: 0 0 0 20px;
     border-radius: 7px;
@@ -246,27 +250,37 @@ body {
     }
     .form_container{
       display:flex;
-        flex-direction: column;
-        width: 80%;
-        height: 80%;
-        padding: 30px 30px 20px 20px;
+      flex-direction: column;
+      width: 80%;
+      height: 80%;
+      padding: 30px 30px 20px 20px;
     }
     .input_nome{
       display: flex;
       width: 90%;
-      gap: 10px;
+      gap: 18px;
     }
     .input_container_gener {
-      width: 90%;
+      width: 100%;
       height: fit-content;
       display: flex;
       flex-direction: column;
       padding-top: 5px;
+      margin-left: 40px;
+    }
+    .input_contgener{
+      margin: 0;
+      margin-top: 0;
+      padding: 0;
     }
     .input_container_cpfdata{
       display: flex;
       width: 90%;
       gap: 15px;
+    }
+    .input_cpf_data{
+      width: 100%;
+      padding-left: 13px;
     }
     .sign-in_btn{
       width: 100%;

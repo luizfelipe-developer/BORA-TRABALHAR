@@ -1,24 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="../../../css/perfil.css">
+    <link rel="stylesheet" href="../../../css/perfil.css">
     <link rel="preconnect"
         href="https://fonts.gstatic.com">
-    <link href=
-"https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../header/header.css">
 </head>
  
 <body>
+    <header>
+        <div id="menu">
+            <div class="logo">
+                <a href="#"> <img src="../../imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a>
+            </div>
+
+            <nav>
+                <ul class="opcoes">
+                    <!-- CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVEGAÇÃO MENUS -->
+                    <div class="menu">
+
+                        <li><a href="#">Início</a></li>
+                        <li><a target="_self">Sobre</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/sobre/sobre.html" target="_self">Sobre Nós</a></li>
+                                <li><a href="componentes/paginas/suporte/suporte.html" target="_self">Suporte</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a target="_self">Serviços</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
+                                <li><a href="componentes/paginas/servicos/pequenosreparos.html">Pequenos reparos</a>
+                                </li>
+                                <li><a href="componentes/paginas/servicos/pintores.html">Pintor</a></li>
+                                <li><a href="componentes/paginas/servicos/diarista.html">Diarista</a>
+                                <li><a href="componentes/paginas/servicos/servico.html">Outros</a></li>
+                            </ul>
+                        </li>
+                        <li><a target="_self">Conta</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/entrar/pglogin.html" target="_self">Entrar</a></li>
+                                <li><a target="_self" class="cad">Cadastre-se</a>
+                                    <ul class="cadastro">
+                                        <li><a href="componentes/paginas/cadastro/cliente.html"
+                                                target="_self">Cliente</a></li>
+                                        <li><a href="componentes/paginas/cadastro/colaborador.html"
+                                                target="_self">Colaborador</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
     <div class="container">
         <div class="user-image">
             
             <img src=
-"https://i.pinimg.com/originals/0e/f9/69/0ef969df332a463cefd1f6cf5945faf9.jpg"
+"../../imgs/servicos-img/trabalhadores/cleiton.jpg"
             alt="">
             
             <div class="direita">
@@ -31,9 +81,7 @@
                 <a class="effect effect-4" href="#">
                     Mensagem
                 </a>
-                <a class="effect effect-4" href="#">
-                    Contratar
-                </a>
+               
              </div>
         </div>
         </div>
@@ -50,7 +98,7 @@
 <div class="container-dois">
     <div class="user-avatar">  
         <img src=
-        "https://i.pinimg.com/originals/0e/f9/69/0ef969df332a463cefd1f6cf5945faf9.jpg"alt="">
+        "../../imgs/servicos-img/trabalhadores/pedreiro.jpg"alt="">
         <p>Nome do usuario</p>
 
         
