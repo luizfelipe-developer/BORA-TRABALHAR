@@ -6,14 +6,10 @@
 
 /* Assigning all the same properties to the body */
 body{
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(69,207,222);
-    background: -moz-radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
-    background: -webkit-radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
-    background: radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
+  background: radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
 }
 
 .container{
@@ -24,14 +20,10 @@ body{
   text-align: center;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 1em;
- margin-top: 70px;
+  margin-top: 90px;
 }
-
-
 .container-dois{
-
  text-align: start;
- 
 }
 
 .user-image{
@@ -128,7 +120,7 @@ gap: 8px;
 .name{
   font-size:0.8em;
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 
@@ -176,8 +168,7 @@ a:last-child{
 
 .content{
   color: #565656;
-  padding: 3.1em;
- 
+  padding: 0 40px 20px;
   
 }
 
@@ -185,7 +176,6 @@ a:last-child{
 .effect {
   text-align: center;
   display: inline-block;
-  
   text-decoration: none;
   text-transform: capitalize;
   width: 150px;
@@ -222,7 +212,7 @@ a:last-child{
    
   
    text-align: center;
-   margin: 60px 15px 0px;
+   margin: 90px 15px 0px;
    
   }
   
