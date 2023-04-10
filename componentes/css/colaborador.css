@@ -240,6 +240,14 @@ body {
     border: none;
     font-weight: bold;
   }
+  #home{
+    text-decoration:none;
+    color: #666;
+    background-color: #efefef;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 7px;
+  }
 
 @media only screen and (max-width: 800px) {
     .container{
