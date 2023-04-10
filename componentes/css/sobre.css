@@ -87,8 +87,8 @@ p{
     text-align: justify;
 }
 #img1{
-    background-image: url("../imgs/sobre/primeiro-lanche.jpeg");
-    height: 100vh;
+    background-image: url("../imgs/img-paralax.jpg");
+    height: 90vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -112,6 +112,7 @@ p{
    .quem-somos p{
     font-size: 20px;
    }
+   
 
    .fundadores-img{
     width: 100%;
@@ -120,6 +121,7 @@ p{
    .fundadores p{
     margin-top: 20px;
     font-size: 18px;
+    padding-bottom: 40px;
    }
    
    .nossa-historia{

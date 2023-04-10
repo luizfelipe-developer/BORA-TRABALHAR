@@ -1,0 +1,176 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Assigning all the same properties to the body */
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: rgb(69,207,222);
+    background: -moz-radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
+    background: -webkit-radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
+    background: radial-gradient(circle, rgba(69,207,222,1) 4%, rgba(136,236,255,1) 36%, rgba(92,188,218,1) 92%);
+  align-items: center;
+  
+
+}
+
+.container{
+  width: 30em;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1em;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.265);
+ margin-top: 50px;
+}
+
+.user-image{
+  padding: 1em 0;
+  display: flex;
+  background-color: rgb(43, 47, 47);
+}
+
+.direita{
+  text-align: justify;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+
+.name{
+  color: white;
+  font-size:0.8em;
+  text-transform: uppercase;
+}
+
+.user-image img{
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+  
+}
+
+
+.branco {
+  margin-top: 0px;
+  display: flex;
+ 
+}
+
+
+.branco img{
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.branco p {
+  background-color: #cccccc4e;
+  height: 25px;
+  width: 200px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-left: 10px;
+  
+}
+
+
+.digitando{
+  margin-left: 60px;
+  font-size: 12px;
+  
+}
+
+
+.oi p{
+  text-align: center;
+}
+
+
+.oi{
+  background-color: #cccccc4e;
+  height: 25px;
+  width: 58%;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 10px;
+  
+
+}
+
+
+.horas{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 10px;
+}
+
+
+
+.horass{
+  text-align: center;
+  margin-top: 200px;
+  font-size: 10px;
+}
+
+
+.comentario{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 10px 0;
+ margin-top: 20px;
+}
+
+.comentario input{
+  width: 320px;
+  height: 3.5vh;
+  
+
+}
+
+
+.comentario img{
+  height: 30px;
+margin-left: 7px;
+cursor: pointer;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+
+  .container { 
+   
+  
+   text-align: center;
+   margin: 10px 15px 0px;
+   
+  }
+  
+
+  .oi{
+    width: 85%;
+  }
+
+ .digitando{
+  text-align: start;
+ }
+
+  .comentario input{
+    width: 85%;
+  }
+
+}
