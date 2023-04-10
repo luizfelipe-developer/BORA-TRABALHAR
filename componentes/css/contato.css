@@ -11,10 +11,8 @@ body {
   width: 100%;
 }
 .card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 350px;
+  padding: 20px 20px 20px 0px;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
@@ -98,13 +96,14 @@ body {
 
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
     padding: 45px;
-    margin: 10px;
+    margin: 10px auto;
+    width: 500px;
+    border-radius: 25px;
 }
 #home{
   text-decoration:none;
@@ -113,4 +112,16 @@ body {
   margin: 15px ;
   padding: 10px;
   border-radius: 7px;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.envied{
+  margin-left: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    width: 75%;
+  }
 }
