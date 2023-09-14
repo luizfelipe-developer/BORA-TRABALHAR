@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagem/x-icon" href="ico-sem-fundo.ico.ico" />
+    <link rel="stylesheet" href="componentes/header/headercopy.css">
+    <link rel="stylesheet" href="componentes/css/style.css">
+    <title>Bora Trabalhar</title>
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <div class="logo">
+                <!-- <a href="#"> <img src="componentes/imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a> -->
+                <a href="#"> <img src="logo-sem-fundo.png" alt=""></a>
+            </div>
+
+            <nav>
+                <ul class="opcoes">
+                    <!-- CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle"/>
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVEGAÇÃO MENUS -->
+                    <div class="menu">
+
+                        <li><a href="#">Início</a></li>
+                        <li><a target="_self">Sobre</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/sobre/sobre.html" target="_self">Sobre Nós</a></li>
+                                <li><a href="componentes/paginas/suporte/suporte.html" target="_self">Suporte</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a target="_self">Serviços</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
+                                <li><a href="componentes/paginas/servicos/pequenosreparos.html">Pequenos reparos</a>
+                                </li>
+                                <li><a href="componentes/paginas/servicos/pintores.html">Pintor</a></li>
+                                <li><a href="componentes/paginas/servicos/diarista.html">Diarista</a>
+                                <li><a href="componentes/paginas/servicos/servico.html">Outros</a></li>
+                            </ul>
+                        </li>
+                        <li><a target="_self">Conta</a>
+                            <ul class="sub-opcao">
+                                <li><a href="componentes/paginas/entrar/pglogin.html" target="_self">Entrar</a></li>
+                                <li><a target="_self" class="cad">Cadastre-se</a>
+                                    <ul class="cadastro">
+                                        <li><a href="componentes/paginas/cadastro/cliente.html"
+                                                target="_self">Cliente</a></li>
+                                        <li><a href="componentes/paginas/cadastro/colaborador.html"
+                                                target="_self">Colaborador</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="container">
+        <div class="barra-pesquisa">
+            <h1 style="color: #555;">O que você procura?</h1><br>
+
+            <form class="form">
+                <button>
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-labelledby="search">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                            stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </button>
+                <input class="input" placeholder="Ex. Encanador" required="" type="text">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+        </div>
+        <!-- CAIXA DE CATEGORIAS -->
+        <section class="box-categorias">
+            <div class="categoria">
+                <span class="txt-categoria">Construção</span>
+                <a href="componentes/paginas/servicos/servico.html">
+                    <div class="icone-categoria">
+                        <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="categoria">
+                <span class="txt-categoria">Elétricos</span>
+                <a href="componentes/paginas/servicos/servico.html">
+                    <div class="icone-categoria">
+                        <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="categoria">
+                <span class="txt-categoria">Domésticos</span>
+                <a href="componentes/paginas/servicos/diarista.html">
+                    <div class="icone-categoria">
+                        <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="categoria">
+                <span class="txt-categoria">Pinturas</span>
+                <a href="componentes/paginas/servicos/pintores.html">
+                    <div class="icone-categoria">
+                        <img class="img-categorias" src="componentes/imgs/rolo-de-pintura.png" alt="">
+                    </div>
+                </a>
+            </div>
+        </section>
+        <div class="area">
+            <div class="slogan">
+                <h2>Tudo em um só lugar</h2>
+                <br>
+                <p> Praticidade e segurança na palma da sua mão! Com o aplicativo do <b>Bora Trabalhar</b>, você recebe
+                    notificações e avisos em tempo real.</p>
+
+                <div class="apks">
+                    <a href="https://play.google.com/store/games?hl=pt_BR&gl=US">
+                        <img src="componentes/imgs/playstor.png" alt="" class="baixar">
+                    </a>
+                    <a href="https://www.apple.com/br/store"><img src="componentes/imgs/apple.png" alt=""
+                            class="baixar">
+                    </a>
+                </div>
+            </div>
+
+            <div class="imgcarinha">
+                <img src="componentes/imgs/carinha.png" alt="">
+            </div>
+        </div>    
+    </main>
+    <section><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,197.3C240,181,300,107,360,112C420,117,480,203,540,245.3C600,288,660,288,720,277.3C780,267,840,245,900,218.7C960,192,1020,160,1080,128C1140,96,1200,64,1260,69.3C1320,75,1380,117,1410,138.7L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg></section>
+
+</body>
+
+</html>
