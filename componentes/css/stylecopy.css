@@ -199,16 +199,11 @@ footer{
     padding: 2px;
     margin-left: 20px;
 }
-footer > a{
-    display: block;
-    width: 90px;
-    text-decoration: none;
-    border: 1px solid black;
-    text-align: end;
-    float: right;
-    margin-right: 60px;
-    color: red;
+.ondas{
+    position: absolute;
+    top: 50px;
 }
+
 @media (max-width: 760px){
     .box-categorias{
         display: block;
