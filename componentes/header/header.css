@@ -6,7 +6,7 @@
 }
 header{
   /* esse header está um pouco redundante, tanto faz usar esses parametros abaixo nele ou no id=#menu */
-background-color: #fff;
+background-color: #f9f9f9;
 margin: 0 auto;
 width: 100%;
 position: fixed;
