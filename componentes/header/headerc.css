@@ -4,170 +4,190 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-header{
+
+header {
   /* esse header está um pouco redundante, tanto faz usar esses parametros abaixo nele ou no id=#menu */
-background-color: #fff;
-margin: 0 auto;
-width: 100%;
-position: fixed;
-top: 0;
-}
-#menu{
-display: flex;
-  justify-content: space-between;
-  height: 80px;
-  width: 100%;
-  padding: 1px;
+  background-color: #fff;
   border-bottom: #189eb9 1px solid;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.124);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  padding: 10px 0;
 }
-.logo{
-  /* tamanho da caixa da logo */
-  height: 70px;
-  width: 130px;
 
-  margin: 0 15px;
+#menu {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 1px;
 }
-.logo img{
+
+.logo {
+  /* tamanho da caixa da logo */
+  height: 60px;
+}
+
+.logo img {
   /* imagem vai ocupar o tamanho da div em que ela está contida */
   /* arredondei a imagem */
   width: 100%;
   height: 100%;
 }
 
-nav{
-  padding: 20px 0px ;
+nav {
+ 
 }
+
 /* nav ul li{
 
   
 } */
-.opcoes{
-    /* CAIXA de texto INterior do top e do Z-index*/
-    display: flex;   
-    justify-content: end;  
+.opcoes {
+  /* CAIXA de texto INterior do top e do Z-index*/
+  display: flex;
+  justify-content: end;
 }
 
-.opcoes li{
-    width: 120px;
-    height: 45px;
-    /*margin-top: 10px;*/
-    list-style: none;               
-    z-index: 1;
-    transition: all .10s linear; 
+.opcoes li {
+  width: 120px;
+  height: 45px;
+  /*margin-top: 10px;*/
+  list-style: none;
+  z-index: 1;
+  transition: all .10s linear;
 }
-  .opcoes li a{
-    /* CAIXA DE BOTÕES DE SERVIÇOS DO LOGIN*/
 
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    color: #189eb9;
-    text-decoration: none;
-    font-size:0.8em;
-    transition: all .30s linear;
-    font-weight: bold;
-    background-color: #fff;
-}   
-.opcoes li:hover > a{
-    background-color: #189eb9;
-    color:#fff;
+.opcoes li a {
+  /* CAIXA DE BOTÕES DE SERVIÇOS DO LOGIN*/
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #189eb9;
+  text-decoration: none;
+  font-size: 0.8em;
+  transition: all .30s linear;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.opcoes li:hover>a {
+  background-color: #189eb9;
+  color: #fff;
 }
 
 .sub-opcao li {
-    display: none;
-    text-align: center;
+  display: none;
+  text-align: center;
 }
 
-.sub-opcao li a{
+.sub-opcao li a {
   background-color: #eee;
   color: #444;
 
 }
 
-.opcoes li:hover .sub-opcao li{
-    display:inline-block;     
+.opcoes li:hover .sub-opcao li {
+  display: inline-block;
 }
+
 .cad {
   margin-top: 5px;
 }
 
-.cadastro{
-  display: none; 
+.cadastro {
+  display: none;
   margin-top: 0px;
 
 }
-.sub-opcao:hover .cadastro{
-display: block;
-z-index: 1;
+
+.sub-opcao:hover .cadastro {
+  display: block;
+  z-index: 1;
 }
-.cadastro li a{
-background-color: #aaa;
-color: #fff;
+
+.cadastro li a {
+  background-color: #aaa;
+  color: #fff;
 }
 
 
- /* NAVBAR MENU RESPONSIVA*/
+/* NAVBAR MENU RESPONSIVA*/
 /* CHECKBOX HACK */
-input[type=checkbox]{
-display: none;
-} 
+input[type=checkbox] {
+  display: none;
+}
+
 /*HAMBURGER MENU*/
 .hamburger {
-display: none;
-font-size: 30px;
-/* user-select: none; */
-color: #189eb9;
-cursor: pointer;
+  display: none;
+  font-size: 30px;
+  /* user-select: none; */
+  color: #189eb9;
+  cursor: pointer;
 }
+
 /* NAVBAR MENU */
 .menu {
-display: flex;
-font-size: 18px;
+  display: flex;
+  font-size: 18px;
 }
+
 .menu li:hover {
-border-radius: 5px;
-transition: 0.3s ease;
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
+
 @media (max-width: 650px) {
 
-.menu { 
-    display:none;
+  .menu {
+    display: none;
     position: absolute;
     text-align: center;
     margin-top: 64px;
-   }
-   #menu li{
+  }
+
+  #menu li {
     margin: 0;
     padding: 0;
     width: 100vw;
-   }
-   .menu li:hover {
+  }
+
+  .menu li:hover {
     /*display: inline-block;*/
     display: inline-block;
     transition: 0.3s ease;
     margin-top: 0;
-   }
-   input[type=checkbox]:checked ~ .menu{
+  }
+
+  input[type=checkbox]:checked~.menu {
     display: block;
-   }
-   nav {
+  }
+
+  nav {
     height: 15%;
     padding: 0px;
-}
-   .hamburger {
+  }
+
+  .hamburger {
     display: block;
     margin: 15px 20px;
-   }
-   .sub-opcao li:hover {
+  }
+
+  .sub-opcao li:hover {
     background-color: #4c9e9e;
-   }
-   .opcoes li {
+  }
+
+  .opcoes li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.170);
 
-   }
-   
-}
+  }
 
+}

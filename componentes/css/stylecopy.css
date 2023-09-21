@@ -14,7 +14,8 @@ body{
   /* CORPO DO SITE */
   #container{
     /* container onde está abrigado todos os elementos do site */
-    max-width: 1280px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
