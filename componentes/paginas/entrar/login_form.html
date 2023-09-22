@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Template Roxo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        img{
+	width: 370px;
+}
+.login {
+    height: 1000px;
+    width: 100%;
+    background: radial-gradient(#1E90FF, #332042);
+    position: relative;
+}
+.login_box {
+    width: 1050px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 4px 22px -8px #0004;
+    display: flex;
+    overflow: hidden;
+}
+.login_box .left{
+  width: 41%;
+  height: 100%;
+  padding: 25px 25px;
+  
+}
+.login_box .right{
+  width: 59%;
+  height: 100%  
+}
+.left .top_link a {
+    color: #452A5A;
+    font-weight: 400;
+}
+.left .top_link{
+  height: 20px
+}
+.left .contact{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    height: 100%;
+    width: 73%;
+    margin: auto;
+}
+.left h3{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.left input {
+    border: none;
+    width: 80%;
+    margin: 15px 0px;
+    border-bottom: 1px solid #4f30677d;
+    padding: 7px 9px;
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+.left{
+	background: linear-gradient(-45deg, #dcd7e0, #fff);
+}
+.submit {
+    border: none;
+    padding: 15px 70px;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    background: #1E90FF;
+    color: #fff;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    box-shadow: 0px 9px 15px -11px rgba(57, 69, 242, 0.7);
+}
+
+
+
+.right {
+  background-image: linear-gradient(212.38deg, rgba(112, 157, 204, 0) 0%, rgba(42, 135, 223, 0.71) 100%), url('../../imgs/onda.jpg'); /* Substitua 'sua-imagem-de-onda.png' pelo URL da sua imagem de onda */
+  background-size: cover, cover, auto; /* Define o tamanho da imagem de onda como 'auto' para se adaptar ao conteúdo */
+  background-repeat: no-repeat, no-repeat, repeat; /* Repetição apenas para a imagem de onda */
+  color: #fff;
+  position: relative;
+}
+
+.right .right-text{
+  height: 100%;
+  position: relative;
+  transform: translate(19%, 37%);
+}
+
+
+.right .right-inductor{
+  position: absolute;
+  width: 70px;
+  height: 7px;
+  background: #fff0;
+  left: 50%;
+  bottom: 70px;
+  transform: translate(-50%, 0%);
+}
+.top_link img {
+    width: 28px;
+    padding-right: 7px;
+    margin-top: -3px;
+}
+button {
+  max-width: 320px;
+  display: flex;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.75rem;
+  color: rgb(65, 63, 63);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .6s ease;
+  margin: 20px auto;
+}
+
+.button svg {
+  height: 24px;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+.separator {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: #8B8E98;
+  margin: 10px auto -5px;
+}
+
+.separator .line {
+    display: block;
+    width: 100%;
+    height: 1px;
+  
+    background-color: #e8e8e8;
+}
+.note {
+  font-size: 0.75rem;
+  color: #8B8E98;
+  text-decoration: underline;
+  margin-left: 73px;
+  margin-top: 26px;
+}
+</style>
+</head>
+<body>
+    <section class="login">
+		<div class="login_box">
+			<div class="left">
+				<div class="top_link"><a href="javascript:history.back()"><img src="../../imgs/icones/voltar.png" alt="">Voltar</a></div>
+				<div class="contact">
+					<form action="">
+						<h3>Login</h3>
+						<input type="text" placeholder="USUÁRIO">
+						<input type="text" placeholder="SENHA">
+						<button class="submit">ENTRAR</button>
+            <div class="separator">
+              <hr class="line">
+              <span>Ou</span>
+              <hr class="line">
+            </div>
+            <button class="button">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+              <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+              <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+              <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+              <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+            </svg>
+              Entrar com Google
+            </button>
+
+            <p class="note">Termos de uso &amp; Condições</p>
+					</form>
+				</div>
+			</div>
+			<div class="right">
+				<div class="right-text">
+          <div>
+					<img src="../../imgs/logo/logo-sem-fundo.png" alt="">
+        </div>
+				</div>
+				<div class="right-inductor"><img src="" alt=""></div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
