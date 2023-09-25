@@ -14,22 +14,32 @@ body{
   /* CORPO DO SITE */
   #container{
     /* container onde está abrigado todos os elementos do site */
-    max-width: 1200px;
-    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
 }
 
 
 .barra-pesquisa{
     display: block;
-    width: 450px;
+    width: 800px;
     height: 100px;
-    margin: 100px auto 55px;
+    margin: 140px auto 55px;
 }
 h1, h2{
     color: #189eb9;
 }
 
+#mine-titulo-geral{
+    font-size: 17px;
+}
+
+#mine-titulo{
+    font-size: 17px;
+}
+
+#sub-titulo{
+    font-size: 15px;
+}
 
 .form button {
     border: none;
@@ -117,7 +127,6 @@ h1, h2{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     height: auto;
     width: auto;
 
@@ -127,12 +136,10 @@ h1, h2{
 
 }
 .categoria{
-
-    margin:  8px auto;
-    width: 150px;
+    margin: 10px;
+    width: 195px;
     height: 150px;
     text-align: center;
-    
 }
 
 .txt-categoria{
@@ -140,10 +147,14 @@ h1, h2{
     background-color: #189eb9;
     color: #fff;
     font-weight: bold;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 18px;
 }
 .icone-categoria{
     width: 100%;
-    background-color: aliceblue;
+    background-color: rgb(228, 243, 255);
+    border-radius: 10px;
 }
 
 .categoria img{
@@ -154,6 +165,7 @@ h1, h2{
 .categoria a{
     display: block;
     width: 100%;
+    text-decoration: none;
 
 }
 .img-categorias{
@@ -164,12 +176,23 @@ h1, h2{
     width: auto;
     height: auto;
     margin: 80px auto 5px;
+    justify-content: center;
+    align-items: center;
+}
 
-}
 .slogan{
-    margin-top: 30px;
-    width: 350px;
+   margin-top: 30px;
+    width: 650px;
 }
+
+.slogan h2{
+    font-size: 25px;
+}
+
+.slogan p{
+    font-size: 18px;
+}
+
 .apks{
     width: 300px;
     display: flex;
@@ -181,8 +204,9 @@ h1, h2{
     padding: 5px;
 }
 .imgcarinha{
-width: 300px;
-margin-left: 70px;
+    margin-top: 30px;
+    width: 255px;
+    margin-left: 70px;
 }
 .imgcarinha img{
     width: 100%;
@@ -218,13 +242,16 @@ footer > a{
     margin-right: 60px;
     color: red;
 }
-@media (max-width: 760px){
+@media (max-width: 1080px){
     .box-categorias{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
-        gap: 15px;
         padding: 20px;
+        flex-wrap: wrap;
+    }
+    .categoria{
+        width: 200px;
+        margin: 50px 8px;
     }
     h1, .slogan{
         padding-left: 10px;
@@ -237,7 +264,60 @@ footer > a{
         margin-left: 0px;
         width: 230px;
     }
+    #menu{
+        justify-content: space-between;
+    }
+    .slogan{
+        width: 380px;
+        margin: 50px 18px;
+    }
+    .area{
+        justify-content: center;
+    }
+    .apks{
+        width: 330px;    
+    }
+    .barra-pesquisa{
+        width: 90%;
+    }
 }
+
+@media (max-width: 760px){
+    .box-categorias{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 20px 25px;
+    }
+    .categoria{
+        padding: 3px;
+    }
+    h1, .slogan{
+        padding-left: 10px;
+        margin: auto;
+    }
+    .area{
+        margin-top: 60px;
+    }
+    .imgcarinha{
+        margin-left: 0px;
+        width: 240px;
+    }
+    #menu{
+        justify-content: space-between;
+    }
+    .slogan{
+        width: 350px;
+    }
+    .area{
+        justify-content: center;
+    }
+    .apks{
+        width: 330px;    
+    }
+}
+
 @media  (max-width:600px) {
     .barra-pesquisa{
         width: 100%;
@@ -249,16 +329,17 @@ footer > a{
     #container{
         margin: 0 auto;
     }
-       .box-categorias{
+    .box-categorias{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 15px;
-        padding: 40px;
+        gap: 10px;
+        padding: 20px 10px;
        
     }
     .categoria{
-        width: 125px;
+        margin: 10px;
+        width: 145px;
         height: 125px;
     }
     .area{
