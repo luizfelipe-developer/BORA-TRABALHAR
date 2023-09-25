@@ -5,62 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagem/x-icon" href="ico-sem-fundo.ico.ico" />
-    <link rel="stylesheet" href="componentes/header/headerc.css">
-    <link rel="stylesheet" href="componentes/css/stylecopy.css">
+    <link rel="stylesheet" href="componentes/header/header.css">
+    <link rel="stylesheet" href="componentes/css/style.css">
     <title>Bora Trabalhar</title>
 </head>
 
 <body>
     <header>
         <div id="menu">
-            <div class="logo">
-                <!-- <a href="#"> <img src="componentes/imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a> -->
-                <a href="#"> <img src="logo-sem-fundo.png" alt=""></a>
+            <div class="menu-logo">
+                <div class="logo">
+                    <!-- <a href="#"> <img src="componentes/imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a> -->
+                    <a href="#"> <img src="componentes/imgs/logo/logo-sem-fundo.png" alt=""></a>
+                </div>
             </div>
-
-            <nav>
-                <ul class="opcoes">
-                    <!-- CHECKBOX HACK -->
-                    <input type="checkbox" id="checkbox_toggle"/>
-                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                    <!-- NAVEGAÇÃO MENUS -->
-                    <div class="menu">
-
-                        <li><a href="#">Início</a></li>
-                        <li><a target="_self">Sobre</a>
-                            <ul class="sub-opcao">
-                                <li><a href="componentes/paginas/sobre/sobre.html" target="_self">Sobre Nós</a></li>
-                                <li><a href="componentes/paginas/suporte/suporte.html" target="_self">Suporte</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a target="_self">Serviços</a>
-                            <ul class="sub-opcao">
-                                <li><a href="componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
-                                <li><a href="componentes/paginas/servicos/pequenosreparos.html">Pequenos reparos</a>
-                                </li>
-                                <li><a href="componentes/paginas/servicos/pintores.html">Pintor</a></li>
-                                <li><a href="componentes/paginas/servicos/diarista.html">Diarista</a>
-                                <li><a href="componentes/paginas/servicos/servico.html">Outros</a></li>
-                            </ul>
-                        </li>
-                        <li><a target="_self">Conta</a>
-                            <ul class="sub-opcao">
-                                <li><a href="componentes/paginas/entrar/pglogin.html" target="_self">Entrar</a></li>
-                                <li><a target="_self" class="cad">Cadastre-se</a>
-                                    <ul class="cadastro">
-                                        <li><a href="componentes/paginas/cadastro/cliente.html"
-                                                target="_self">Cliente</a></li>
-                                        <li><a href="componentes/paginas/cadastro/colaborador.html"
-                                                target="_self">Colaborador</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </div>
-                </ul>
-            </nav>
+            <div class="config">
+                <div class="aba-perfil">
+                    <a href="componentes/paginas/entrar/pglogins.html">
+                        <img src="componentes/imgs/icones/do-utilizador.png" alt="">
+                        <h3>Fazer login</h3>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="opcoes">
+                        <!-- CHECKBOX HACK -->
+                        <input type="checkbox" id="checkbox_toggle"/>
+                        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                        
+                        <!-- NAVEGAÇÃO MENUS -->
+                        <div class="menu">
+    
+                            <li><a href="#" id="mine-titulo-geral">Início</a></li>
+                            <li><a id="mine-titulo" target="_self">Sobre</a>
+                                <ul class="sub-opcao">
+                                    <li><a id="sub-titulo" href="componentes/paginas/sobre/sobre.html" target="_self">Sobre Nós</a></li>
+                                    <li><a id="sub-titulo" href="componentes/paginas/suporte/suporte.html" target="_self">Suporte</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a id="mine-titulo" target="_self">Serviços</a>
+                                <ul class="sub-opcao">
+                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
+                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pequenosreparos.html">Pequenos reparos</a></li>
+                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pintores.html">Pintor</a></li>
+                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/diarista.html">Diarista</a>
+                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/servico.html">Outros</a></li>
+                                </ul>
+                            </li>
+                            <li><a id="mine-titulo" target="_self">Conta</a>
+                                <ul class="sub-opcao">
+                                    <li><a id="sub-titulo" href="componentes/paginas/entrar/pglogins.html" target="_self">Entrar</a></li>
+                                    <li><a id="sub-titulo" target="_self" class="cad" href="componentes/paginas/cadastro/cadastros.html">Cadastre-se</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -89,34 +90,42 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <span class="txt-categoria">Construção</span>
                 <a href="componentes/paginas/servicos/servico.html">
+                    <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
                     </div>
                 </a>
             </div>
             <div class="categoria">
-                <span class="txt-categoria">Elétricos</span>
                 <a href="componentes/paginas/servicos/servico.html">
+                    <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
                     </div>
                 </a>
             </div>
             <div class="categoria">
-                <span class="txt-categoria">Domésticos</span>
                 <a href="componentes/paginas/servicos/diarista.html">
+                    <span class="txt-categoria">Domésticos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">
                     </div>
                 </a>
             </div>
             <div class="categoria">
-                <span class="txt-categoria">Pinturas</span>
                 <a href="componentes/paginas/servicos/pintores.html">
+                    <span class="txt-categoria">Pinturas</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/rolo-de-pintura.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="categoria">
+                <a href="componentes/paginas/servicos/servico.html">
+                    <span class="txt-categoria">Construção</span>
+                    <div class="icone-categoria">
+                        <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
                     </div>
                 </a>
             </div>
@@ -141,9 +150,9 @@
             <div class="imgcarinha">
                 <img src="componentes/imgs/carinha.png" alt="">
             </div>
-        </div>    
+        </div>
     </main>
-   
+    </div>
 </body>
 
 </html>
