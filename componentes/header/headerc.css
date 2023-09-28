@@ -117,18 +117,18 @@ nav{
   .sub-opcao li {
     display: none;
     text-align: center;
-    position: absolute;
   }
   
   .sub-opcao li a{
-    position: relative;
-    left: 150px;
     background-color: #eee;
     color: #444;
-}
-
-.opcoes li:hover .sub-opcao li{
+    position: absolute;
+  }
+  
+  .opcoes li:hover .sub-opcao li{
     display: flex;
+    position: relative;
+    left: 100px;
 }
 .cad {
   margin-top: 5px;
