@@ -1,76 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../icones/novaicone.ico"/>
+    <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../header/header.css">
     <link rel="stylesheet" href="../../css/sobre.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./../../js/script.js" defer></script>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
     <title>Sobre Nós</title>
 </head>
+
 <body>
     <header>
-        <div id="menu">
-            <div class="logo">
-               <a href="../../../index.html"> <img src="../../imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a>
-            </div>
-                            
-                <nav>
-                    <ul class="opcoes">
-                        <!-- CHECKBOX HACK -->
-                    <input type="checkbox" id="checkbox_toggle" />
-                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                    <!-- NAVEGAÇÃO MENUS -->
-                        <div class="menu">
-
-                            <li><a href="../../../index.html">Início</a></li>
-                            <li><a target="_self">Sobre</a>
-                                <ul class="sub-opcao">
-                                    <li><a target="_self">Sobre Nós</a></li>
-                                    <li><a href="../suporte/suporte.html">Suporte</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a target="_self">Serviços</a>
-                                <ul class="sub-opcao">
-                                    <li><a href="../servicos/pedreiros.html">Pedreiro</a></li>
-                                    <li><a href="../servicos/pequenosreparos.html">Pequenos reparos</a></li>
-                                    <li><a href="../servicos/pintores.html">Pintor</a></li>
-                                    <li><a href="../servicos/diarista.html">Diarista</a>
-                                    <li><a href="../servicos/servico.html">Outros</a></li>
-                                </ul>
-                        
-                            <li><a target="_self">Conta</a>
-                                <ul class="sub-opcao">
-                                    <li><a href="../entrar/pglogin.html">Entrar</a></li>
-                                    <li><a target="_self">Cadastre-se</a> 
-                                        <ul class="cadastro">
-                                            <li><a href="../cadastro/cliente.html" target="_self">Cliente</a></li>
-                                            <li><a href="../cadastro/colaborador.html" target="_self">Colaboador</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li> 
+        <div class="navbar">
+            <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <!-- Menu -->
+            <div class="align-left">
+                <div class="aba-perfil">
+                    <a href="./../entrar/pglogins.html">
+                        <img src="./../../imgs/icones/do-utilizador.png" alt="">
+                        <span>Fazer login</span>
+                    </a>
+                </div>
+                <div class="hamburguer active">&#9776;</div>
+                <ul class="menu active">
+                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class="">
+                        <p>SERVIÇOS</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../servicos/pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./../servicos/pequenosreparos.html">Peq. Reparos</a></li>
+                                <li><a href="./../servicos/pintores.html">Pintor</a></li>
+                                <li><a href="./../servicos/diarista.html">Diarista</a></li>
+                                <li><a href="./../servicos/servico.html">Outros</a></li>
+                            </ul>
                         </div>
-                    </ul>
-                </nav>
+                    </li>
+                    <li class="actives">
+                        <p>SOBRE</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="#">Sobre Nós</a></li>
+                                <li><a href="./../suporte/suporte.html">Suporte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p>CONTA</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../cadastro/cadastros.html">Cadastrar</a></li>
+                                <li><a href="./../entrar/login_form.html">Entrar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            
+        </div>
     </header>
- 
+
     <div class="div-img-texto" id="img1">
-    <div class="paragrafo">
-        <h1>Sobre nós</h1><br>
-        <h3>Saiba mais sobre o Bora Trabalhar </h3>
-    </div> 
+        <div class="paragrafo">
+            <h1>Sobre nós</h1><br>
+            <h3>Saiba mais sobre o Bora Trabalhar </h3>
+        </div>
     </div>
     <div class="quem-somos">
         <h2>Quem Somos</h2>
-        <p>Em meio a expansão tecnológica, pessoas perceberam uma grande oportunidade de divulgarem seus trabalhos e seus dotes, desbravando a possibilidade de seguir seus sonhos e alcançar o seu potencial de acordo com seu próprio mérito e empenho.
-            Em pesquisas, através da plataforma Google Forms, o projeto conseguiu identificar o principal profissional autônomo mais procurado entre as diversas opções apresentadas e assim, foi realizado a elaboração da plataforma web.
-            Nosso intuito é facilitar a contratação de prestadores de serviços formais e informais sem vínculos imprecativo, fazendo isso de forma online, juntando em um mesmo local possíveis contratantes de serviços tanto básicos que exija o manuseio 
-            de ferramentas específicas quantos profissionais de funções que exige conhecimento técnico apurado, disponibilizando em um mesmo sistema contratantes e possíveis contratados, buscando amenizar ou solucionar o problema de achar prestadores de
+        <p>Em meio a expansão tecnológica, pessoas perceberam uma grande oportunidade de divulgarem seus trabalhos e
+            seus dotes, desbravando a possibilidade de seguir seus sonhos e alcançar o seu potencial de acordo com seu
+            próprio mérito e empenho.
+            Em pesquisas, através da plataforma Google Forms, o projeto conseguiu identificar o principal profissional
+            autônomo mais procurado entre as diversas opções apresentadas e assim, foi realizado a elaboração da
+            plataforma web.
+            Nosso intuito é facilitar a contratação de prestadores de serviços formais e informais sem vínculos
+            imprecativo, fazendo isso de forma online, juntando em um mesmo local possíveis contratantes de serviços
+            tanto básicos que exija o manuseio
+            de ferramentas específicas quantos profissionais de funções que exige conhecimento técnico apurado,
+            disponibilizando em um mesmo sistema contratantes e possíveis contratados, buscando amenizar ou solucionar o
+            problema de achar prestadores de
             serviços, facilitando a inserção do indivíduo no mercado informal.
         </p><br>
         <div class="nossa-historia">
@@ -82,15 +100,23 @@
                 <hr>
                 <h2>Nossa Equipe</h2>
                 <img class="fundadores-img" src="../../imgs/img-programando.jpg" alt="">
-                <p>Somos compostos por uma vasta equipe de desenvolvimento reconhecidos por seus respectivos departamentos, em meio a elas, encontra-se os desenvolvedores, que constroem todo o parâmetro do site com base em ideias dos demais departamentos; o departamento de design: responsável pela organização do site, é quem desenha e cria cada ícone em vários tamanhos e cores, dando características e pequenos dons de personalidade ao ambiente criado; o departamento de apoiadores: é uma equipe que está por dentro do projeto como um todo, possuindo uma prontidão apta para resolver ou alertarem possíveis problemas ou falhas ainda em sua versão beta; e o departamento de escrita: a equipe que criou e desenvolveu todos os formulários, pesquisas e textos do nosso Website.</p>
+                <p>Somos compostos por uma vasta equipe de desenvolvimento reconhecidos por seus respectivos
+                    departamentos, em meio a elas, encontra-se os desenvolvedores, que constroem todo o parâmetro do
+                    site com base em ideias dos demais departamentos; o departamento de design: responsável pela
+                    organização do site, é quem desenha e cria cada ícone em vários tamanhos e cores, dando
+                    características e pequenos dons de personalidade ao ambiente criado; o departamento de apoiadores: é
+                    uma equipe que está por dentro do projeto como um todo, possuindo uma prontidão apta para resolver
+                    ou alertarem possíveis problemas ou falhas ainda em sua versão beta; e o departamento de escrita: a
+                    equipe que criou e desenvolveu todos os formulários, pesquisas e textos do nosso Website.</p>
             </div>
         </div>
     </div>
-    
+
     <div id="container">
-            
+
     </div>
-    
-    
+
+
 </body>
+
 </html>

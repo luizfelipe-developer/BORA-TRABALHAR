@@ -1,19 +1,23 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
 }
-header{
+
+header {
   width: 100%;
   padding: 10px 20px;
   border-bottom: #189eb9 1px solid;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.124); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.124);
   background-color: #f9f9f9;
   position: fixed;
   top: 0;
   z-index: 999;
 }
-.navbar{
+
+.navbar {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -22,12 +26,14 @@ header{
   align-items: center;
   justify-content: space-between;
 }
-.logo{
+
+.logo {
   /* tamanho da caixa da logo */
   height: 70px;
   width: 130px;
 }
-.logo img{
+
+.logo img {
   /* imagem vai ocupar o tamanho da div em que ela está contida */
   /* arredondei a imagem */
   width: 100%;
@@ -35,25 +41,26 @@ header{
 }
 
 /* perfil do usuário */
-.align-left{
+.align-left {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
-.aba-perfil{
+
+.aba-perfil {
   display: none;
   justify-content: center;
   align-items: center;
 }
 
-.aba-perfil span{
+.aba-perfil span {
   font-size: 1.1em;
   margin: 0 4px;
   font-size: 700;
 }
 
-.aba-perfil a{
+.aba-perfil a {
   width: 100%;
   display: flex;
   border: solid 0.5px #189eb9;
@@ -65,11 +72,11 @@ header{
   color: #189eb9;
 }
 
-.aba-perfil a:hover{
+.aba-perfil a:hover {
   background-color: rgb(204, 232, 255);
 }
 
-.aba-perfil img{
+.aba-perfil img {
   width: 20px;
   height: 20px;
 }
@@ -78,78 +85,93 @@ header{
   cursor: pointer;
   display: none;
 }
-.menu{
+
+.menu {
   list-style: none;
   display: flex;
 }
+
 ul li {
   list-style: none;
   text-decoration: none;
 }
-.menu li{
+
+.menu li {
   margin-left: 10px;
 }
-p, .menu li a{
+
+.navbar p,
+.menu li a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
   color: #189EB9;
   cursor: pointer;
   font-weight: bold;
-  
+
 }
-p:hover, .menu li a:hover{
+
+.navbar p:hover,
+.menu li a:hover {
   background-color: #189eb9;
-  color:#fff;
+  color: #fff;
 }
 
 /* IDENTIFICAÇÃO DE PÁGINA */
-.actives, .navbar ul li:hover{
+.actives,
+.navbar ul li:hover {
   background-color: #f1f1f1;
-  
+
   border-radius: 3px;
 }
 
 /* SUBMENUS */
-.sub-menu-1{
+.sub-menu-1 {
   display: none;
   align-items: center;
 }
-.navbar ul li:hover .sub-menu-1{
+
+.navbar ul li:hover .sub-menu-1 {
   display: block;
   position: absolute;
   background: #f1f1f1;
   margin-top: .5px;
 }
-.navbar ul li:hover .sub-menu-1 ul{
+
+.navbar ul li:hover .sub-menu-1 ul {
   display: block;
   margin: 10px;
 }
+
 .navbar ul li:hover .sub-menu-1 ul li {
   width: 150px;
   padding: 10px;
-  border-bottom: 1px dotted #fff;
+  border-bottom: 1px dotted #949090;
   background: transparent;
   border-radius: 0;
 }
-.navbar ul li:hover .sub-menu-1 ul li:last-child{
+
+.navbar ul li:hover .sub-menu-1 ul li:last-child {
   border-bottom: none;
 }
-.navbar ul li:hover .sub-menu-1 ul li a:hover{
+
+.navbar ul li:hover .sub-menu-1 ul li a:hover {
   text-align: left;
   color: #fff;
 }
 
-@media screen and (max-width:980px){
-  .aba-perfil{
+@media screen and (max-width:980px) {
+  .aba-perfil {
     display: flex;
   }
-  .hamburguer{
+
+  .hamburguer {
     display: block;
-     font-size: 2rem;
+    font-size: 2rem;
     z-index: 999;
   }
-  .menu{
+
+  .menu {
     position: fixed;
     top: 0;
     left: -100%;
@@ -160,19 +182,19 @@ p:hover, .menu li a:hover{
     width: 100%;
     max-width: 200px;
     padding: 100px 20px;
-    
+
     flex-direction: column;
   }
-  .menu.active{
+
+  .menu.active {
     left: 0;
     transition: 0.5s ease;
   }
-  .navbar ul li:hover .sub-menu-1{
+
+  .navbar ul li:hover .sub-menu-1 {
     display: block;
     position: absolute;
     right: -120px;
     margin-top: -35px;
   }
 }
-
-

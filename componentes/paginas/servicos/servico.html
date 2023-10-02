@@ -1,213 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../icones/novaicone.ico"/>
+    <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../header/header.css">
     <link rel="stylesheet" href="../../css/servico.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./../../js/script.js" defer></script>
     <title>Serviços</title>
     <style>
-        #container{
+  
+
+        #container {
             margin-top: 100px;
         }
     </style>
 </head>
+
 <body>
     <header>
-        <div id="menu">
-            <div class="menu-logo">
-                <div class="logo">
-                    <!-- <a href="#"> <img src="componentes/imgs/logo/LOGO-BORA-TRABALHAR.png" alt=""></a> -->
-                    <a href="#"> <img src="../../imgs/logo/logo-sem-fundo.png" alt=""></a>
-                </div>
-            </div>
-            <div class="config">
+        <div class="navbar">
+            <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <!-- Menu -->
+            <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="../entrar/pglogins.html">
-                        <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <h3>Fazer login</h3>
+                    <a href="./../entrar/pglogins.html">
+                        <img src="./../../imgs/icones/do-utilizador.png" alt="">
+                        <span>Fazer login</span>
                     </a>
                 </div>
-                <nav>
-                    <ul class="opcoes">
-                        <!-- CHECKBOX HACK -->
-                        <input type="checkbox" id="checkbox_toggle"/>
-                        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-                        
-                        <!-- NAVEGAÇÃO MENUS -->
-                        <div class="menu">
-    
-                            <li><a href="#" id="mine-titulo-geral">Início</a></li>
-                            <li><a id="mine-titulo" target="_self">Sobre</a>
-                                <ul class="sub-opcao">
-                                    <li><a id="sub-titulo" href="componentes/paginas/sobre/sobre.html" target="_self">Sobre Nós</a></li>
-                                    <li><a id="sub-titulo" href="componentes/paginas/suporte/suporte.html" target="_self">Suporte</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a id="mine-titulo" target="_self">Serviços</a>
-                                <ul class="sub-opcao">
-                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
-                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pequenosreparos.html">Pequenos reparos</a></li>
-                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/pintores.html">Pintor</a></li>
-                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/diarista.html">Diarista</a>
-                                    <li><a id="sub-titulo" href="componentes/paginas/servicos/servico.html">Outros</a></li>
-                                </ul>
-                            </li>
-                            <li><a id="mine-titulo" target="_self">Conta</a>
-                                <ul class="sub-opcao">
-                                    <li><a id="sub-titulo" href="componentes/paginas/entrar/pglogins.html" target="_self">Entrar</a></li>
-                                    <li><a id="sub-titulo" target="_self" class="cad" href="componentes/paginas/cadastro/cadastros.html">Cadastre-se</a></li>
-                                </ul>
-                            </li>
+                <div class="hamburguer active">&#9776;</div>
+                <ul class="menu active">
+                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class="actives">
+                        <p>SERVIÇOS</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./pequenosreparos.html">Peq. Reparos</a></li>
+                                <li><a href="./pintores.html">Pintor</a></li>
+                                <li><a href="./diarista.html">Diarista</a></li>
+                                <li><a href="#">Outros</a></li>
+                            </ul>
                         </div>
-                    </ul>
-                </nav>
+                    </li>
+                    <li class="">
+                        <p>SOBRE</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./../suporte/suporte.html">Suporte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p>CONTA</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../cadastro/cadastros.html">Cadastrar</a></li>
+                                <li><a href="./../entrar/login_form.html">Entrar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
     <div id="container">
 
         <main>
-        <div class="cards">
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
-                    <h2 class="nome">Luan</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Pintor</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Pinturas especializadas em geral</p>
-                    <br>
-                    <ul>
-                        <li>Portas</li>
-                        <li>Portões</li>
-                        <li>Paredes</li>
-                        <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/trabalhadores/rogerin.jpg" alt="Foto do Trabalhador">
-                    <h2 class="nome">Rogerio</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Lanches</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Rogério lanches, o melhorzin</p>
-                    <br>
-                    <ul>
-                        <li>Saguadinhos</li>
-                        <li>Sucos da Fruta?</li>
-                        <li>Melhores promoções</li>
-                        <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/trabalhadores/pintor1.png" alt="Foto do Trabalhador">
-                    <h2 class="nome">Nome do Trabalhador</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Pintor</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
-                    <ul>
-                        <li>Portas</li>
-                        <li>Portões</li>
-                        <li>Móveis</li>                            <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
-                    <h2 class="nome">Nome do Trabalhador</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Diarista</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Limpeza em geral, cozinhar e passar</p><br>
-                    <ul>
-                        <li>Especialidades</li>
-                        <li>Especialidades</li>
-                        <li>Especialidades</li>                            <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
-                    <h2 class="nome">Nome do Trabalhador</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Pedreiro</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Construção de paredes, muros e paredes em geral</p><br>
-                    <ul>
-                        <li>Paredes</li>
-                        <li>Muros</li>
-                        <li>Pilares</li>
-                        <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
-                    <h2 class="nome">Nome do Trabalhador</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Profissão</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
-                    <ul>
-                        <li>Portas</li>
-                        <li>Portões</li>
-                        <li>Móveis</li>                            <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            <section class="card">
-                <div class="card-foto">
-                    <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Trabalhador">
-                    <h2 class="nome">Nome do Trabalhador</h2>
-                </div>
-                <div class="descricao">
-                    <h3>Profissão</h3>
-                    <p>☆☆☆☆☆</p>
-                    <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
-                    <ul>
-                        <li>Portas</li>
-                        <li>Portões</li>
-                        <li>Móveis</li> 
-                        <li>Outros</li>
-                    </ul>
-                </div>
-                <a class="orcamento" href="perfil/perfil.html">contatar</a>
-            </section>
-            
-            
-        </div>
-    </main>
-        
-</div>
+            <div class="cards">
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
+                        <h2 class="nome">Luan</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Pintor</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Pinturas especializadas em geral</p>
+                        <br>
+                        <ul>
+                            <li>Portas</li>
+                            <li>Portões</li>
+                            <li>Paredes</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/trabalhadores/rogerin.jpg" alt="Foto do Trabalhador">
+                        <h2 class="nome">Rogerio</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Lanches</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Rogério lanches, o melhorzin</p>
+                        <br>
+                        <ul>
+                            <li>Saguadinhos</li>
+                            <li>Sucos da Fruta?</li>
+                            <li>Melhores promoções</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/trabalhadores/pintor1.png" alt="Foto do Trabalhador">
+                        <h2 class="nome">Nome do Trabalhador</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Pintor</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
+                        <ul>
+                            <li>Portas</li>
+                            <li>Portões</li>
+                            <li>Móveis</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
+                        <h2 class="nome">Nome do Trabalhador</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Diarista</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Limpeza em geral, cozinhar e passar</p><br>
+                        <ul>
+                            <li>Especialidades</li>
+                            <li>Especialidades</li>
+                            <li>Especialidades</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
+                        <h2 class="nome">Nome do Trabalhador</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Pedreiro</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Construção de paredes, muros e paredes em geral</p><br>
+                        <ul>
+                            <li>Paredes</li>
+                            <li>Muros</li>
+                            <li>Pilares</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png"
+                            alt="Foto do Trabalhador">
+                        <h2 class="nome">Nome do Trabalhador</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Profissão</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
+                        <ul>
+                            <li>Portas</li>
+                            <li>Portões</li>
+                            <li>Móveis</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+                <section class="card">
+                    <div class="card-foto">
+                        <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Trabalhador">
+                        <h2 class="nome">Nome do Trabalhador</h2>
+                    </div>
+                    <div class="descricao">
+                        <h3>Profissão</h3>
+                        <p>☆☆☆☆☆</p>
+                        <p>Pintura de paredes de casas, apartamentos e edificações em geral.</p>
+                        <ul>
+                            <li>Portas</li>
+                            <li>Portões</li>
+                            <li>Móveis</li>
+                            <li>Outros</li>
+                        </ul>
+                    </div>
+                    <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                </section>
+
+
+            </div>
+        </main>
+
+    </div>
 </body>
+
 </html>
