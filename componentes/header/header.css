@@ -161,6 +161,10 @@ ul li {
 }
 
 @media screen and (max-width:980px) {
+  .logo{
+    width: 90px;
+    height: auto;
+  }
   .aba-perfil {
     display: flex;
   }
