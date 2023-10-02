@@ -23,5 +23,5 @@ if (mysqli_query($conexao, $inserirSql)) {
 }
 //encerrar a conexão, para evitar travamentos no BD
 mysqli_close($conexao);
-header('Location: ../../entrar/pglogins.html');
+header('Location: ../../entrar/logins_form.html');
 ?>
