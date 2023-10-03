@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alterar Categoria</title>
+    <link rel="stylesheet" href="componentes/header/header.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .container-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container-button button {
+            max-width: 200px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        
+        .top img {
+            width: 27px;
+            padding-right: 7px;
+            margin-top: -3.5px;
+        }
+        .top {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .top a {
+            display: flex;
+            align-items: center;
+            border: 2px solid #1E90FF;
+            border-radius: 15px;
+            padding: 2px 7px;
+            margin-right: 10px;
+        }
+
+        .top img {
+            width: 27px;
+            padding-right: 7px;
+            margin-top: -3.5px;
+        }
+
+        .categoria-button{
+            cursor: pointer;
+            background-color: #f1f1f1;
+            color: #189eb9;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .categoria-button.selecionado {
+            background-color: #189eb9;
+            color: #ffffff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f9f9f9; 
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <!-- Menu -->
+            <div class="align-left">
+                <div class="aba-perfil">
+                    <a href="componentes/paginas/entrar/pglogins.html">
+                        <img src="componentes/imgs/icones/do-utilizador.png" alt="">
+                        <span>Fazer login</span>
+                    </a>
+                </div>
+                <div class="hamburguer active">&#9776;</div>
+                <ul class="menu active">
+                    <li class="actives"><a href="index.html">INiCIO</a></li>
+                    <li class="">
+
+                    </li>
+                    <li class="">
+                        <p>SOBRE</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./componentes/paginas/sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./componentes/paginas/suporte/suporte.html">Suporte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p>MEU PERFIL</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                
+                                <li><a href="./componentes/paginas/entrar/login_form.html">Sair</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header> 
+<div class="container">
+    <div class="alterar">
+
+    <h1>Alterar Categoria</h1>
+
+    <form method="post" action="">
+
+        <h2>Categorias:</h2><br>
+        <div class="container-button">
+            <button class="categoria-button" value="Pedreiro">Pedreiro</button><br>
+            <button class="categoria-button" value="Pintor">Pintor</button><br>
+            <button class="categoria-button" value="Eletricista">Eletricista</button><br>
+            <button class="categoria-button" value="Outro">Outros</button><br>    
+        </div>
+
+        <input type="submit" value="Salvar">
+    </form>
+    </div>
+    <div class="top"><a href="index.html"><img src="componentes/imgs/voltar.png" alt="">Voltar</a>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2023 Bora Trabalhar. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        // Obtém todos os elementos com a classe "categoria-button"
+        var buttons = document.querySelectorAll(".categoria-button");
+
+        // Adiciona um ouvinte de evento de clique a cada botão
+        buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            // Impede o comportamento padrão do botão (recarregar a página)
+            event.preventDefault();
+
+            // Verifica se o botão já está selecionado
+            if (button.classList.contains("selecionado")) {
+            // Se estiver selecionado, remove a classe "selecionado" para desmarcá-lo
+            button.classList.remove("selecionado");
+            } else {
+            // Se não estiver selecionado, adiciona a classe "selecionado" para marcá-lo
+            button.classList.add("selecionado");
+            }
+        });
+        });
+
+    </script>
+</body>
+</html>
