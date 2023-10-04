@@ -21,7 +21,7 @@ if (isset($_POST['bt-entrar'])) {
         $_SESSION['online'] = true;
         $_SESSION['cpf'] = $cpf;
         $_SESSION['tipo'] = 'cliente';
-        header("Location: ../../../../index.html");// Redirecionar para a página do cliente
+        header("Location: ../../../../index_cliente.html");// Redirecionar para a página do cliente
     } elseif ($row_colaborador) {
         $_SESSION['online'] = true;
         $_SESSION['cpf'] = $cpf;
