@@ -16,8 +16,8 @@
 					<form action="./php_login/form_email.php" method="POST">
           <a href="../../../index.html" class="config_logo"><img src="../../imgs/logo/logo-sem-fundo.png" class="logo"></a>
 						<h3>Login - Email</h3>
-						<input type="text" placeholder="EMAIL" name="email" required>
-						<input type="text" placeholder="SENHA" name="senha" required>
+						<input type="email" placeholder="EMAIL" name="email" required>
+						<input type="password" placeholder="SENHA" name="senha" required>
 						<button class="submit" name="bt-entrar">ENTRAR</button>
             <div class="separator">
               <hr class="line">
@@ -36,21 +36,6 @@
 
             <p class="note">Termos de uso &amp; Condições</p>
 					</form>
-          
-          <?php
-            if (isset($erro)) {
-                echo "<p>$erro</p>";
-            }
-          ?>
-
-          <?php
-            // Exibir nome e foto do usuário após o login bem-sucedido
-            if (isset($_SESSION['nome'])) {
-                echo "<h3>Bem-vindo, " . $_SESSION['nome'] . "!</h3>";
-                // echo "<img src='" . $_SESSION['foto'] . "' alt='Foto do usuário'>";
-                // && isset($_SESSION['foto'])
-            }
-          ?>
 
 				</div>
 			</div>

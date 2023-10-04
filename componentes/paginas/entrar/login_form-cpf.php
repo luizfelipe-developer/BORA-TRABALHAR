@@ -16,8 +16,8 @@
 					<form action="./php_login/form_cpf.php" method="POST">
           <a href="../../../index.html" class="config_logo"><img src="../../imgs/logo/logo-sem-fundo.png" class="logo"></a>
 						<h3>Login - CPF</h3>
-						<input type="text" placeholder="CPF" name="cpf" required>
-						<input type="text" placeholder="SENHA" name="senha" required>
+						<input oninput="mascara(this)" type="text" placeholder="CPF" name="cpf" required>
+						<input type="password" placeholder="SENHA" name="senha" required>
 						<button class="submit" name="bt-entrar">ENTRAR</button>
             <div class="separator">
               <hr class="line">
@@ -48,5 +48,21 @@
 			</div>
 		</div>
 	</section>
+  <script>
+    function mascara(i){
+ 
+      var v = i.value;
+      
+      if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+          i.value = v.substring(0, v.length-1);
+          return;
+      }
+      
+      i.setAttribute("maxlength", "14");
+      if (v.length == 3 || v.length == 7) i.value += ".";
+      if (v.length == 11) i.value += "-";
+
+    }
+  </script>
 </body>
 </html>

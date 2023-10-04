@@ -43,13 +43,15 @@ header {
 /* perfil do usuário */
 .align-left {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  text-align: center;
   gap: 5px;
+  flex-direction: row-reverse;
+  width: 100%;
 }
 
 .aba-perfil {
-  display: none;
   justify-content: center;
   align-items: center;
 }
