@@ -169,12 +169,14 @@ display: none;
 @media screen and (max-width:1080px) {
   .navbar{
     justify-content: space-evenly;
+    gap: 270px;
   }
 }
 
 @media screen and (max-width:980px) {
   .navbar{
-    justify-content: space-between;  
+    justify-content: space-between;
+    gap: 0px;
   }
 
   .align-left{
