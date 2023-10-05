@@ -1,5 +1,5 @@
 body {
-  background: rgb(72, 213, 248);
+  background: rgb(131, 219, 241);
 }
 
 img {
@@ -292,10 +292,54 @@ form {
   align-items: center;
 }
 
+.div i{
+  cursor: pointer;
+  left: 31.5px;
+  position: absolute;
+  width: 20px;
+}
+
+.bi-eye-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 31.5%;
+  position: absolute;
+  width: 20px;
+  margin-top: 26px;
+}
+
+.bi-eye-slash-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 31.5%;
+  position: absolute;
+  width: 20px;
+  margin-top: 26px;
+}
+
+button {
+  max-width: 320px;
+  display: flex;
+  padding: 9px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.75rem;
+  color: rgb(65, 63, 63);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .6s ease;
+  margin: 20px auto;
+}
+
 @media only screen and (max-width: 1080px) {
   .login {
     display: flex;
-    height: 100vh;
     width: 95%;
     justify-content: center;
     align-items: center;
@@ -305,12 +349,38 @@ form {
   .login_box {
     display: flex;
     width: 100%;
+    top: 50%;
     justify-content: center;
     align-items: center;
   }
 
   .right .right-text {
     width: 90%;
+  }
+
+  .div i{
+    cursor: pointer;
+    left: 29px;
+    position: absolute;
+    width: 20px;
+  }
+  
+  .bi-eye-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 29%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
+  }
+  
+  .bi-eye-slash-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 29%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
   }
 }
 
@@ -343,6 +413,31 @@ form {
   button {
     width: 250px;
   }
+
+  .div i{
+    cursor: pointer;
+    left: 78px;
+    position: absolute;
+    width: 20px;
+  }
+  
+  .bi-eye-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 78%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
+  }
+  
+  .bi-eye-slash-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 78%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -353,24 +448,30 @@ form {
   button {
     width: auto;
   }
+
+  .div i{
+    cursor: pointer;
+    left: 76px;
+    position: absolute;
+    width: 20px;
+  }
+  
+  .bi-eye-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 76%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
+  }
+  
+  .bi-eye-slash-fill::before {
+    content: "\f33e";
+    cursor: pointer;
+    left: 76%;
+    position: absolute;
+    width: 20px;
+    margin-top: 26px;
+  }
 }
 
-button {
-  max-width: 320px;
-  display: flex;
-  padding: 9px;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  text-align: center;
-  vertical-align: middle;
-  align-items: center;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  gap: 0.75rem;
-  color: rgb(65, 63, 63);
-  background-color: #fff;
-  cursor: pointer;
-  transition: all .6s ease;
-  margin: 20px auto;
-}

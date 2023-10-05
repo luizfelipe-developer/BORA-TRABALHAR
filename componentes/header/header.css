@@ -166,7 +166,17 @@ input[type=checkbox]{
 display: none;
 }
 
+@media screen and (max-width:1080px) {
+  .navbar{
+    justify-content: space-evenly;
+  }
+}
+
 @media screen and (max-width:980px) {
+  .navbar{
+    justify-content: space-between;  
+  }
+
   .align-left{
     flex-direction: row;
     gap: 10px;

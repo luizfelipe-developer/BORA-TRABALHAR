@@ -244,6 +244,31 @@ body {
   border-radius: 7px;
 }
 
+.div i{
+  cursor: pointer;
+  left: 160px;
+  position: absolute;
+  width: 20px;
+}
+
+.bi-eye-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 88%;
+  position: absolute;
+  width: 20px;
+  margin-top: 13px;
+}
+
+.bi-eye-slash-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 88%;
+  position: absolute;
+  width: 20px;
+  margin-top: 13px;
+}
+
 @media only screen and (max-width: 800px) {
   .container {
     display: flex;

@@ -28,7 +28,7 @@ if (isset($_POST['bt-entrar'])) {
         $_SESSION['tipo'] = 'colaborador';
         header("Location: ../../../../index.html");// Redirecionar para a página do colaborador
     } else {
-        header('Location: ../login_form-email.php');
+        header('Location: ../login_form-email.html');
     }
 }
 mysqli_close($conexao);

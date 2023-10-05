@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/novaicone.ico" />
     <link rel="stylesheet" href="../../css/colaborador.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <title>Cadastre-se</title>
 </head>
 <body>
@@ -66,12 +67,18 @@
             <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field" id="email_field" required>
           </div>
           <div class="input_container">
-            <label class="input_label" for="password_field">Senha:</label>
-            <input placeholder="Senha" title="Senha" name="senha" type="password" class="input_field" required>
+            <div>
+              <label class="input_label" for="password_field">Senha:</label>
+              <input placeholder="Senha" id="senha" title="Senha" name="senha" type="password" class="input_field" required>
+              <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+            </div>
           </div>
           <div class="input_container">
-            <label class="input_label" for="password_field">Confirme sua Senha:</label>
-            <input placeholder="" title="Insira sua senha novamente" name="confirmacao_senha" type="password" class="input_field" required>
+            <div>
+              <label class="input_label" for="password_field">Confirme Senha:</label>
+              <input placeholder="" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha" type="password" class="input_field" required>
+              <i class="bi bi-eye-fill" id="btn-confirmar" onclick="confirmarsenha()"></i> 
+            </div>
           </div>
             <button title="Sign In" type="submit" class="sign-in_btn">
               <span>Cadastrar</span>
@@ -120,5 +127,6 @@
             return value
         }
     </script>
+    <script src="../../js/senha.js"></script>
 </body>
 </html>
