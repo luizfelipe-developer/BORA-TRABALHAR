@@ -8,7 +8,7 @@ body {
   background: -webkit-radial-gradient(circle, rgba(69, 207, 222, 1) 4%, rgba(136, 236, 255, 1) 36%, rgba(92, 188, 218, 1) 92%);
   background: radial-gradient(circle, rgba(69, 207, 222, 1) 4%, rgba(136, 236, 255, 1) 36%, rgba(92, 188, 218, 1) 92%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45cfde", endColorstr="#5cbcda", GradientType=1);
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .container {
@@ -18,6 +18,32 @@ body {
   max-width: 1200px;
   align-items: center;
   height: 98vh;
+}
+
+.div i{
+  cursor: pointer;
+  left: 160px;
+  position: absolute;
+  width: 20px;
+}
+.bi-eye-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 88%;
+  position: absolute;
+  width: 20px;
+  margin-top: 13px;
+}
+
+
+
+.bi-eye-slash-fill::before {
+  content: "\f33e";
+  cursor: pointer;
+  left: 88%;
+  position: absolute;
+  width: 20px;
+  margin-top: 13px;
 }
 
 .form_container {
@@ -67,7 +93,6 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 5px;
 }
 
 .input_container_gener {
@@ -164,7 +189,7 @@ body {
 }
 
 .input_field {
-  width: 95%;
+  width: 90%;
   height: 40px;
   padding: 0 0 0 20px;
   border-radius: 7px;
@@ -221,6 +246,19 @@ body {
   transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
+
+.input_snamee {
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 20px;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+
 .sign-in_btn {
   width: 100%;
   height: 40px;
@@ -244,30 +282,6 @@ body {
   border-radius: 7px;
 }
 
-.div i{
-  cursor: pointer;
-  left: 160px;
-  position: absolute;
-  width: 20px;
-}
-
-.bi-eye-fill::before {
-  content: "\f33e";
-  cursor: pointer;
-  left: 88%;
-  position: absolute;
-  width: 20px;
-  margin-top: 13px;
-}
-
-.bi-eye-slash-fill::before {
-  content: "\f33e";
-  cursor: pointer;
-  left: 88%;
-  position: absolute;
-  width: 20px;
-  margin-top: 13px;
-}
 
 @media only screen and (max-width: 800px) {
   .container {
