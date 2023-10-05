@@ -20,7 +20,7 @@ header {
 .navbar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 20px 0px 15px;
+  padding: 0 20px 0px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,18 +42,18 @@ header {
 /* perfil do usuário */
 .align-left {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  gap: 5px;
+  gap: 50px;
   flex-direction: row-reverse;
 }
 
 .aba-perfil {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
 }
 
 .aba-perfil span {
@@ -69,7 +69,7 @@ header {
   border-radius: 50px;
   align-items: center;
   justify-content: center;
-  padding: 6px 10px;
+  padding: 4px 8px;
   text-decoration: none;
   color: #189eb9;
 }
@@ -79,8 +79,8 @@ header {
 }
 
 .aba-perfil img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .hamburguer {
@@ -180,41 +180,42 @@ display: none;
   .align-left{
     flex-direction: row;
     gap: 10px;
-}
-.logo{
-width: 105px;
-height: auto;
-}
-.aba-perfil {
-display: flex;
-margin-top: 4px;
-}
-.aba-perfil span {
-font-size: 15px;
-margin: 0 4px;
-font-size: 700;
-}
+  }
+  .logo{
+    width: 105px;
+    height: auto;
+  }
+  .aba-perfil {
+    display: flex;
+    margin-top: 5px;
+  }
+  .aba-perfil span {
+    font-size: 15px;
+    margin: 0 4px;
+    font-size: 700;
+  }
+  
+  .aba-perfil a {
+    width: 100%;
+    display: flex;
+    border: solid 0.5px #189eb9;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 6px;
+    text-decoration: none;
+    color: #189eb9;
+  }
+  
+  .aba-perfil a:hover {
+    background-color: rgb(204, 232, 255);
+  }
+  
+  .aba-perfil img {
+    width: 25px;
+    height: 25px;
+  }
 
-.aba-perfil a {
-width: 100%;
-display: flex;
-border: solid 0.5px #189eb9;
-border-radius: 50px;
-align-items: center;
-justify-content: center;
-padding: 3px 6px;
-text-decoration: none;
-color: #189eb9;
-}
-
-.aba-perfil a:hover {
-background-color: rgb(204, 232, 255);
-}
-
-.aba-perfil img {
-width: 25px;
-height: 25px;
-}
   .hamburguer {
     display: block;
     font-size: 2rem;

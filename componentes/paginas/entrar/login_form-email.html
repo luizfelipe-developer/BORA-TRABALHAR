@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../css/login_form_email_cpf.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body>
     <section class="login">
@@ -17,8 +18,11 @@
 					<form action="./php_login/form_email.php" method="POST">
           <a href="../../../index.html" class="config_logo"><img src="../../imgs/logo/logo-sem-fundo.png" class="logo"></a>
 						<h3>Login - Email</h3>
-						<input type="text" placeholder="EMAIL" name="email" required>
-						<input type="text" placeholder="SENHA" name="senha" required>
+						<input type="email" placeholder="EMAIL" name="email" required>
+            <div>
+              <input type="password" placeholder="SENHA" name="senha" id="senha" required>
+              <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
+            </div>
 						<button class="submit" name="bt-entrar">ENTRAR</button>
             <div class="separator">
               <hr class="line">
@@ -37,21 +41,6 @@
 
             <p class="note">Termos de uso &amp; Condições</p>
 					</form>
-          
-          <?php
-            if (isset($erro)) {
-                echo "<p>$erro</p>";
-            }
-          ?>
-
-          <?php
-            // Exibir nome e foto do usuário após o login bem-sucedido
-            if (isset($_SESSION['nome'])) {
-                echo "<h3>Bem-vindo, " . $_SESSION['nome'] . "!</h3>";
-                // echo "<img src='" . $_SESSION['foto'] . "' alt='Foto do usuário'>";
-                // && isset($_SESSION['foto'])
-            }
-          ?>
 
 				</div>
 			</div>
@@ -65,5 +54,6 @@
 			</div>
 		</div>
 	</section>
+  <script src="../../js/senha.js"></script>
 </body>
 </html>

@@ -21,14 +21,14 @@ if (isset($_POST['bt-entrar'])) {
         $_SESSION['online'] = true;
         $_SESSION['email'] = $email;
         $_SESSION['tipo'] = 'cliente';
-        header("Location: ../../../../index_login_cliente.php");// Redirecionar para a página do cliente
+        header("Location: ../../../../index_cliente.php");// Redirecionar para a página do cliente
     } elseif ($row_colaborador) {
         $_SESSION['online'] = true;
         $_SESSION['email'] = $email;
         $_SESSION['tipo'] = 'colaborador';
         header("Location: ../../../../index.html");// Redirecionar para a página do colaborador
     } else {
-        header('Location: ../login_form-email.php');
+        header('Location: ../login_form-email.html');
     }
 }
 mysqli_close($conexao);

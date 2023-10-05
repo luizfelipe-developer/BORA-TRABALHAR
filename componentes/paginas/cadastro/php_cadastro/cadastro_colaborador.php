@@ -1,5 +1,5 @@
 <?php 
-include("../../../php/conexao.php");
+include("../../php/conexao.php");
 //receber as iformações repassadas pelo método POST pelo formulário
 $nome = $_POST['nome'];
 $sobrenome = $_POST['sobrenome'];
