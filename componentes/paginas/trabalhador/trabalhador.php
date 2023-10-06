@@ -42,12 +42,9 @@
             <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
-                <div class="aba-perfil">
-                    <a href="componentes/paginas/entrar/pglogins.html">
-                        <img src="componentes/imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
-                    </a>
-                </div>
+            <?php
+        echo "<h3><u>$logado</u></h3>";
+    ?>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
                     <li class="actives"><a href="../../../index.html">INÍCIO</a></li>
@@ -74,10 +71,9 @@
                     </li>
                     
                 </ul>
-                <?php
-        echo "<h3><u>$logado</u></h3>";
-    ?>
+      
             </div>
+      
         </div>
     </header>
     <main id="container" style="margin-top: 7%;">       
