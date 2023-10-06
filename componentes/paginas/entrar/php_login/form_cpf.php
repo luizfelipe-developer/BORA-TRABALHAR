@@ -26,7 +26,7 @@ if (isset($_POST['bt-entrar'])) {
         $_SESSION['online'] = true;
         $_SESSION['cpf'] = $cpf;
         $_SESSION['tipo'] = 'colaborador';
-        header("Location: ../../../../index.html");// Redirecionar para a página do colaborador
+        header("Location: ../../trabalhador/trabalhador.html");// Redirecionar para a página do colaborador
     } else {
         header('Location: ../login_form-cpf.html');
     }
