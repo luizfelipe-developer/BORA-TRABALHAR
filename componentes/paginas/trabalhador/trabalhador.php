@@ -64,7 +64,7 @@
                         <p>MiNHA CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="">Ver Perfil</a></li>
+                                <li><a href="../perfil/perfil.html">Ver Perfil</a></li>
                                 <li><a href="./componentes/paginas/entrar/login_form.html">Sair</a></li>
                             </ul>
                         </div>
