@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once('conexao.php');
+    include_once('../php/conexao.php');
     // print_r($_SESSION);
      if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
      {
@@ -12,11 +12,11 @@
     if(!empty($_GET['search']))
     {
         $data = $_GET['search'];
-        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+        $sql = "SELECT * FROM cad_colaborador WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
     }
     else
     {
-        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
+        $sql = "SELECT * FROM cad_colaborador ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
 ?>
@@ -72,7 +72,11 @@
                             </ul>
                         </div>
                     </li>
+                    
                 </ul>
+                <?php
+        echo "<h3><u>$logado</u></h3>";
+    ?>
             </div>
         </div>
     </header>
