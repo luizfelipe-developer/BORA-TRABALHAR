@@ -30,6 +30,6 @@ if (mysqli_query($conexao, $inserirSql)) {
 }
 //encerrar a conexão, para evitar travamentos no BD
 mysqli_close($conexao);
-header('Location: Location: ../../entrar/pglogins.html')
+header('Location: ../../entrar/pglogins.html')
 
 ?>
