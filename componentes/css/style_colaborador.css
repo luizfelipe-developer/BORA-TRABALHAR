@@ -1,0 +1,46 @@
+* {
+    padding: 0px;
+    margin-top: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.alterar{
+    margin-top: 7%;
+}
+
+form {
+    margin: 20px auto;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
