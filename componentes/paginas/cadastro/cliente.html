@@ -17,56 +17,31 @@
     <title>Cadastre-se</title>
   </head>
 
-  <body>
-    <div class="container">
-      <form
-        class="form_container"
-        action="../php/cadastro_cliente.php"
-        method="post"
-      >
-        <div class="title_container">
-          <p class="title">CADASTRE-SE COMO CLIENTE</p>
-          <span class="subtitle"
-            >Comece a usar nosso site, basta criar uma conta e aproveitar a
-            experiência.</span
-          >
+<body>
+  <div class="container">
+    <form class="form_container" action="../php/cadastro_cliente.php" method="post">
+      <div class="title_container">
+        <p class="title">CADASTRE-SE COMO CLIENTE</p>
+        <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a experiência.</span>
+      </div>
+      <div class="input_nome">
+        <div class="nome">
+          <label class="input_label" for="email_field">Nome:</label>
+          <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" required>
         </div>
-        <div class="input_nome">
-          <div class="nome">
-            <label class="input_label" for="email_field">Nome:</label>
-            <input
-              placeholder="Nome"
-              title="Primeiro nome"
-              name="nome"
-              type="text"
-              class="input_name"
-              required
-            />
-          </div>
-          <div class="nome">
-            <label class="input_label" for="email_field">Sobrenome:</label>
-            <input
-              placeholder="Sobrenome"
-              title="Sobrenome completo"
-              name="sobrenome"
-              type="text"
-              class="input_sname"
-              required
-            />
-          </div>
+        <div class="nome">
+          <label class="input_label" for="email_field">Sobrenome:</label>
+          <input placeholder="Sobrenome" title="Sobrenome completo" name="sobrenome" type="text" class="input_sname"
+            required>
         </div>
-        <div class="input_nome">
-          <div class="nome">
-            <label class="input_label" for="email_field">CPF:</label>
-            <input
-              oninput="mascara(this)"
-              placeholder="123.456.789-10"
-              name="cpf"
-              type="text"
-              class="input_name"
-              required
-            />
-          </div>
+      </div>
+      <div class="input_nome">
+        <div class="nome">
+          <label class="input_label" for="email_field">CPF:</label>
+          <input oninput="mascara(this)" placeholder="123.456.789-10" name="cpf" type="text" class="input_name"
+            required>
+
+        </div>
 
           <div class="nome">
             <label class="input_label" for="email_field">Nascimento:</label>
