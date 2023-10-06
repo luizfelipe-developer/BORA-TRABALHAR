@@ -44,7 +44,7 @@
                 <div class="aba-perfil">
                   
                     <?php
-        echo "<h5><u>$logado</u></h5>";
+        echo "<h3><u>$logado</u></h3>";
     ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
