@@ -1,46 +1,178 @@
-* {
-    padding: 0px;
-    margin-top: 0px;
-}
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 20px;
     text-align: center;
 }
 
-.alterar{
-    margin-top: 7%;
-}
-
-form {
+main {
+    max-width: 1200px;
     margin: 20px auto;
-    width: 300px;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    color: #333;
+    font-size: 24px;
 }
 
-h2 {
-    margin-top: 10px;
+.lista-solicitacoes {
+    list-style: none;
+    padding: 0;
 }
 
-label {
-    display: block;
-    margin: 5px 0;
+.lista-solicitacoes li {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
 }
 
-input[type="checkbox"] {
-    margin-right: 5px;
+.lista-solicitacoes h2 {
+    font-size: 18px;
 }
 
-input[type="submit"] {
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
+.lista-solicitacoes p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.lista-solicitacoes a {
+    display: inline-block; /*Se for mudado o icone de localização vai para o outro lado >>>*/
     padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    color: #189EB9;
+    border-radius: 5px;
+}
+
+.lista-solicitacoes a:active{
+    transform: scale(.9);
+  box-shadow: 0 3px 15px -2px;
+}
+
+.lista-solicitacoes a:hover {
+    background-color: #189EB9;
+    color: #fff;
+}
+
+
+.lista-solicitacoes {
+    list-style-type: none;
+    padding: 0;
+}
+
+/**/
+/* Estilizando a seção de filtro */
+#filtro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.filtro-botao:active{
+    transform: scale(.9);
+    box-shadow: 0 3px 15px -2px;
+}
+.filtro-botao:hover{
+    background-color: #189EB9;
+    color: #fff;
+}
+
+.filtro-botao {
+    margin-right: 10px;
+    padding: 8px 16px;
+    color: #189EB9;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilizando a lista de solicitações */
+.lista-solicitacoes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-solicitacoes li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Estilizando a imagem de rastreamento de localização */
+.lista-solicitacoes img {
+    width: 24px; 
+    height: 24px; 
+    float: right; 
+    margin-left: 10px; 
+}
+
+
+/* Estilizando os links Aceitar e Recusar */
+.lista-solicitacoes a {
+    text-decoration: none;
+    color: #189EB9;
+    margin-right: 10px;
+}
+
+/* Estilizando os botões de navegação */
+#nav-botoes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#nav-botoes button:hover{
+    color: #fff;
+    background-color: #189EB9;
+    border-radius: 5px;
+    
+}
+
+#nav-botoes button:active{
+    transform: scale(.9);
+  box-shadow: 0 3px 15px -2px;
+}
+
+#nav-botoes button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    color: #189EB9;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Estilizando o cabeçalho principal */
+#container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9; 
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*botao de localização*/
+.localiza{
+float: right;
 }
