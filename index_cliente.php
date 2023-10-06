@@ -1,3 +1,26 @@
+<?php
+    session_start();
+    include_once('conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+        //  unset($_SESSION['nome']);
+        //  unset($_SESSION['senha']);
+        //  header('Location: login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,14 +38,14 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="index.html"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="componentes/paginas/entrar/logins_form.html">
-                        <img src="componentes/imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
-                    </a>
+                  
+                    <?php
+        echo "<h5><u>$logado</u></h5>";
+    ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
