@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Alterar Categoria</title>
-    <link rel="stylesheet" href="componentes/header/header.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+    <link rel="stylesheet" href="../../header/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style_colaborador.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../../js/script.js" defer></script>
     <style>
         .container {
             display: flex;
@@ -77,12 +79,58 @@
             padding: 10px;
             text-align: center;
         }
-    </style>
+        * {
+    padding: 0px;
+    margin-top: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
+.alterar{
+    margin-top: 7%;
+}
+
+form {
+    margin: 20px auto;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+</head>
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="index.html"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="trabalhador.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
@@ -93,7 +141,7 @@
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class="actives"><a href="index.html">INiCIO</a></li>
+                    <li class="actives"><a href="index.html">INÍCIO</a></li>
                     <li class="">
 
                     </li>

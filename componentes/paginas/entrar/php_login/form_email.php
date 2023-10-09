@@ -12,6 +12,7 @@ if (isset($_POST['bt-entrar'])) {
     $result_cliente = mysqli_query($conexao, $query_cliente);
     $row_cliente = mysqli_fetch_assoc($result_cliente);
 
+    
     // Verificar a tabela cad_colaborador
     $query_colaborador = "SELECT * FROM cad_colaborador WHERE email='$email' AND senha='$senha'";
     $result_colaborador = mysqli_query($conexao, $query_colaborador);
@@ -26,7 +27,7 @@ if (isset($_POST['bt-entrar'])) {
         $_SESSION['online'] = true;
         $_SESSION['email'] = $email;
         $_SESSION['tipo'] = 'colaborador';
-        header("Location: ../../trabalhador/trabalhador.html");// Redirecionar para a página do colaborador
+        header("Location: ../../trabalhador/trabalhador.php");// Redirecionar para a página do colaborador
     } else {
         header('Location: ../login_form-email.html');
     }

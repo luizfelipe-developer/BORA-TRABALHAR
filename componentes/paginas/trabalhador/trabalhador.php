@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('../php/conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+          unset($_SESSION['nome']);
+          unset($_SESSION['senha']);
+          header('Location: login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_colaborador WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_colaborador ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,9 +39,12 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="../../../exit.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
+            <?php
+        echo "<h3><u>$logado</u></h3>";
+    ?>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
                     <li class="actives"><a href="../../../index.html">INÍCIO</a></li>
@@ -40,15 +65,17 @@
                         <div class="sub-menu-1">
                             <ul>
                                 <li><a href="../perfil/perfil.html">Ver Perfil</a></li>
-                                <li><a href="#">Sair</a></li>
+                                <li><a href="../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
                     </li>
+                    
                 </ul>
+      
             </div>
+      
         </div>
     </header>
-    
     <main id="container" style="margin-top: 7%;">       
         <div id="filtro">
         <a href="#"><button class="filtro-botao" data-filtro="todos">Todos Pedidos</button></a>
