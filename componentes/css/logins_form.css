@@ -168,8 +168,10 @@ button {
   height: 24px;
 }
 
-button:hover {
-  transform: scale(1.02);
+.button:hover {
+    border: 1px solid #1E90FF;
+    box-shadow: 0px 0px 0px 1px #1E90FF;
+    text-decoration: none;
 }
 .separator {
   width: 100%;
