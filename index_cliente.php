@@ -4,9 +4,9 @@
     // print_r($_SESSION);
      if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
      {
-        //   unset($_SESSION['nome']);
-        //   unset($_SESSION['senha']);
-        //   header('Location: login.php');
+           unset($_SESSION['nome']);
+           unset($_SESSION['senha']);
+         header('Location: login.php');
      }
     $logado = $_SESSION['nome'];
     if(!empty($_GET['search']))
@@ -38,7 +38,7 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="index.html"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="exit.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
@@ -75,8 +75,7 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/cadastro/form_cadastros.html">Cadastrar</a></li>
-                                <li><a href="./componentes/paginas/entrar/logins_form.html">Entrar</a></li>
+                                <li><a href="exit.php">Exit</a></li>
                             </ul>
                         </div>
                     </li>
