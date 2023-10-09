@@ -47,7 +47,7 @@
     <div>
         <h1>Login</h1>
         <form action="testLogin.php" method="POST">
-            <input type="text" name="nome" placeholder="Email">
+            <input type="text" name="nome" placeholder="Nome">
             <br><br>
             <input type="password" name="senha" placeholder="Senha">
             <br><br>
