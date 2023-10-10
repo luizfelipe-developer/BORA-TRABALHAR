@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "shortcut icon" type = "imagem/x-icon" href="../../../ico-sem-fundo.ico.ico"/>
     <link rel="stylesheet" href="../../header/header.css">
-    <link rel="stylesheet" href="../../css/servico.css">
+    <link rel="stylesheet" href="../../css/servicocopy.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
-    <title>Diarista</title>
+    <title>Outros</title>
     <style>
         #container{
             margin-top: 50px;
         }
-
         #title{
-margin-top: 0px;
-color: black;
-text-align: center;
-display: block;
-}
- 
+            margin-top: 0px;
+            color: black;
+            text-align: center;
+            display: block;
+        }
+      
        
     </style>
 </head>
@@ -48,8 +47,8 @@ display: block;
                                 <li><a href="./pedreiros.html">Pedreiro</a></li>
                                 <li><a href="./pequenosreparos.html">Peq. Reparos</a></li>
                                 <li><a href="./pintores.html">Pintor</a></li>
-                                <li><a href="#">Diarista</a></li>
-                                <li><a href="./servico.html">Outros</a></li>
+                                <li><a href="./diarista.html">Diarista</a></li>
+                                <li><a href="#">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -88,7 +87,7 @@ display: block;
                 </svg>
             </button>
             <input class="input" id="searchbar" onkeyup="search_pesquisa()" type="text" name="search"
-                placeholder="Ex. diarista" required="">
+                placeholder="Ex. Outros" required="">
             <button class="reset" type="reset">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -99,53 +98,51 @@ display: block;
     </div>
 
 
+    <h2 id="title">Outros</h2>
+
+
     <div id="container">
 
         <main>
-            <h2 id="title">Diaristas</h2>
 
 
             <ol id='list'>
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Joaquina</h2>
+                            <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Luan</h2>
 
-                            <span class="txt-categoria">Joaquina</span>
-                            <span class="txt-categoria">joaquina</span>
-
+                            <span class="txt-categoria">luan</span>
                             
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Pintor</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
+                                
                                 <nav>
 
-                                    <label for="touch"><span>qualificação</span></label>
+                                    <label for="touch"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza</li>
-                                        <li>Faxina</li>
-                                        <li>Passar</li>
+                                        <li>Pinturas especializadas em geral</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Paredes</li>
                                         <li>Outros</li>
                                     </ul>
     
                                 </nav>
 
                                 <ul>
-                                    <span class="txt-categoria">limpeza</span>
-                                    <span class="txt-categoria">Limpeza</span>
-                                    <span class="txt-categoria">faxina</span>
-                                    <span class="txt-categoria">Faxina</span>
-                                    <span class="txt-categoria">passar</span>
-                                    <span class="txt-categoria">Passar</span>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portoes</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">paredes</span>
                                     <span class="txt-categoria">outros</span>
-
+ 
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.html">contatar</a>
@@ -159,38 +156,38 @@ display: block;
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
-                            <img  src="../../imgs/servicos-img/trabalhadores/diarista1.png" alt="Foto do Trabalhador">
+                            <img class="rogerio" src="../../imgs/servicos-img/trabalhadores/rogerin.jpg" alt="Foto do Trabalhador">
                             <h2 class="nome">Rogerio</h2>
                             <span class="txt-categoria">rogerio</span>
-                            <span class="txt-categoria">Rogerio</span>
-
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Lanches</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
 
                                 <nav>
 
-                                    <label for="touch1"><span>qualificação</span></label>
+                                    <label for="touch1"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch1">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza</li>
-                                        <li>Passar</li>
-                                        <li>Recolher o lixo</li>
-                                        <li>Outros</li>
+                                        <li>Rogério lanches, o melhorzin</li>
+                                        <li>Salgado</li>
+                                        <li>Suco da fruta?</li>
+                                        <li>Melhores promoçôes</li>
+                                        <li>Salguadinhos</li>
                                     </ul>
     
                                 </nav>
 
                                 <ul>
-                                    <span class="txt-categoria">Limpeza</span>
-                                    <span class="txt-categoria">limpeza</span>
-                                    <span class="txt-categoria">passar</span>
-                                    <span class="txt-categoria">recolher o lixo</span>
-                                    <span class="txt-categoria">outros</span>
+                                    <span class="txt-categoria">salgado</span>
+                                    <span class="txt-categoria">salguadinhos</span>
+                                    <span class="txt-categoria">suco de fruta</span>
+                                    <span class="txt-categoria">melhores promoçoes</span>
+                                    <span class="txt-categoria">promoçâo</span>
+                                    <span class="txt-categoria">Rogerio</span>
+
                                     
                                 </div>
                                 </ul>
@@ -204,40 +201,38 @@ display: block;
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Ruti</h2>
-                            <span class="txt-categoria">ruti</span>
-                            <span class="txt-categoria">Ruti</span>
-
+                            <img src="../../imgs/servicos-img/trabalhadores/pintor1.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Batisto</h2>
+                            <span class="txt-categoria">batisto</span>
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Pintor</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
 
                                 <nav>
 
-                                    <label for="touch2"><span>qualificação</span></label>
+                                    <label for="touch2"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch2">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza de vidro</li>
-                                        <li>Limpeza de banheiro</li>
-                                        <li>Aspiraçâo</li>
+                                        <li>Pinturas especializadas em geral</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Móveis</li>
                                         <li>Outros</li>
                                     </ul>
     
                                 </nav>
 
                                 <ul>
-                                    <span class="txt-categoria">Limpeza de vidro</span>
-                                    <span class="txt-categoria">limpeza de vidro</span>
-                                    <span class="txt-categoria">Limpeza de banheiro</span>
-                                    <span class="txt-categoria">limpeza de banheiro</span>
-                                    <span class="txt-categoria">Aspiraçâo</span>
-                                    <span class="txt-categoria">aspiraçâo</span>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portoes</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">móveis</span>
+                                    <span class="txt-categoria">moveis</span>
                                     <span class="txt-categoria">outros</span>
+
 
                                 </ul>
                             </div>
@@ -251,11 +246,9 @@ display: block;
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista.png" alt="Foto do Trabalhador">
+                            <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Flavia</h2>
                             <span class="txt-categoria">flavia</span>
-                            <span class="txt-categoria">Flavia</span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
@@ -264,26 +257,23 @@ display: block;
 
                                 <nav>
 
-                                    <label for="touch3"><span>qualificação</span></label>
+                                    <label for="touch3"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch3">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza de casa</li>
-                                        <li>Passar roupas</li>
-                                        <li>Retirada de pó</li>
+                                        <li>Limpeza em geral,<br>cozinhar e passar</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Paredes</li>
                                         <li>Outros</li>
                                     </ul>
     
                                 </nav>
 
                                 <ul>
-                                    <span class="txt-categoria">Limpeza de casa</span>
-                                    <span class="txt-categoria">limpeza de casa</span>
-                                    <span class="txt-categoria">Passar roupas</span>
-                                    <span class="txt-categoria">passar roupas</span>
-                                    <span class="txt-categoria">Retirada de pó</span>
-                                    <span class="txt-categoria">retirada de po</span>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">paredes</span>
                                     <span class="txt-categoria">outros</span>
 
 
@@ -307,36 +297,32 @@ display: block;
 
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Pedreiro</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
 
                                 <nav>
 
-                                    <label for="touch4"><span>qualificação</span></label>
+                                    <label for="touch4"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch4">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Passar roupas</li>
-                                        <li>Tirar o lixo</li>
-                                        <li>Varrer e juntar o lixo</li>
-                                        <li>Guardar roupas</li>
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
                                         <li>Outros</li>
-
                                     </ul>
     
                                 </nav>
 
                                 <ul>
-                                    <span class="txt-categoria">Passar roupas</span>
-                                    <span class="txt-categoria">passar roupas</span>
-                                    <span class="txt-categoria">Tirar o lixo</span>
-                                    <span class="txt-categoria">tirar o lixo</span>
-                                    <span class="txt-categoria">Varrer e juntar o lixo</span>
-                                    <span class="txt-categoria">varrer e juntar o lixo</span>
-                                    <span class="txt-categoria">Guardar roupas</span>
-                                    <span class="txt-categoria">guardar roupas</span>
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
                                     <span class="txt-categoria">outros</span>
 
 
@@ -360,26 +346,31 @@ display: block;
 
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Pedreiro</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
                                 <nav>
 
-                                    <label for="touch5"><span>qualificação</span></label>
+                                    <label for="touch5"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch5">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
                                         <li>Outros</li>
-
                                     </ul>
     
                                 </nav>
+
                                 <ul>
-                                 
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
                                     <span class="txt-categoria">outros</span>
 
 
@@ -394,36 +385,39 @@ display: block;
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Claudia</h2>
-                            <span class="txt-categoria">claudia</span>
+                            <h2 class="nome">Alguem</h2>
+                            <span class="txt-categoria">Alguem</span>
                             <span class="txt-categoria"></span>
 
                         </div>
                             <div class="descricao">
-                                <h3>Diarista</h3>
+                                <h3>Pedreiro</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
-                                <!-- <div style='position:relative; top:0px; left:0px;'> -->
                                 <nav>
 
-                                    <label for="touch6"><span>qualificação</span></label>
+                                    <label for="touch6"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch6">
     
                                     <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
                                         <li>Outros</li>
-
                                     </ul>
     
                                 </nav>
-                                
+
                                 <ul>
-                                  
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
                                     <span class="txt-categoria">outros</span>
+
 
                                 </ul>
                             </div>
