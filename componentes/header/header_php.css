@@ -54,6 +54,7 @@ header {
     justify-content: center;
     align-items: center;
     font-weight: bolder;
+    display: flex;
 }
 
 .aba-perfil span {
@@ -62,7 +63,7 @@ header {
   font-size: 700;
 }
 
-.aba-perfil a {
+.aba-perfil{
   width: 100%;
   display: flex;
   border: solid 0.5px #189eb9;
@@ -72,10 +73,7 @@ header {
   padding: 4px 8px;
   text-decoration: none;
   color: #189eb9;
-}
-
-.aba-perfil a:hover {
-  background-color: rgb(204, 232, 255);
+  gap: 10px;
 }
 
 .aba-perfil img {
