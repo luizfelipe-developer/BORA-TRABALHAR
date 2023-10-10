@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('../php/conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+           unset($_SESSION['nome']);
+           unset($_SESSION['senha']);
+           header('Location: login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,7 +57,9 @@
                 <div class="aba-perfil">
                     <a href="./../entrar/logins_form.html">
                         <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
+                        <?php
+                        echo "<h3>$logado</h3>";
+                    ?>
                     </a>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
@@ -45,11 +69,11 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./pedreiros.php">Pedreiro</a></li>
                                 <li><a href="#">Peq. Reparos</a></li>
-                                <li><a href="./pintores.html">Pintor</a></li>
-                                <li><a href="./diarista.html">Diarista</a></li>
-                                <li><a href="./servico.html">Outros</a></li>
+                                <li><a href="./pintores.php">Pintor</a></li>
+                                <li><a href="./diarista.php">Diarista</a></li>
+                                <li><a href="./servico.php">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -66,8 +90,8 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../cadastro/form_cadastros.html">Cadastrar</a></li>
-                                <li><a href="./../entrar/logins_form.html">Entrar</a></li>
+                                <li><a href="#">Ver Perfil</a></li>
+                                <li><a href="./../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
                     </li>
