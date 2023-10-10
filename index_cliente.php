@@ -57,7 +57,7 @@
                                 <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
                                 <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
                                 <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
-                                <li><a href="./componentes/paginas/servicos/diarista.html">Diarista</a></li>
+                                <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
                                 <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
                             </ul>
                         </div>
@@ -108,7 +108,7 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <a href="componentes/paginas/servicos/servico.html">
+                <a href="componentes/paginas/servicos/pedreiros.html">
                     <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
@@ -116,7 +116,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/servico.html">
+                <a href="componentes/paginas/servicos/pequenosreparos.html">
                     <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
@@ -124,7 +124,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/diarista.html">
+                <a href="componentes/paginas/servicos/diarista.php">
                     <span class="txt-categoria">Domésticos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">
