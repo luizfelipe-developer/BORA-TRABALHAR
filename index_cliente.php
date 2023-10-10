@@ -42,10 +42,10 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                  
+                    <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
-        echo "<h3><u>$logado</u></h3>";
-    ?>
+                        echo "<h3>$logado</h3>";
+                    ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
