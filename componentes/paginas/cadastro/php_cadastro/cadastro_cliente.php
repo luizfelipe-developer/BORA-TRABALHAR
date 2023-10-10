@@ -15,11 +15,10 @@ $numero = $_POST['numero'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
-$confirmacao_senha = $_POST['confirmacao_senha'];
 
 //inserir os valores adicionados das variáveis nos campos da tabela cliente do BD
-$inserirSql = "INSERT INTO cad_cliente(nome, sobrenome, cpf, dt_nascimento, genero, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha, confirmacao_senha) 
-VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha', '$confirmacao_senha')";
+$inserirSql = "INSERT INTO cad_cliente(nome, sobrenome, cpf, dt_nascimento, genero, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha) 
+VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha')";
 //sempre que os valores forem do tipo varchar, devem ficar entre 'aspas simples'
 //Verificação
 if (mysqli_query($conexao, $inserirSql)) {
