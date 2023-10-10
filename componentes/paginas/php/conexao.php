@@ -11,6 +11,6 @@ if(!$conexao){
 //mensagem de erro
 }
 else{
-    echo "Conexão Realizada!";
+    // echo "Conexão Realizada!";
 }
 ?>
