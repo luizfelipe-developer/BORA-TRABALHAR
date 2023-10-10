@@ -53,7 +53,7 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="../../../index_cliente.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">

@@ -38,7 +38,7 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="exit.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="index_cliente.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
