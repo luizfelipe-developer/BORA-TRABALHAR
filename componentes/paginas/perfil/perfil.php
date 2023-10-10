@@ -77,32 +77,7 @@
                                 <li><a href="./componentes/paginas/entrar/logins_form.html">Entrar</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <div class="config">
-                <!-- perfil   -->
-                    <div class="col-2 col-lg-3 text-center justify-content-center">
-                    <button data-bs-toggle="dropdown" aria-expanded="false">
-                <div id="perfil">
-                    <img class="perfil" src="imagens/usuario-de-perfil(1).png" alt="">
-
-                </div>
-                        
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">
-                            <i class="fa-solid fa-circle-user"></i> Conta
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            <i class="fa-solid fa-comments"></i> Conversas
-                        </a></li>
-             
-                        <li><a class="dropdown-item" href="#">
-                            <i class="fa-solid fa-gear"></i> Configurações
-                        </a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Sair</a></li>
-                      </ul>
-                </div>
+                    </li>      
 <!-- fim -->
                 </ul>
             </div>
