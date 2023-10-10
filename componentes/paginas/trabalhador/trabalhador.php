@@ -33,6 +33,7 @@
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../js/script.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API" defer></script>
+    
     <title>Bora Trabalhar</title>
 </head>
 
@@ -64,7 +65,7 @@
                         <p>MiNHA CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="../perfil/perfil.html">Ver Perfil</a></li>
+                                <li><a href="../perfil/perfil.php">Ver Perfil</a></li>
                                 <li><a href="../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
