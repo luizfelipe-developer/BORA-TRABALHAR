@@ -5,10 +5,10 @@
     {
         $id_cliente = $_GET['id_cliente'];
         $sqlSelect = "SELECT * FROM cad_cliente WHERE id_cliente = $id_cliente";
-        $result = $conexao->query($sqlSelect);  
-        if($result->num_rows > 0)
+        $resultado = $conexao->query($sqlSelect);  
+        if($resultado->num_rows > 0)
         {
-            while($dados_cliente = mysqli_fetch_assoc($result))
+            while($dados_cliente = mysqli_fetch_assoc($resultado))
             {   
                 $nome = $_POST['nome'];
                 $sobrenome = $_POST['sobrenome'];
@@ -38,7 +38,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,26 +59,26 @@
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">Nome:</label>
-                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" required>
+                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $nome; ?>" required>
                 </div>
                 <div class="nome">
                     <label class="input_label" for="email_field">Sobrenome:</label>
                     <input placeholder="Sobrenome" title="Sobrenome completo" name="sobrenome" type="text"
-                        class="input_sname" required>
+                        class="input_sname" value="<?php echo $sobrenome; ?>" required>
                 </div>
             </div>
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">CPF:</label>
                     <input oninput="mascara(this)" placeholder="123.456.789-10" name="cpf" type="text"
-                        class="input_name" required>
+                        class="input_name" value="<?php echo $cpf; ?>" required>
 
                 </div>
 
                 <div class="nome">
                     <label class="input_label" for="email_field">Nascimento:</label>
                     <input placeholder="Sobrenome" title="Sobrenome completo" name="dt_nascimento" type="date"
-                        class="input_sname" required />
+                        class="input_sname" value="<?php echo $dt_nascimento; ?>" required />
                 </div>
             </div>
             <div class="input_container">
