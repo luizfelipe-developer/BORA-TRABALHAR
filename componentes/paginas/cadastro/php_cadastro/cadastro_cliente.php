@@ -16,6 +16,7 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
+
 //inserir os valores adicionados das variáveis nos campos da tabela cliente do BD
 $inserirSql = "INSERT INTO cad_cliente(nome, sobrenome, cpf, dt_nascimento, genero, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha) 
 VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha')";
