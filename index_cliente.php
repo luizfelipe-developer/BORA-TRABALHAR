@@ -1,13 +1,14 @@
 <?php
     session_start();
-    include_once('conexao.php');
+    include_once('componentes/paginas/php/conexao.php');
+    include "componentes/paginas/cliente/php/consulta_cliente.php";
     // print_r($_SESSION);
-     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-     {
-           unset($_SESSION['nome']);
-           unset($_SESSION['senha']);
-         header('Location: login.php');
-     }
+    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['nome']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
     $logado = $_SESSION['nome'];
     if(!empty($_GET['search']))
     {
@@ -18,12 +19,11 @@
     {
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
-    $result = $conexao->query($sql);
+    $resultado = $conexao->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,8 +75,17 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
+<<<<<<< HEAD
+                                <li> 
+                                    <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
+                                        Editar Cadastro
+                                    </a>
+                                    <li><a href="exit.php">Exit</a></li>
+                                </li>
+=======
                             <li><a href="">Ver Perfil</a></li>
                             <li><a href="exit.php">Exit</a></li>
+>>>>>>> 8b36a3bc99fb7302ba3bb345f646c556ccad84e9
                             </ul>
                         </div>
                     </li>
