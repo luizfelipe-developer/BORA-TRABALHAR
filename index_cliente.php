@@ -38,11 +38,11 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="index_cliente.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="exit.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                <img src="componentes/imgs/icones/do-utilizador.png" alt="">
+                    <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
                         echo "<h3>$logado</h3>";
                     ?>
@@ -54,9 +54,9 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/servicos/pedreiros.php">Pedreiro</a></li>
-                                <li><a href="./componentes/paginas/servicos/pequenosreparos.php">Peq. Reparos</a></li>
-                                <li><a href="./componentes/paginas/servicos/pintores.php">Pintor</a></li>
+                                <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
+                                <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
                                 <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
                                 <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
                             </ul>
@@ -75,17 +75,28 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-<<<<<<< HEAD
-                                <li> 
-                                    <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
-                                        Editar Cadastro
-                                    </a>
-                                    <li><a href="exit.php">Exit</a></li>
-                                </li>
-=======
-                            <li><a href="">Ver Perfil</a></li>
-                            <li><a href="exit.php">Exit</a></li>
->>>>>>> 8b36a3bc99fb7302ba3bb345f646c556ccad84e9
+                                <?php while($dados_cliente = mysqli_fetch_assoc($resultado)){
+                                    echo "<td>" .$dados_cliente['nome']."</td>";
+                                    echo "<td>" .$dados_cliente['sobrenome']."</td>";
+                                    echo "<td>" .$dados_cliente['cpf']."</td>";
+                                    echo "<td>" .$dados_cliente['dt_nascimento']."</td>";
+                                    echo "<td>" .$dados_cliente['genero']."</td>";
+                                    echo "<td>" .$dados_cliente['cep']."</td>";
+                                    echo "<td>" .$dados_cliente['uf']."</td>";
+                                    echo "<td>" .$dados_cliente['cidade']."</td>";
+                                    echo "<td>" .$dados_cliente['bairro']."</td>";
+                                    echo "<td>" .$dados_cliente['endereco']."</td>";
+                                    echo "<td>" .$dados_cliente['numero']."</td>";
+                                    echo "<td>" .$dados_cliente['telefone']."</td>";
+                                    echo "<td>" .$dados_cliente['email']."</td>";
+                                    echo "<td>" .$dados_cliente['senha']."</td>";
+                                    echo "<li>
+                                        <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
+                                            Editar Cadastro
+                                        </a>
+                                    </li>";
+                                } ?> 
+                                <li><a href="exit.php">Exit</a></li>
                             </ul>
                         </div>
                     </li>
@@ -118,7 +129,7 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pedreiros.php">
+                <a href="componentes/paginas/servicos/pedreiros.html">
                     <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
@@ -126,7 +137,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pequenosreparos.php">
+                <a href="componentes/paginas/servicos/pequenosreparos.html">
                     <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
@@ -134,7 +145,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="./componentes/paginas/servicos/diarista.php">
+                <a href="componentes/paginas/servicos/diarista.php">
                     <span class="txt-categoria">Domésticos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">
@@ -142,7 +153,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pintores.php">
+                <a href="componentes/paginas/servicos/pintores.html">
                     <span class="txt-categoria">Pinturas</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/rolo-de-pintura.png" alt="">
