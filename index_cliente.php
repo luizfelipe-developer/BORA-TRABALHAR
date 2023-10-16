@@ -38,11 +38,11 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="exit.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="index_cliente.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <img src="componentes/imgs/icones/do-utilizador.png" alt="">
+                <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
                         echo "<h3>$logado</h3>";
                     ?>
@@ -54,9 +54,9 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
-                                <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
-                                <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
+                                <li><a href="./componentes/paginas/servicos/pedreiros.php">Pedreiro</a></li>
+                                <li><a href="./componentes/paginas/servicos/pequenosreparos.php">Peq. Reparos</a></li>
+                                <li><a href="./componentes/paginas/servicos/pintores.php">Pintor</a></li>
                                 <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
                                 <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
                             </ul>
@@ -75,12 +75,17 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
+<<<<<<< HEAD
                                 <li> 
                                     <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
                                         Editar Cadastro
                                     </a>
                                     <li><a href="exit.php">Exit</a></li>
                                 </li>
+=======
+                            <li><a href="">Ver Perfil</a></li>
+                            <li><a href="exit.php">Exit</a></li>
+>>>>>>> 8b36a3bc99fb7302ba3bb345f646c556ccad84e9
                             </ul>
                         </div>
                     </li>
@@ -113,7 +118,7 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pedreiros.html">
+                <a href="componentes/paginas/servicos/pedreiros.php">
                     <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
@@ -121,7 +126,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pequenosreparos.html">
+                <a href="componentes/paginas/servicos/pequenosreparos.php">
                     <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
@@ -129,7 +134,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/diarista.php">
+                <a href="./componentes/paginas/servicos/diarista.php">
                     <span class="txt-categoria">Domésticos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">
@@ -137,7 +142,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pintores.html">
+                <a href="componentes/paginas/servicos/pintores.php">
                     <span class="txt-categoria">Pinturas</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/rolo-de-pintura.png" alt="">
