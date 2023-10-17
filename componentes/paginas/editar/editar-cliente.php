@@ -153,9 +153,9 @@
                 </div>
             </div>
 
-            <button title="Sign In" type="submit" class="sign-in_btn" name="update">
-                <span>Atualizar</span>
-            </button>
+                <input type="hidden" name="id_cliente" value=<?php echo $id_cliente;?>>
+                <input type="submit" name="update" id="submit" class="sign-in_btn">
+               
             <a id="home" href="../../../index.html"> Voltar a página inicial</a>
         </form>
     </div>
