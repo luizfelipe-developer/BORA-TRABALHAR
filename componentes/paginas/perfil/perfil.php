@@ -99,11 +99,12 @@
                     <a href="editar_perfil.php">Editar Perfil</a>
                 </button>
             </div>
-            <div class="subcontainer2">
+            <form action="../cliente/php/cad_biografia_cliente.php" method="post" class="subcontainer2">
                 <div class="subform2">
-                    <textarea name="" id="descricao" cols="80" rows="10"></textarea>
+                    <textarea name="" id="descricao" cols="80" rows="10" placeholder="Biografia" required></textarea>
                 </div>
-            </div>
+                <button id="save_biografia" value="Salvar" name="save_biografia">Salvar</button>
+            </form>
         </div>
     </main>
   
