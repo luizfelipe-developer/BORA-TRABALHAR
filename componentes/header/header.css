@@ -59,7 +59,7 @@ header {
 .aba-perfil span {
   font-size: 1.1em;
   margin: 0 4px;
-  font-size: 700;
+  font-weight: 700;
 }
 
 .aba-perfil a {
@@ -194,7 +194,7 @@ margin-top: 4px;
 .aba-perfil span {
 font-size: 15px;
 margin: 0 4px;
-font-size: 700;
+font-weight: 700;
 }
 
 .aba-perfil a {

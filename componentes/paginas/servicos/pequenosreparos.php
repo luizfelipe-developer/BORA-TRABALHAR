@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('../php/conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+           unset($_SESSION['nome']);
+           unset($_SESSION['senha']);
+           header('Location: login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +31,7 @@
     <link rel="stylesheet" href="../../header/header.css">
     <link rel="stylesheet" href="../../css/servicocopy.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
     <title>Pequenos reparos</title>
     <style>
@@ -29,13 +51,15 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="../../../index_cliente.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
                     <a href="./../entrar/logins_form.html">
                         <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
+                        <?php
+                        echo "<h3>$logado</h3>";
+                    ?>
                     </a>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
@@ -45,11 +69,11 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./pedreiros.php">Pedreiro</a></li>
                                 <li><a href="#">Peq. Reparos</a></li>
-                                <li><a href="./pintores.html">Pintor</a></li>
-                                <li><a href="./diarista.html">Diarista</a></li>
-                                <li><a href="./servico.html">Outros</a></li>
+                                <li><a href="./pintores.php">Pintor</a></li>
+                                <li><a href="./diarista.php">Diarista</a></li>
+                                <li><a href="./servico.php">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -66,8 +90,8 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../cadastro/form_cadastros.html">Cadastrar</a></li>
-                                <li><a href="./../entrar/logins_form.html">Entrar</a></li>
+                                <li><a href="#">Ver Perfil</a></li>
+                                <li><a href="./../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
                     </li>
@@ -102,23 +126,34 @@
 
 
     <div id="container">
+
         <main>
             <h2 id="title">Pequenos reparos</h2>
+
+
             <ol id='list'>
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/reaparos2.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Rogerio</h2>
+
                             <span class="txt-categoria">Rogerio</span>
+
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
+
+
                             <nav>
+
                                 <label for="touch"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Concerto de fechadura</li>
@@ -126,30 +161,44 @@
                                     <li>Instalaçâo de chuveiro</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
                             <ul>
+
                                 <span class="txt-categoria">Concerto de fechadura</span>
                                 <span class="txt-categoria">troca de lampadas</span>
                                 <span class="txt-categoria">instalaçâo de chuveiro</span>
                                 <span class="txt-categoria">outros</span>
+
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+
                 </li>
+
+
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/reparo.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Roberto</h2>
                             <span class="txt-categoria">roberto</span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
                             <nav>
+
                                 <label for="touch1"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch1">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Calhas metalicas</li>
@@ -157,30 +206,41 @@
                                     <li>Telhas</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
                             <ul>
                                 <span class="txt-categoria">calhas metalicas</span>
                                 <span class="txt-categoria">paredes</span>
                                 <span class="txt-categoria">telhas</span>
                                 <span class="txt-categoria">outros</span>
+
                         </div>
                         </ul>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+
+
                 </li>
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/reparo1.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Joâo</h2>
                             <span class="txt-categoria">joao</span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
                             <nav>
+
                                 <label for="touch2"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch2">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Limpeza de vidro</li>
@@ -188,28 +248,41 @@
                                     <li>Instalaçâo</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
+
                             <ul>
                                 <span class="txt-categoria">limpeza de vidro</span>
                                 <span class="txt-categoria">montagem de moveis</span>
                                 <span class="txt-categoria">instalaçâo</span>
                                 <span class="txt-categoria">outros</span>
+
+
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+
+
                 </li>
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/reaparos2.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Saflaete</h2>
                             <span class="txt-categoria">saflaete</span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
                             <nav>
+
                                 <label for="touch3"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch3">
 
@@ -220,7 +293,9 @@
                                     <li>Retirada de pó</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
                             <ul>
                                 <span class="txt-categoria">Limpeza de casa</span>
                                 <span class="txt-categoria">limpeza de casa</span>
@@ -231,8 +306,14 @@
                                 <span class="txt-categoria">outros</span>
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+
+
                 </li>
+
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -240,14 +321,18 @@
                             <h2 class="nome">Roberto</h2>
                             <span class="txt-categoria">roberto</span>
                             <span class="txt-categoria">Roberto</span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
                             <nav>
+
                                 <label for="touch4"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch4">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Troca de chuveiro</li>
@@ -255,16 +340,24 @@
                                     <li>Poda de árvores</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
                             <ul>
                                 <span class="txt-categoria">troca de chuveiro</span>
                                 <span class="txt-categoria">instalaçâo de lâmpadas</span>
                                 <span class="txt-categoria">poda de árvores</span>
                                 <span class="txt-categoria">outros</span>
+
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+
+
                 </li>
+
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -272,14 +365,18 @@
                             <h2 class="nome">Ricardo</h2>
                             <span class="txt-categoria">Ricardo</span>
                             <span class="txt-categoria">ricardo</span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
                             <nav>
+
                                 <label for="touch5"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch5">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Troca de chuveiro</li>
@@ -287,16 +384,24 @@
                                     <li>Tpoda de árvores</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
                             <ul>
                                 <span class="txt-categoria">troca de chuveiro</span>
                                 <span class="txt-categoria">instalaçâo de lâmpadas</span>
                                 <span class="txt-categoria">poda de árvores</span>
                                 <span class="txt-categoria">outros</span>
+
+
+                            
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
                 </li>
+
+
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -304,14 +409,18 @@
                             <h2 class="nome">Alguem</h2>
                             <span class="txt-categoria">Alguem</span>
                             <span class="txt-categoria"></span>
+
                         </div>
                         <div class="descricao">
                             <h3>Técnico em pequenos reparos</h3>
                             <p>☆☆☆☆☆</p>
                             <br>
+
                             <nav>
+
                                 <label for="touch6"><span>qualificaçâo</span></label>
                                 <input type="checkbox" id="touch6">
+
                                 <ul class="slide">
                                     <li>Executo pequenos reparos no geral.</li>
                                     <li>Troca de chuveiro</li>
@@ -319,21 +428,29 @@
                                     <li>Poda de árvores</li>
                                     <li>Outros</li>
                                 </ul>
+
                             </nav>
+
                             <ul>
                                 <span class="txt-categoria">troca de chuveiro</span>
                                 <span class="txt-categoria">instalaçâo de lâmpadas</span>
                                 <span class="txt-categoria">poda de árvores</span>
                                 <span class="txt-categoria">outros</span>
+
+
                             </ul>
                         </div>
-                        <a class="orcamento" href="../entrar/logins_form.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
                 </li>
+
+
                 </section>
             </ol>
+
         </main>
+
     </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
-
 </html>

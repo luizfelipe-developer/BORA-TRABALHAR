@@ -1,13 +1,14 @@
 <?php
     session_start();
-    include_once('conexao.php');
+    include_once('componentes/paginas/php/conexao.php');
+    include "componentes/paginas/cliente/php/consulta_cliente.php";
     // print_r($_SESSION);
-     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-     {
-        //  unset($_SESSION['nome']);
-        //  unset($_SESSION['senha']);
-        //  header('Location: login.php');
-     }
+    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['nome']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
     $logado = $_SESSION['nome'];
     if(!empty($_GET['search']))
     {
@@ -18,12 +19,11 @@
     {
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
-    $result = $conexao->query($sql);
+    $resultado = $conexao->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,14 +38,14 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="index.html"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="exit.php"><img src="componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                  
+                    <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
-        echo "<h3><u>$logado</u></h3>";
-    ?>
+                        echo "<h3>$logado</h3>";
+                    ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
@@ -57,7 +57,7 @@
                                 <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
                                 <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
                                 <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
-                                <li><a href="./componentes/paginas/servicos/diarista.html">Diarista</a></li>
+                                <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
                                 <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
                             </ul>
                         </div>
@@ -75,8 +75,28 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/cadastro/form_cadastros.html">Cadastrar</a></li>
-                                <li><a href="./componentes/paginas/entrar/logins_form.html">Entrar</a></li>
+                                <?php while($dados_cliente = mysqli_fetch_assoc($resultado)){
+                                    echo "<td>" .$dados_cliente['nome']."</td>";
+                                    echo "<td>" .$dados_cliente['sobrenome']."</td>";
+                                    echo "<td>" .$dados_cliente['cpf']."</td>";
+                                    echo "<td>" .$dados_cliente['dt_nascimento']."</td>";
+                                    echo "<td>" .$dados_cliente['genero']."</td>";
+                                    echo "<td>" .$dados_cliente['cep']."</td>";
+                                    echo "<td>" .$dados_cliente['uf']."</td>";
+                                    echo "<td>" .$dados_cliente['cidade']."</td>";
+                                    echo "<td>" .$dados_cliente['bairro']."</td>";
+                                    echo "<td>" .$dados_cliente['endereco']."</td>";
+                                    echo "<td>" .$dados_cliente['numero']."</td>";
+                                    echo "<td>" .$dados_cliente['telefone']."</td>";
+                                    echo "<td>" .$dados_cliente['email']."</td>";
+                                    echo "<td>" .$dados_cliente['senha']."</td>";
+                                    echo "<li>
+                                        <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
+                                            Editar Cadastro
+                                        </a>
+                                    </li>";
+                                } ?> 
+                                <li><a href="exit.php">Exit</a></li>
                             </ul>
                         </div>
                     </li>
@@ -109,7 +129,7 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <a href="componentes/paginas/servicos/servico.html">
+                <a href="componentes/paginas/servicos/pedreiros.html">
                     <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
@@ -117,7 +137,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/servico.html">
+                <a href="componentes/paginas/servicos/pequenosreparos.html">
                     <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
@@ -125,7 +145,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/diarista.html">
+                <a href="componentes/paginas/servicos/diarista.php">
                     <span class="txt-categoria">Domésticos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/vassoura.png" alt="">

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../../ico-sem-fundo.ico.ico"/>
+    <link rel="stylesheet" href="../../header/header.css">
+    <link rel="stylesheet" href="../../css/servicocopy.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./../../js/script.js" defer></script>
+    <title>Outros</title>
+    <style>
+        #container{
+            margin-top: 50px;
+        }
+        #title{
+            margin-top: 0px;
+            color: black;
+            text-align: center;
+            display: block;
+        }
+      
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="../../../index.html"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <!-- Menu -->
+            <div class="align-left">
+                <div class="aba-perfil">
+                    <a href="./../entrar/logins_form.html">
+                        <img src="../../imgs/icones/do-utilizador.png" alt="">
+                        <span>Fazer login</span>
+                    </a>
+                </div>
+                <div class="hamburguer active">&#9776;</div>
+                <ul class="menu active">
+                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class="actives">
+                        <p>SERVIÇOS</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./pequenosreparos.html">Peq. Reparos</a></li>
+                                <li><a href="./pintores.html">Pintor</a></li>
+                                <li><a href="./diarista.html">Diarista</a></li>
+                                <li><a href="#">Outros</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p>SOBRE</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./../suporte/suporte.html">Suporte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="">
+                        <p>CONTA</p>
+                        <div class="sub-menu-1">
+                            <ul>
+                                <li><a href="./../cadastro/form_cadastros.html">Cadastrar</a></li>
+                                <li><a href="./../entrar/logins_form.html">Entrar</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="barra-pesquisa">
+        <h1 style="color: #555;">O que você procura?</h1><br>
+
+        <form class="form">
+            <button>
+                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-labelledby="search">
+                    <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+            <input class="input" id="searchbar" onkeyup="search_pesquisa()" type="text" name="search"
+                placeholder="Ex. Outros" required="">
+            <button class="reset" type="reset">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+
+    <h2 id="title">Outros</h2>
+
+
+    <div id="container">
+
+        <main>
+
+
+            <ol id='list'>
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Luan</h2>
+
+                            <span class="txt-categoria">luan</span>
+                            
+                        </div>
+                            <div class="descricao">
+                                <h3>Pintor</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+                                
+                                <nav>
+
+                                    <label for="touch"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch">
+    
+                                    <ul class="slide">
+                                        <li>Pinturas especializadas em geral</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Paredes</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portoes</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">paredes</span>
+                                    <span class="txt-categoria">outros</span>
+ 
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+                        
+                </li>
+
+                
+                
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img class="rogerio" src="../../imgs/servicos-img/trabalhadores/rogerin.jpg" alt="Foto do Trabalhador">
+                            <h2 class="nome">Rogerio</h2>
+                            <span class="txt-categoria">rogerio</span>
+                        </div>
+                            <div class="descricao">
+                                <h3>Lanches</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+
+                                <nav>
+
+                                    <label for="touch1"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch1">
+    
+                                    <ul class="slide">
+                                        <li>Rogério lanches, o melhorzin</li>
+                                        <li>Salgado</li>
+                                        <li>Suco da fruta?</li>
+                                        <li>Melhores promoçôes</li>
+                                        <li>Salguadinhos</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">salgado</span>
+                                    <span class="txt-categoria">salguadinhos</span>
+                                    <span class="txt-categoria">suco de fruta</span>
+                                    <span class="txt-categoria">melhores promoçoes</span>
+                                    <span class="txt-categoria">promoçâo</span>
+                                    <span class="txt-categoria">Rogerio</span>
+
+                                    
+                                </div>
+                                </ul>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+     
+                        
+                </li>
+
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/trabalhadores/pintor1.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Batisto</h2>
+                            <span class="txt-categoria">batisto</span>
+                        </div>
+                            <div class="descricao">
+                                <h3>Pintor</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+
+                                <nav>
+
+                                    <label for="touch2"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch2">
+    
+                                    <ul class="slide">
+                                        <li>Pinturas especializadas em geral</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Móveis</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portoes</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">móveis</span>
+                                    <span class="txt-categoria">moveis</span>
+                                    <span class="txt-categoria">outros</span>
+
+
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+     
+                        
+                </li>
+
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Flavia</h2>
+                            <span class="txt-categoria">flavia</span>
+                        </div>
+                            <div class="descricao">
+                                <h3>Diarista</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+
+                                <nav>
+
+                                    <label for="touch3"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch3">
+    
+                                    <ul class="slide">
+                                        <li>Limpeza em geral,<br>cozinhar e passar</li>
+                                        <li>Portas</li>
+                                        <li>Portôes</li>
+                                        <li>Paredes</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">portas</span>
+                                    <span class="txt-categoria">portôes</span>
+                                    <span class="txt-categoria">paredes</span>
+                                    <span class="txt-categoria">outros</span>
+
+
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+     
+                        
+                </li>
+
+
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Roberto</h2>
+                            <span class="txt-categoria">roberto</span>
+                            <span class="txt-categoria">Roberto</span>
+
+                        </div>
+                            <div class="descricao">
+                                <h3>Pedreiro</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+
+                                <nav>
+
+                                    <label for="touch4"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch4">
+    
+                                    <ul class="slide">
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
+                                    <span class="txt-categoria">outros</span>
+
+
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+     
+                        
+                </li>
+
+
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Ricardo</h2>
+                            <span class="txt-categoria">Ricardo</span>
+                            <span class="txt-categoria">ricardo</span>
+
+                        </div>
+                            <div class="descricao">
+                                <h3>Pedreiro</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+                                <nav>
+
+                                    <label for="touch5"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch5">
+    
+                                    <ul class="slide">
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
+                                    <span class="txt-categoria">outros</span>
+
+
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+
+                </li>
+
+
+                <li class="pesquisa">
+                    <section class="card">
+                        <div class="card-foto">
+                            <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
+                            <h2 class="nome">Alguem</h2>
+                            <span class="txt-categoria">Alguem</span>
+                            <span class="txt-categoria"></span>
+
+                        </div>
+                            <div class="descricao">
+                                <h3>Pedreiro</h3>
+                                <p>☆☆☆☆☆</p>
+                                <br>
+                                <nav>
+
+                                    <label for="touch6"><span>qualificaçâo</span></label>
+                                    <input type="checkbox" id="touch6">
+    
+                                    <ul class="slide">
+                                        <li>Construçâo de paredes, muros e paredes em geral</li>
+                                        <li>Paredes</li>
+                                        <li>Muros</li>
+                                        <li>Polares</li>
+                                        <li>Outros</li>
+                                    </ul>
+    
+                                </nav>
+
+                                <ul>
+                                    <span class="txt-categoria">Paredes</span>
+                                    <span class="txt-categoria">parede</span>
+                                    <span class="txt-categoria">muros</span>
+                                    <span class="txt-categoria">Muros</span>
+                                    <span class="txt-categoria">pilares</span>
+                                    <span class="txt-categoria">Pilares</span>
+                                    <span class="txt-categoria">outros</span>
+
+
+                                </ul>
+                            </div>
+                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        
+                </li>
+
+                
+            </section>
+            </ol>
+
+    </main>
+        
+</div>
+</body>
+<script src="../../js/pesquisa.js"></script>
+</html>
