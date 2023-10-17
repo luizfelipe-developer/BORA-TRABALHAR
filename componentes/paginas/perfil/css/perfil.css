@@ -1,169 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
 
-header button
-{
+body{
+    justify-content: center;
     background-color: #f9f9f9;
-
-    border: none;
 }
 
-#perfil{
-    margin-top: 15px;
-}
-
-#perfil img{
-    height: 40px;
-    width: 40px;
-}
-
-
-
-header h2 i
-{
-    color: white;
-}
-
-
-
-
-main{
-    margin-top: 200px;
-}
-main .foto-perfil{
-    background-color: black;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-main form .edit_button{
-    width: 200px;
-    height: 35px;
-    border: none;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    background-image: linear-gradient(to right, #373ad1 , #1d72c7);
-}
-main form .edit_button:hover{
-    background-image: linear-gradient(to right, rgb(43, 43, 43) , rgb(49, 49, 49) , rgb(37, 37, 37));
-}
-main form .edit_button a{
-    text-decoration: none;
-    color: white;
-}
-main label img{
-    width: 50px;
-}
-main .info{
-    text-align: center;
-}
-main .info button{
-    width: 120px;
-    height: 32px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
-    color: #303030;
-    cursor:auto;
-}
-main #input_foto_perfil{
-    display: none;
-}
-main .ft_perfil{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #ddd;
-}
-main .foto_perfil{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #ddd;
+.container{
     display: flex;
-    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
     justify-content: center;
-    cursor: pointer;
 }
-main #picture_input{
-    display: none;
+
+.subcontainer{
+    margin: 70px;
+    justify-content: center;
+    align-items: center;
 }
-main .picture{
+
+.subcontainer2{
+    margin: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.subform2{
     width: 500px;
-    height: 300px;
-    background-color: #ddd;
-    color: #727272;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
-main form{
-    margin-top: 50px;
-}
-main .username{
-    background-color: white;
-}
-main form input{
-    background-color: white;
-    border: none;
-    outline: none;
-}
-.picture button{
-    border: none;
-    width: 35px;
-    height: 30px;
-    position: absolute;
-    margin-left: 467px;
-    margin-bottom: 270px;
-}
-#post_perfil{
-    width: 300px;
-    height: 220px;
-    margin-bottom: 10px;
-    display: none;
-}
-.modal-body form .picture{
+
+#descricao{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-family: sans-serif;
-    transition: color 300ms ease-in-out, backgrund-color 300ms ease-in-out;
-    margin-bottom: 70px;
+    height: 25vh;
+    border-radius: 40px;
+    resize: none;
+    padding: 15px;
 }
-.picture:hover{
-    color: #999;
-    background-color: #ccc;
-}
-picture:active{
-    background-color: #ddd;
-    color: #aaa;
-}
-.picture--img{
-    width: 467px;
-    height: 300px;
-}
-#picture--input{
-    display: none;
-}
-.npi{
-    width: 120px;
-    cursor: pointer;
-}
-#first-post p{
-    margin-top: 25px;
-    color: #757575;
-    margin-bottom: 170px;
-}
-#first-post{
+
+#subform{
     text-align: center;
-    margin-top: 170px;
-    display: block;
+    width: 200px;
 }
 
-.fa-circle-user::before, .fa-user-circle::before {
-    content: "\f2bd";
-    background-color: black;
-    border-radius: 17px;
-  }
+#subform span{
+    font-size: 18px;
+}
 
-  
+#subform label{
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+header button {
+  background-color: #f9f9f9;
+
+  border: none;
+}
+
+#perfil {
+  margin-top: 15px;
+}
+
+#perfil img {
+  height: 40px;
+  width: 40px;
+}
+
+header h2 i {
+  color: white;
+}
+
+main {
+  margin-top: 100px;
+}
+
+#subform span{
+    text-align: center;
+}
+
+main .foto-perfil {
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.edit_button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  background-image: linear-gradient(to right, #373ad1, #1d72c7);
+}
+.edit_button:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(43, 43, 43),
+    rgb(49, 49, 49),
+    rgb(37, 37, 37)
+  );
+}
+.edit_button a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+main label img {
+  width: 50px;
+}
+main .info {
+  text-align: center;
+}
+main .info button {
+  width: 120px;
+  height: 32px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  color: #303030;
+  cursor: auto;
+}
+main #input_foto_perfil {
+  display: none;
+}
+.ft_perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.foto_perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main #picture_input {
+  display: none;
+}
+main .picture {
+  width: 500px;
+  height: 300px;
+  background-color: #ddd;
+  color: #727272;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main form {
+  margin-top: 50px;
+}
+main .username {
+  background-color: white;
+}
+main form input {
+  background-color: white;
+  border: none;
+  outline: none;
+}
+.picture button {
+  border: none;
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  margin-left: 467px;
+  margin-bottom: 270px;
+}
+#post_perfil {
+  width: 300px;
+  height: 220px;
+  margin-bottom: 10px;
+  display: none;
+}
+.modal-body form .picture {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: sans-serif;
+  transition: color 300ms ease-in-out, backgrund-color 300ms ease-in-out;
+  margin-bottom: 70px;
+}
+.picture:hover {
+  color: #999;
+  background-color: #ccc;
+}
+picture:active {
+  background-color: #ddd;
+  color: #aaa;
+}
+.picture--img {
+  width: 467px;
+  height: 300px;
+}
+#picture--input {
+  display: none;
+}
+.npi {
+  width: 120px;
+  cursor: pointer;
+}
+#first-post p {
+  margin-top: 25px;
+  color: #757575;
+  margin-bottom: 170px;
+}
+#first-post {
+  text-align: center;
+  margin-top: 170px;
+  display: block;
+}
+
+.fa-circle-user::before,
+.fa-user-circle::before {
+  content: "\f2bd";
+  background-color: black;
+  border-radius: 17px;
+}

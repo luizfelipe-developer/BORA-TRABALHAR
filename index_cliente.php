@@ -2,6 +2,9 @@
     session_start();
     include_once('componentes/paginas/php/conexao.php');
     include "componentes/paginas/cliente/php/consulta_cliente.php";
+
+    
+
     // print_r($_SESSION);
     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
     {
@@ -19,7 +22,6 @@
     {
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
-    $resultado = $conexao->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -75,27 +77,7 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <?php while($dados_cliente = mysqli_fetch_assoc($resultado)){
-                                    echo "<td>" .$dados_cliente['nome']."</td>";
-                                    echo "<td>" .$dados_cliente['sobrenome']."</td>";
-                                    echo "<td>" .$dados_cliente['cpf']."</td>";
-                                    echo "<td>" .$dados_cliente['dt_nascimento']."</td>";
-                                    echo "<td>" .$dados_cliente['genero']."</td>";
-                                    echo "<td>" .$dados_cliente['cep']."</td>";
-                                    echo "<td>" .$dados_cliente['uf']."</td>";
-                                    echo "<td>" .$dados_cliente['cidade']."</td>";
-                                    echo "<td>" .$dados_cliente['bairro']."</td>";
-                                    echo "<td>" .$dados_cliente['endereco']."</td>";
-                                    echo "<td>" .$dados_cliente['numero']."</td>";
-                                    echo "<td>" .$dados_cliente['telefone']."</td>";
-                                    echo "<td>" .$dados_cliente['email']."</td>";
-                                    echo "<td>" .$dados_cliente['senha']."</td>";
-                                    echo "<li>
-                                        <a href='componentes/paginas/editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]'>
-                                            Editar Cadastro
-                                        </a>
-                                    </li>";
-                                } ?> 
+                                <li><a href="componentes/paginas/perfil/perfil.php">Meu Perfil</a></li>
                                 <li><a href="exit.php">Exit</a></li>
                             </ul>
                         </div>

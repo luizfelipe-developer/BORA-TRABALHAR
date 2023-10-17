@@ -3,7 +3,7 @@
 
     // Função para obter os dados do registro a ser editado
     function obterDadosCadastro($conexao, $id_colaborador) {
-        $sql = "SELECT * FROM sua_tabela WHERE id_colaborador = $id_colaborador";
+        $sql = "SELECT * FROM cad_colaborador WHERE id_colaborador = $id_colaborador";
         $result = $conexao->query($sql);
 
         if ($result->num_rows == 1) {
