@@ -1,3 +1,42 @@
+<?php
+    include_once('../php/conexao.php');
+
+    if(!empty($_GET['id_colaborador']))
+    {
+        $id_colaborador = $_GET['id_colaborador'];
+        $sqlSelect = "SELECT * FROM cad_colaborador WHERE id_colaborador = $id_colaborador";
+        $resultado = $conexao->query($sqlSelect);  
+        if($resultado->num_rows > 0)
+        {
+            while($dados_cliente = mysqli_fetch_assoc($resultado))
+            {   
+                $nome = $_POST['nome'];
+                $sobrenome = $_POST['sobrenome'];
+                $cpf = $_POST['cpf'];
+                $dt_nascimento = $_POST['dt_nascimento'];
+                $genero = $_POST['genero'];
+                $profissao = $_POST['profissao'];
+                $cep = $_POST['cep'];
+                $uf = $_POST['uf'];
+                $cidade = $_POST['cidade'];
+                $bairro = $_POST['bairro'];
+                $endereco = $_POST['endereco'];
+                $numero = $_POST['numero'];
+                $telefone = $_POST['telefone'];
+                $email = $_POST['email'];
+                $senha = $_POST['senha'];
+            }
+        }
+        else
+        {
+            header('Location: editar-colaborador.php');
+        }
+    }
+    else
+    {
+        header('Location: editar-colaborador.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,9 +51,9 @@
 
 <body>
     <div class="container">
-        <form class="form_container" action="processar_edicao_colaborador.php" method="post">
+        <form class="form_container" action="SaveEdit_cliente.php" method="post">
             <div class="title_container">
-                <p class="title">CADASTRE-SE COMO CLIENTE</p>
+                <p class="title">EDITAR COLABORADOR</p>
                 <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a
                     experiência.</span>
             </div>
@@ -54,6 +93,13 @@
                     <input type="radio" id="outro" name="genero" value="outros" />
                     <label class="input_label" for="outro">Outros</label>
                 </div>
+
+                <div class="input_container">
+          <label class="input_label" for="profissao">Profissão:</label>
+          <input placeholder="Profissão:" id="profissao" title="Profissão" name="profissao" type="text" 
+          class="input_field" value="<?php echo $profissao; ?>" required/>
+
+      </div>
             </div>
             <div class="input_container">
                 <div class="input_nome">
