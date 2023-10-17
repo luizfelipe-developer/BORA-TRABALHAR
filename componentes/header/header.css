@@ -155,7 +155,9 @@ ul li {
   text-align: left;
   color: #fff;
 }
-
+input[type=checkbox]{
+  display: none;
+  }
 @media screen and (max-width:980px) {
   .aba-perfil {
     display: flex;
