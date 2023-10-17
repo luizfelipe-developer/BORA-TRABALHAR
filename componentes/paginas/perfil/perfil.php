@@ -122,8 +122,6 @@
                         <img src="..." alt="">
                     </div>
                     <form action="" method="get">
-                    
-                        
                         <div>
                             <?php echo "<input<u> <u>$logado</u>";?><br>
                             <input type="text" placeholder="Bio..." disabled> <br>
