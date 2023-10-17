@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: #189eb9 1px solid;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.124);
+  background-color: #f9f9f9;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px 0px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  /* tamanho da caixa da logo */
+  height: 70px;
+  width: 130px;
+}
+
+.logo img {
+  /* imagem vai ocupar o tamanho da div em que ela está contida */
+  /* arredondei a imagem */
+  width: 100%;
+  height: 100%;
+}
+
+/* perfil do usuário */
+.align-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  flex-direction: row-reverse;
+}
+
+.aba-perfil {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.aba-perfil span {
+  font-size: 1.1em;
+  margin: 0 4px;
+  font-weight: 700;
+}
+
+.aba-perfil a {
+  width: 100%;
+  display: flex;
+  border: solid 0.5px #189eb9;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #189eb9;
+}
+
+.aba-perfil a:hover {
+  background-color: rgb(204, 232, 255);
+}
+
+.aba-perfil img {
+  width: 20px;
+  height: 20px;
+}
+
+.hamburguer {
+  cursor: pointer;
+  display: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.menu li {
+  margin-left: 10px;
+}
+
+.navbar p,
+.menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #189EB9;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.navbar p:hover,
+.menu li a:hover {
+  background-color: #189eb9;
+  color: #fff;
+}
+
+/* IDENTIFICAÇÃO DE PÁGINA */
+.actives,
+.navbar ul li:hover {
+  background-color: #f1f1f1;
+
+  border-radius: 3px;
+}
+
+/* SUBMENUS */
+.sub-menu-1 {
+  display: none;
+  align-items: center;
+}
+
+.navbar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background: #f1f1f1;
+  margin-top: .5px;
+}
+
+.navbar ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 10px;
+}
+
+.navbar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #949090;
+  background: transparent;
+  border-radius: 0;
+}
+
+.navbar ul li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+.navbar ul li:hover .sub-menu-1 ul li a:hover {
+  text-align: left;
+  color: #fff;
+}
+
+input[type=checkbox]{
+display: none;
+}
+
+@media screen and (max-width:1080px) {
+  .navbar{
+    justify-content: space-evenly;
+    gap: 270px;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .navbar{
+    justify-content: space-between;
+    gap: 0px; 
+  }
+
+  .align-left{
+    flex-direction: row;
+    gap: 10px;
+}
+.logo{
+width: 105px;
+height: auto;
+}
+.aba-perfil {
+display: flex;
+margin-top: 4px;
+}
+.aba-perfil span {
+font-size: 15px;
+margin: 0 4px;
+font-weight: 700;
+}
+
+.aba-perfil a {
+width: 100%;
+display: flex;
+border: solid 0.5px #189eb9;
+border-radius: 50px;
+align-items: center;
+justify-content: center;
+padding: 3px 6px;
+text-decoration: none;
+color: #189eb9;
+}
+
+.aba-perfil a:hover {
+background-color: rgb(204, 232, 255);
+}
+
+.aba-perfil img {
+width: 25px;
+height: 25px;
+}
+  .hamburguer {
+    display: block;
+    font-size: 2rem;
+    z-index: 999;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    max-width: 200px;
+    padding: 100px 20px;
+
+    flex-direction: column;
+  }
+
+  .menu.active {
+    left: 0;
+    transition: 0.5s ease;
+  }
+
+  .navbar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    right: -120px;
+    margin-top: -35px;
+  }
+}

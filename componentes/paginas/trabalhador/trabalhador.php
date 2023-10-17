@@ -43,9 +43,12 @@
             <div class="logo"><a href="../../../exit.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
-            <?php
-        echo "<h3><u>$logado</u></h3>";
-    ?>
+                <div class="aba-perfil">
+                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+                    <?php
+                        echo "<h3>$logado</h3>";
+                    ?>
+                </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
                     <li class="actives"><a href="../../../index.html">INÍCIO</a></li>
