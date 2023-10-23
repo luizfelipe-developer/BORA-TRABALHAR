@@ -1,6 +1,17 @@
-<?php 
+<?php
 include("../../php/conexao.php");
-//receber as iformações repassadas pelo método POST pelo formulário
+
+// Função para inserir categorias selecionadas
+function inserirCategorias($id_usuario, $categoriasSelecionadas, $conexao) {
+    foreach ($categoriasSelecionadas as $categoria) {
+        $categoria = mysqli_real_escape_string($conexao, $categoria);
+        $sql = "INSERT INTO categorias_selecionadas (id_usuario, categoria) VALUES ($id_usuario, '$categoria')";
+        $conexao->query($sql);
+    }
+}
+
+// Continuação do seu código existente
+
 $nome = $_POST['nome'];
 $sobrenome = $_POST['sobrenome'];
 $cpf = $_POST['cpf'];
@@ -17,18 +28,18 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-//inserir os valores adicionados das variáveis nos campos da tabela cliente do BD
 $inserirSql = "INSERT INTO cad_colaborador(nome, sobrenome, cpf, dt_nascimento, genero, profissao, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha) 
 VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$profissao', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha')";
-//sempre que os valores forem do tipo varchar, devem ficar entre 'aspas simples'
-//Verificação
+
 if (mysqli_query($conexao, $inserirSql)) {
     echo "Usuário cadastrado!";
+    $id_usuario = mysqli_insert_id($conexao); // Obtém o ID do usuário recém-inserido
+    $categoriasSelecionadas = $_POST['categorias']; // Supondo que as categorias são enviadas do formulário com o nome 'categorias'
+    inserirCategorias($id_usuario, $categoriasSelecionadas, $conexao); // Chama a função para inserir as categorias
 } else {
-    echo "Usuário não cadastrado. Erro: ".mysqli_connect_error($conexao);
+    echo "Usuário não cadastrado. Erro: " . mysqli_connect_error($conexao);
 }
-//encerrar a conexão, para evitar travamentos no BD
-mysqli_close($conexao);
-header('Location: ../../entrar/logins_form.html')
 
+mysqli_close($conexao);
+header('Location: ../../entrar/logins_form.html');
 ?>
