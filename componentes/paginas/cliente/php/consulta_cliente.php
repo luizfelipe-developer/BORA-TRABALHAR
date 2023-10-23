@@ -1,28 +1,24 @@
+
+
 <?php
-    include "../../php/conexao.php";
+
+include "../../php/conexao.php";
+
+   session_start();
     
     if(mysqli_connect_error())
     trigger_error(mysqli_connect_error());
 
+    $id_user = $_SESSION['idUsu'];
+    $user = $_SESSION['nomeUse'];
 
+      $sqll= "SELECT * FROM `cad_cliente` WHERE  `id_cliente`= '$id_user'";      
+        $queryp = $conexao->query($sqll);
+
+   
+        $msgg = $queryp->num_rows;
         
-        $sql = "SELECT * FROM `cad_cliente`";
-        $query = $conexao->query($sql);
 
-        
-
-        /*
-        $msg = 'Registros encontrados: '.$query->num_rows;
-        echo $msg;
-        */
-        $msg = $query->num_rows;
-
-    /*while ($dados = $query->fetch_array()) {
-        echo 'Código: '.$dados['cod_cliente']. '<br>'; 
-        echo 'Nome: '.$dados['nome']. '<br>';
-        echo 'UF: '.$dados['uf']. '<br>';
-        echo 'Cidade: '.$dados['cidade']. '<br>'.'<br>';    
-    }*/
     
 
 ?>
