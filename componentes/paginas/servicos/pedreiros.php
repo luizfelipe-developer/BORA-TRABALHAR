@@ -69,7 +69,7 @@ display: block;
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="pedreiros.php">Pedreiro</a></li>
+                                <li><a href="#">Pedreiro</a></li>
                                 <li><a href="./pequenosreparos.php">Peq. Reparos</a></li>
                                 <li><a href="./pintores.php">Pintor</a></li>
                                 <li><a href="diarista.php">Diarista</a></li>

@@ -62,7 +62,7 @@ display: block;
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class=""><a href="../../../index_cliente.php">INÍCIO</a></li>
                     <li class="actives">
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
@@ -70,7 +70,7 @@ display: block;
                                 <li><a href="pedreiros.php">Pedreiro</a></li>
                                 <li><a href="pequenosreparos.php">Peq. Reparos</a></li>
                                 <li><a href="pintores.php">Pintor</a></li>
-                                <li><a href="diarista.php">Diarista</a></li>
+                                <li><a href="#">Diarista</a></li>
                                 <li><a href="servico.php">Outros</a></li>
                             </ul>
                         </div>
