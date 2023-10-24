@@ -2,14 +2,21 @@
     session_start();
     include_once('../php/conexao.php');
     include "../cliente/php/consulta_cliente.php";
+    include "../cliente/php/consulta_biografia.php";
+    session_start();
+    if (!isset($_SESSION['online'])) {
 
+    } else {
+        $user = $_SESSION['nomeUse'];
+    }
+    
     // print_r($_SESSION);
-     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-     {
-          unset($_SESSION['nome']);
-          unset($_SESSION['senha']);
-          header('Location: login.php');
-     }
+    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['nome']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
     $logado = $_SESSION['nome'];
     if(!empty($_GET['search']))
     {
@@ -21,9 +28,17 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY id_cliente DESC";
     }
     $resultado = $conexao->query($sql);
+
+    session_start();
+    if (!isset($_SESSION['online'])) {
+
+    } else {
+        $user = $_SESSION['nomeUsu'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,31 +53,32 @@
     <script src="../../../componentes/js/script.js" defer></script>
     <title>Perfil</title>
     <style>
-        .descricao{
-        display: none;
-        overflow: hidden;
-        }
-      
-
-      .desaparece{
+    .descricao {
         display: none;
         overflow: hidden;
     }
-       
+
+
+    .desaparece {
+        display: none;
+        overflow: hidden;
+    }
     </style>
 </head>
+
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="../../../exit.php"><img src="../../../componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="../../../exit.php"><img
+                        src="../../../componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
-                <!-- <div class="aba-perfil">
+                <div class="aba-perfil">
                     <img src="../../imgs/icones/do-utilizador.png" alt="">
                     <?php
-                        echo "<h3>$logado</h3>";
+                        echo "<span>$logado</span>";
                     ?>
-                </div> -->
+                </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
                     <li class="actives"><a href="#container">INÍCIO</a></li>
@@ -100,47 +116,53 @@
                 </ul>
             </div>
         </div>
-    </header>    
+    </header>
     <main>
-   
+
         <div class="container">
             <div class="subcontainer">
-                <div class="ft_perfil">
-                    <img src="" alt="">
-                </div>
+                <form action="../cliente/php/upload_foto.php" method="POST" enctype="multipart/form-data" style="margin: 0;">
+                    <div class="ft_perfil">
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" name="imagem" />
+                        <input type="submit" value="Enviar" />
+                    </div>
+                </form>
+                <!-- <form action="../cliente/php/upload_foto.php" method="post" style="margin: 0;">
+                    <div class="ft_perfil">
+                        <img src="" alt="">
+                        <input type="file" name="foto_cliente" accept="imagem/cliente">
+                    </div>
+                </form> -->
                 <div id="subform">
                     <?php echo "<span><u>$logado</u></span>";?>
                 </div>
                 <button class="edit_button">
-                    
-                     <?php
-                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
-                    echo "<tr>";
-                    echo "<td><span class='descricao'>CÓDIGO: </span>" . $dados_cliente['id_cliente'] . "</td>";
-                    echo "<td><span class='descricao'>GÊNERO: </span>" . $dados_cliente['nome'] . "</td>";
 
-                    echo "<td>
-                        <a class='btn btn-sm btn-primary' href='../editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]' title='Editar'>
-                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
-                                <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
-                            </svg>
-                            </a> 
-                            </svg>
-                            </a>
-                            </td>";
-                    echo "</tr>";
-                }
-                ?>
+                    <?php
+                        while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                            echo "<tr>";
+                            // echo "<td><span class='descricao'>CÓDIGO: </span>" . $dados_cliente['id_cliente'] . "</td>";
+                            // echo "<td><span class='descricao'>GÊNERO: </span>" . $dados_cliente['nome'] . "</td>";
+
+                            echo "<td>
+                                <a class='btn btn-sm btn-primary' href='../editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]' title='Editar'>
+                                    <span>Editar Perfil</span>
+                                    </a> 
+                                    </svg>
+                                    </a>
+                                    </td>";
+                            echo "</tr>";
+                        }
+                    ?>
                 </button>
             </div>
-            <form action="../cliente/php/cad_biografia_cliente.php" method="post" class="subcontainer2">
-                <div class="subform2">
-                    <textarea name="" id="descricao" cols="80" rows="10" placeholder="Biografia" required></textarea>
-                </div>
-                <button id="save_biografia" value="Salvar" name="save_biografia">Salvar</button>
-            </form>
+            <div>
+                
+            </div>
         </div>
     </main>
-  
+
 </body>
+
 </html>

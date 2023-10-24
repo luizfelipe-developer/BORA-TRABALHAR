@@ -57,9 +57,7 @@ display: block;
                 <div class="aba-perfil">
                     <a href="./../entrar/logins_form.html">
                         <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <?php
-                        echo "<h3>$logado</h3>";
-                    ?>
+                        <?php echo "<span>$logado</span>";?>
                     </a>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
