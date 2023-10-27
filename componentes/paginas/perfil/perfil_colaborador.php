@@ -1,40 +1,24 @@
 <?php
-    session_start();
-    include_once('../php/conexao.php');
-    include "../cliente/php/consulta_cliente.php";
-    include "../cliente/php/consulta_biografia.php";
-    session_start();
-    if (!isset($_SESSION['online'])) {
+session_start();
+include_once('../php/conexao.php');
+include "../cliente/php/consulta_colaborador.php";
 
-    } else {
-        $user = $_SESSION['nomeUse'];
-    }
-    
-    // print_r($_SESSION);
-    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-    {
-        unset($_SESSION['nome']);
-        unset($_SESSION['senha']);
-        header('Location: login.php');
-    }
-    $logado = $_SESSION['nome'];
-    if(!empty($_GET['search']))
-    {
-        $data = $_GET['search'];
-        $sql = "SELECT * FROM cad_cliente WHERE id_cliente LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
-    }
-    else
-    {
-        $sql = "SELECT * FROM cad_cliente ORDER BY id_cliente DESC";
-    }
-    $resultado = $conexao->query($sql);
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
 
-    session_start();
-    if (!isset($_SESSION['online'])) {
+$logado = $_SESSION['nome'];
 
-    } else {
-        $user = $_SESSION['nomeUsu'];
-    }
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_cliente WHERE (id_colaborador LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_colaborador WHERE nome = '$logado' ORDER BY id_colaborador DESC";
+}
+$resultado = $conexao->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -127,22 +111,19 @@
                 </div>
                 <button class="edit_button">
 
-                    <?php
-                        while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
-                            echo "<tr>";
-                            // echo "<td><span class='descricao'>CÓDIGO: </span>" . $dados_cliente['id_cliente'] . "</td>";
-                            // echo "<td><span class='descricao'>GÊNERO: </span>" . $dados_cliente['nome'] . "</td>";
-
-                            echo "<td>
-                                <a class='btn btn-sm btn-primary' href='../editar/editar-cliente.php?id_cliente=$dados_cliente[id_cliente]' title='Editar'>
-                                    <span>Editar Perfil</span>
-                                    </a> 
-                                    </svg>
-                                    </a>
-                                    </td>";
-                            echo "</tr>";
-                        }
-                    ?>
+                <?php
+                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                    echo "<tr>";
+                    echo "<td>
+                        <a class='btn btn-sm btn-primary' href='../editar/editar-colaborador.php?id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
+                            
+                           
+                           EDITAR </a> 
+                           
+                            </td>";
+                    echo "</tr>";
+                }
+                ?>
                 </button>
             </div>
             <div>

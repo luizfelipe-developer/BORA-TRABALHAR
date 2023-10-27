@@ -16,6 +16,7 @@
                 $dt_nascimento = $_POST['dt_nascimento'];
                 $genero = $_POST['genero'];
                 $profissao = $_POST['profissao'];
+
                 $cep = $_POST['cep'];
                 $uf = $_POST['uf'];
                 $cidade = $_POST['cidade'];
@@ -36,6 +37,7 @@
     {
         header('Location: editar-colaborador.php');
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,40 +48,41 @@
     <link rel="shortcut icon" type="imagem/x-icon" href="../../imgs/icones/ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../css/colaborador.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-    <title>Editar - Cliente</title>
+    <title>Editar - Colaborador</title>
 </head>
 
 <body>
     <div class="container">
-        <form class="form_container" action="" method="post">
+        <form class="form_container" action="saveEdit_cliente.php" method="post">
             <div class="title_container">
-                <p class="title">EDITAR COLABORADOR</p>
+                <p class="title">CADASTRE-SE COMO COLABORADOR</p>
                 <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a
                     experiência.</span>
             </div>
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">Nome:</label>
-                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $nome; ?>" required>
+                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $logado; ?>">
                 </div>
                 <div class="nome">
                     <label class="input_label" for="email_field">Sobrenome:</label>
                     <input placeholder="Sobrenome" title="Sobrenome completo" name="sobrenome" type="text"
-                        class="input_sname" value="<?php echo $sobrenome; ?>" required>
+                        class="input_sname" value="<?php echo $sobrenome; ?>"/>
                 </div>
             </div>
+            
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">CPF:</label>
                     <input oninput="mascara(this)" placeholder="123.456.789-10" name="cpf" type="text"
-                        class="input_name" value="<?php echo $cpf; ?>" required>
+                        class="input_name" value="<?php echo $cpf; ?>"/>
 
                 </div>
 
                 <div class="nome">
                     <label class="input_label" for="email_field">Nascimento:</label>
                     <input placeholder="Sobrenome" title="Sobrenome completo" name="dt_nascimento" type="date"
-                        class="input_sname" value="<?php echo $dt_nascimento; ?>" required />
+                        class="input_sname" value="<?php echo $dt_nascimento; ?>"  />
                 </div>
             </div>
             <div class="input_container">
@@ -93,14 +96,14 @@
                     <input type="radio" id="outro" name="genero" value="outros" />
                     <label class="input_label" for="outro">Outros</label>
                 </div>
+            </div>
 
-                <div class="input_container">
+            <div class="input_container">
           <label class="input_label" for="profissao">Profissão:</label>
           <input placeholder="Profissão:" id="profissao" title="Profissão" name="profissao" type="text" 
-          class="input_field" value="<?php echo $profissao; ?>" required/>
+          class="input_field" value="<?php echo $profissao; ?>" />
 
       </div>
-            </div>
             <div class="input_container">
                 <div class="input_nome">
                     <div class="nome">
@@ -140,7 +143,7 @@
                 <input onkeyup="handlePhone(event)" maxlength="15" placeholder="(ddd) 00000-0000"
                     title="Número para Contato" name="telefone" type="text" class="input_field" />
                 <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field"
-                    id="email_field" required />
+                    id="email_field" />
             </div>
 
             <div class="input_container">
@@ -156,14 +159,14 @@
                 <div>
                     <label class="input_label" for="password_field">Confirme Senha:</label>
                     <input placeholder="Senha" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha"
-                        type="password" class="input_field" required />
+                        type="password" class="input_field"  />
                     <i class="bi bi-eye-fill" id="btn-confirmar" onclick="confirmarsenha()"></i>
                 </div>
             </div>
 
-            <button title="Sign In" type="submit" class="sign-in_btn" name="update">
-                <span>Atualizar</span>
-            </button>
+                <input type="hidden" name="id_colaborador" value=<?php echo $id_colaborador;?>>
+                <input type="submit" name="updatee" id="submit" class="sign-in_btn">
+               
             <a id="home" href="../../../index.html"> Voltar a página inicial</a>
         </form>
     </div>

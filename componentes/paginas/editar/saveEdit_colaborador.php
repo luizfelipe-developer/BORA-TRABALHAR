@@ -1,7 +1,7 @@
 <?php
     // isset -> serve para saber se uma variável está definida
     include_once('../php/conexao.php');
-    if(isset($_POST['update'])){
+    if(isset($_POST['updatee'])){
 
         $nome = $_POST['nome'];
         $sobrenome = $_POST['sobrenome'];
@@ -25,6 +25,6 @@
         $resultado = $conexao->query($sqlUpdate);
         print_r($resultado);
     }
-    header('Location: ../../../index_cliente.php');
+    header('Location: ../../paginas/trabalhador/trabalhador.php');
 
 ?>  

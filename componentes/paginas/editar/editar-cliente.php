@@ -35,6 +35,7 @@
     {
         header('Location: editar-cliente.php');
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -59,7 +60,7 @@
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">Nome:</label>
-                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $nome; ?>">
+                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $logado; ?>">
                 </div>
                 <div class="nome">
                     <label class="input_label" for="email_field">Sobrenome:</label>
@@ -67,6 +68,7 @@
                         class="input_sname" value="<?php echo $sobrenome; ?>"/>
                 </div>
             </div>
+            
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">CPF:</label>

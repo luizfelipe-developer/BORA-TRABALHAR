@@ -22,6 +22,7 @@ $resultado = $conexao->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,46 +37,35 @@ $resultado = $conexao->query($sql);
     <script src="../../../componentes/js/script.js" defer></script>
     <title>Perfil</title>
     <style>
-        .descricao{
-        display: none;
-        overflow: hidden;
-        }
-      
-
-      .desaparece{
+    .descricao {
         display: none;
         overflow: hidden;
     }
-       
+
+
+    .desaparece {
+        display: none;
+        overflow: hidden;
+    }
     </style>
 </head>
+
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="../../../exit.php"><img src="../../../componentes/imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="../../../exit.php"><img
+                        src="../../../componentes/imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
-                <!-- <div class="aba-perfil">
+                <div class="aba-perfil">
                     <img src="../../imgs/icones/do-utilizador.png" alt="">
                     <?php
-                        echo "<h3>$logado</h3>";
+                        echo "<span>$logado</span>";
                     ?>
-                </div> -->
+                </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
                     <li class="actives"><a href="#container">INÍCIO</a></li>
-                    <li class="">
-                        <p>SERVIÇOS</p>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
-                                <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
-                                <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
-                                <li><a href="./componentes/paginas/servicos/diarista.html">Diarista</a></li>
-                                <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
-                            </ul>
-                        </div>
-                    </li>
                     <li class="">
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
@@ -85,33 +75,43 @@ $resultado = $conexao->query($sql);
                             </ul>
                         </div>
                     </li>
-                    <!-- <li class="">
+                    <li class="">
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/cadastro/form_cadastros.html">Cadastrar</a></li>
-                                <li><a href="./componentes/paginas/entrar/logins_form.html">Entrar</a></li>
+                                <li><a href="perfil_colaborador.php">Meu Perfil</a></li>
+                                <li><a href="../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
-                    </li>  -->
+                    </li> 
                     <!-- fim -->
                 </ul>
             </div>
         </div>
-    </header>    
+    </header>
     <main>
-   
+
         <div class="container">
             <div class="subcontainer">
-                <div class="ft_perfil">
-                    <img src="" alt="">
-                </div>
+                <form action="../cliente/php/upload_foto.php" method="POST" enctype="multipart/form-data" style="margin: 0;">
+                    <div class="ft_perfil">
+                        <label for="imagem">Imagem:</label>
+                        <input type="file" name="imagem" />
+                        <input type="submit" value="Enviar" />
+                    </div>
+                </form>
+                <!-- <form action="../cliente/php/upload_foto.php" method="post" style="margin: 0;">
+                    <div class="ft_perfil">
+                        <img src="" alt="">
+                        <input type="file" name="foto_cliente" accept="imagem/cliente">
+                    </div>
+                </form> -->
                 <div id="subform">
                     <?php echo "<span><u>$logado</u></span>";?>
                 </div>
                 <button class="edit_button">
-                    
-                     <?php
+
+                <?php
                 while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
                     echo "<tr>";
                     echo "<td>
@@ -126,14 +126,12 @@ $resultado = $conexao->query($sql);
                 ?>
                 </button>
             </div>
-            <form action="../cliente/php/cad_biografia_cliente.php" method="post" class="subcontainer2">
-                <div class="subform2">
-                    <textarea name="" id="descricao" cols="80" rows="10" placeholder="Biografia" required></textarea>
-                </div>
-                <button id="save_biografia" value="Salvar" name="save_biografia">Salvar</button>
-            </form>
+            <div>
+                
+            </div>
         </div>
     </main>
-  
+
 </body>
+
 </html>
