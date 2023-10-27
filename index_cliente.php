@@ -46,7 +46,7 @@
                 <div class="aba-perfil">
                     <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
-                        echo "<span>$logado</span>";
+                        echo "<h3>$logado</h3>";
                     ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
@@ -56,11 +56,11 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/servicos/pedreiros.php">Pedreiro</a></li>
-                                <li><a href="./componentes/paginas/servicos/pequenosreparos.php">Peq. Reparos</a></li>
-                                <li><a href="./componentes/paginas/servicos/pintores.php">Pintor</a></li>
+                                <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
+                                <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
+                                <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
                                 <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
-                                <li><a href="./componentes/paginas/servicos/servico.php">Outros</a></li>
+                                <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -68,7 +68,7 @@
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/sobre/sobre_cliente.php">Sobre Nós</a></li>
+                                <li><a href="./componentes/paginas/sobre/sobre.html">Sobre Nós</a></li>
                                 <li><a href="./componentes/paginas/suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>
@@ -77,21 +77,9 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/perfil/perfil_cliente.php">Meu Perfil</a></li>
+                                <li><a href="componentes/paginas/perfil/perfil.php">Meu Perfil</a></li>
                                 <li><a href="exit.php">Exit</a></li>
-                                <?php while ($usuario = $queryp->fetch_array()) { ?>        
-                  
-                  <tr>
-            
-                     
-                      <a id="ed" class='btn btn-sm btn-primary' href='componentes/paginas/perfil/perfil.php?id_cliente= <?php echo $usuario['id_cliente'];?>' title='Editar'>
-                            <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil' viewBox='0 0 16 16'>
-                                <path d='M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z'/>
-                            </svg>
-                            </a> 
-                   
-                  </tr>
-                 <?php } ?>
+                             
                             </ul>
                         </div>
                     </li>
@@ -124,7 +112,7 @@
         <!-- CAIXA DE CATEGORIAS -->
         <section class="box-categorias">
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pedreiros.php">
+                <a href="componentes/paginas/servicos/pedreiros.html">
                     <span class="txt-categoria">Construção</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/hidrauli.png" alt="">
@@ -132,7 +120,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pequenosreparos.php">
+                <a href="componentes/paginas/servicos/pequenosreparos.html">
                     <span class="txt-categoria">Elétricos</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/lampada-eletrica.png" alt="">
@@ -148,7 +136,7 @@
                 </a>
             </div>
             <div class="categoria">
-                <a href="componentes/paginas/servicos/pintores.php">
+                <a href="componentes/paginas/servicos/pintores.html">
                     <span class="txt-categoria">Pinturas</span>
                     <div class="icone-categoria">
                         <img class="img-categorias" src="componentes/imgs/rolo-de-pintura.png" alt="">

@@ -51,7 +51,7 @@
 
 <body>
     <div class="container">
-        <form class="form_container" action="SaveEdit_cliente.php" method="post">
+        <form class="form_container" action="" method="post">
             <div class="title_container">
                 <p class="title">EDITAR COLABORADOR</p>
                 <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a

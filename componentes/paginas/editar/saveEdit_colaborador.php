@@ -9,7 +9,6 @@
         $dt_nascimento = $_POST['dt_nascimento'];
         $genero = $_POST['genero'];
         $profissao = $_POST['profissao'];
-
         $cep = $_POST['cep'];
         $uf = $_POST['uf'];
         $cidade = $_POST['cidade'];
