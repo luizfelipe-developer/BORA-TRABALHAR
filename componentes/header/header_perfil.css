@@ -50,10 +50,11 @@ header {
 }
 
 .aba-perfil {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  font-weight: bolder;
+  width: auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    display: flex;
 }
 
 .aba-perfil span {
@@ -62,25 +63,22 @@ header {
   font-weight: 700;
 }
 
-.aba-perfil a {
+.aba-perfil{
   width: 100%;
   display: flex;
   border: solid 0.5px #189eb9;
   border-radius: 50px;
   align-items: center;
   justify-content: center;
-  padding: 6px 10px;
+  padding: 4px 6px;
   text-decoration: none;
   color: #189eb9;
-}
-
-.aba-perfil a:hover {
-  background-color: rgb(204, 232, 255);
+  gap: 5px;
 }
 
 .aba-perfil img {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
 
 .hamburguer {

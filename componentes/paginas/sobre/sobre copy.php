@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('../php/conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+          unset($_SESSION['nome']);
+          unset($_SESSION['senha']);
+          header('Location: ../../../login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_colaborador WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_colaborador ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,10 +44,10 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="./../entrar/logins_form.html">
-                        <img src="./../../imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
-                    </a>
+                    <img src="../../imgs/icones/do-utilizador.png">
+                    <?php
+                        echo "<span>$logado</span>";
+                    ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">

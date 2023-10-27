@@ -38,46 +38,40 @@
 </head>
 
 <body>
-    <header>
+<header>
         <div class="navbar">
-            <div class="logo"><a href="../../../exit.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
+            <div class="logo"><a href="trabalhador.php"><img src="../../imgs/logo/logo-sem-fundo.png"></a></div>
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
                     <img src="../../imgs/icones/do-utilizador.png" alt="">
                     <?php
-                        echo "<h3>$logado</h3>";
+                        echo "<span>$logado</span>";
                     ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class="actives"><a href="../../../index.html">INÍCIO</a></li>
-                    <li class="">
-
-                    </li>
+                    <li class="actives"><a href="trabalhador">INÍCIO</a></li>
                     <li class="">
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="../../paginas/sobre/sobre.html">Sobre Nós</a></li>
-                                <li><a href="../../paginas/suporte/suporte.html">Suporte</a></li>
+                                <li><a href="../sobre/sobre_colaborador.php">Sobre Nós</a></li>
+                                <li><a href="../suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="">
-                        <p>MiNHA CONTA</p>
+                        <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="../perfil/perfil.php">Ver Perfil</a></li>
-                                <li><a href="../../../exit.php">Sair</a></li>
+                                <li><a href="../perfil/perfil_colaborador.php">Meu Perfil</a></li>
+                                <li><a href="../../../exit.php">Exit</a></li>
                             </ul>
                         </div>
                     </li>
-                    
                 </ul>
-      
             </div>
-      
         </div>
     </header>
     <main id="container" style="margin-top: 7%;">       

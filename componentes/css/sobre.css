@@ -12,6 +12,41 @@ main{
     max-width: 1200px; 
     background-color: #f9f9f9;
 }
+
+.aba-perfil {
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    display: flex;
+}
+
+.aba-perfil span {
+  font-size: 1.1em;
+  margin: 0 4px;
+  font-size: 700;
+}
+
+.aba-perfil{
+  width: 100%;
+  display: flex;
+  border: solid 0.5px #189eb9;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: #189eb9;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.aba-perfil img {
+  width: 25px;
+  height: 25px;
+}
+
+
 /*==============================CARD=================================*/
 
 section p{

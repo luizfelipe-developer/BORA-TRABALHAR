@@ -59,9 +59,7 @@ display: block;
                 <div class="aba-perfil">
                     <a href="./../entrar/logins_form.html">
                         <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <?php
-                        echo "<h3>$logado</h3>";
-                    ?>
+                        <?php echo "<span>$logado</span>"; ?>
                     </a>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
@@ -71,7 +69,7 @@ display: block;
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="pedreiros.php">Pedreiro</a></li>
+                                <li><a href="#">Pedreiro</a></li>
                                 <li><a href="./pequenosreparos.php">Peq. Reparos</a></li>
                                 <li><a href="./pintores.php">Pintor</a></li>
                                 <li><a href="diarista.php">Diarista</a></li>
