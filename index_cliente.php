@@ -68,7 +68,7 @@
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./componentes/paginas/sobre/sobre_cliente.php">Sobre Nós</a></li>
                                 <li><a href="./componentes/paginas/suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>
@@ -77,7 +77,7 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="componentes/paginas/perfil/perfil.php">Meu Perfil</a></li>
+                                <li><a href="./componentes/paginas/perfil/perfil_cliente.php">Meu Perfil</a></li>
                                 <li><a href="exit.php">Exit</a></li>
                                 <?php while ($usuario = $queryp->fetch_array()) { ?>        
                   
