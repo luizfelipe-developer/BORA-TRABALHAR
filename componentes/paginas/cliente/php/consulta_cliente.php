@@ -12,6 +12,7 @@ include "../../php/conexao.php";
     $id_user = $_SESSION['idUsu'];
     $user = $_SESSION['nomeUse'];
 
+
       $sqll= "SELECT * FROM `cad_cliente` WHERE  `id_cliente`= '$id_user'";      
         $queryp = $conexao->query($sqll);
 
