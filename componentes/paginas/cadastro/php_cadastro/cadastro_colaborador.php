@@ -10,6 +10,7 @@ function inserirCategorias($id_usuario, $categoriasSelecionadas, $conexao) {
     }
 }
 
+
 // Continuação do seu código existente
 
 $nome = $_POST['nome'];
