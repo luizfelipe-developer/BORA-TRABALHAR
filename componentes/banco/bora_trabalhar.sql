@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 06/10/2023 às 19:44
--- Versão do servidor: 5.7.24
--- Versão do PHP: 8.0.1
+-- Generation Time: Oct 30, 2023 at 06:33 PM
+-- Server version: 5.7.24
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `bora_trabalhar`
+-- Database: `bora_trabalhar`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cad_cliente`
+-- Table structure for table `cad_cliente`
 --
 
 CREATE TABLE `cad_cliente` (
@@ -42,21 +42,22 @@ CREATE TABLE `cad_cliente` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(225) NOT NULL,
-  `confirmacao_senha` varchar(225) NOT NULL
+  `id_cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Despejando dados para a tabela `cad_cliente`
+-- Dumping data for table `cad_cliente`
 --
 
-INSERT INTO `cad_cliente` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `confirmacao_senha`) VALUES
-('felipe', 'guimaraes', '467.267.472-78', '3273-06-27', 'masculino', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '42', '(67) 67472-8687', 'felipe.guimaraes5050@gmail.com', '123', '123'),
-('fdjdrjdryj', 'rtshjsrtjsrtjstrj', '756.856.856-86', '2023-10-11', 'masculino', '65906752', 'MA', 'Imperatriz', 'Residencial Sebastião Régis', 'Rua A', '32', '(56) 74585-6568', 'nhffvhdffbahdfb@gmail.com', '9876', '9876');
+INSERT INTO `cad_cliente` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `id_cliente`) VALUES
+('Ciclano', 'silva', '123.456.789-12', '2000-04-05', 'masculino', '65907410', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Projetada D', '1755', '(99) 99999-9999', 'ciclano@gmail.com', '1234', 1),
+('teste', 'teste', '172.897.319-87', '2312-09-08', 'masculino', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '12', '(12) 31231-7289', 'aaaa.@gmail.com', '123', 2),
+('anna', 'morais', '623.442.293-45', '2004-08-08', 'feminino', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '514140007', '(99) 98040-5150', 'annaklara57@gmai.com', '123', 3);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cad_colaborador`
+-- Table structure for table `cad_colaborador`
 --
 
 CREATE TABLE `cad_colaborador` (
@@ -75,31 +76,51 @@ CREATE TABLE `cad_colaborador` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(225) NOT NULL,
-  `confirmacao_senha` varchar(225) NOT NULL
+  `id_colaborador` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Despejando dados para a tabela `cad_colaborador`
+-- Dumping data for table `cad_colaborador`
 --
 
-INSERT INTO `cad_colaborador` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `profissao`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `confirmacao_senha`) VALUES
-('gustavinho', 'jiodw', '878.378.728-78', '1232-03-12', 'masculino', 'oedreuri', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '53', '(82) 98490-2809', 'gustavo.souza789@gmail.com', '123', '123');
+INSERT INTO `cad_colaborador` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `profissao`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `id_colaborador`) VALUES
+('htrjsrtjstr', 'fgjfgsjtjrtsjtsrj', '856.845.538-84', '2023-10-18', 'masculino', 'thjtfjfgjfgjkrtktk', '65906752', 'MA', 'Imperatriz', 'Residencial Sebastião Régis', 'Rua A', '457', '(79) 76065-6543', 'dwdgd@gmail.com', '456', 1),
+('felipe', 'sylva', '123.123.12', '2000-01-23', 'masculino', '', '65907410', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Projetada D', '1755', '(99) 99999-9999', 'pedreiro@gmail.com', '123', 22),
+('gustavinho', 'aa', '123.971.927-98', '1223-03-12', 'masculino', '', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '123', '(12) 87937-9817', 'gusta@gmail.com', '123', 23),
+('kayo', 'kayo', '120.987.312-90', '0123-09-07', 'masculino', 'Pedreiro', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '02', '(12) 31678-2637', 'kayo@gmail.com', '123', 24);
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `cad_cliente`
+-- Indexes for table `cad_cliente`
 --
 ALTER TABLE `cad_cliente`
-  ADD PRIMARY KEY (`cpf`);
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD KEY `cpf` (`cpf`);
 
 --
--- Índices de tabela `cad_colaborador`
+-- Indexes for table `cad_colaborador`
 --
 ALTER TABLE `cad_colaborador`
-  ADD PRIMARY KEY (`cpf`);
+  ADD PRIMARY KEY (`id_colaborador`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cad_cliente`
+--
+ALTER TABLE `cad_cliente`
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `cad_colaborador`
+--
+ALTER TABLE `cad_colaborador`
+  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
