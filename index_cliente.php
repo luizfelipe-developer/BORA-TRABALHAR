@@ -56,11 +56,11 @@
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/servicos/pedreiros.html">Pedreiro</a></li>
-                                <li><a href="./componentes/paginas/servicos/pequenosreparos.html">Peq. Reparos</a></li>
-                                <li><a href="./componentes/paginas/servicos/pintores.html">Pintor</a></li>
+                                <li><a href="./componentes/paginas/servicos/pedreiros.php">Pedreiro</a></li>
+                                <li><a href="./componentes/paginas/servicos/pequenosreparos.php">Peq. Reparos</a></li>
+                                <li><a href="./componentes/paginas/servicos/pintores.php">Pintor</a></li>
                                 <li><a href="./componentes/paginas/servicos/diarista.php">Diarista</a></li>
-                                <li><a href="./componentes/paginas/servicos/servico.html">Outros</a></li>
+                                <li><a href="./componentes/paginas/servicos/servico.php">Outros</a></li>
                             </ul>
                         </div>
                     </li>
