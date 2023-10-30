@@ -57,16 +57,14 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="./../entrar/logins_form.html">
-                        <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <?php
+                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+                    <?php
                         echo "<h3>$logado</h3>";
                     ?>
-                    </a>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class=""><a href="../../../index_cliente.php">INÍCIO</a></li>
                     <li class="actives">
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
@@ -83,7 +81,7 @@
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./../sobre/sobre_cliente.php">Sobre Nós</a></li>
                                 <li><a href="./../suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>

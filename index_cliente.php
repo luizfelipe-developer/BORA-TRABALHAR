@@ -68,7 +68,7 @@
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./componentes/paginas/sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./componentes/paginas/sobre/sobre_cliente.php">Sobre Nós</a></li>
                                 <li><a href="./componentes/paginas/suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>
