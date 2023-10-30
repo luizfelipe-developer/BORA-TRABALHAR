@@ -62,7 +62,7 @@ display: block;
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class=""><a href="../../../index.html">INÍCIO</a></li>
+                    <li class=""><a href="../../../index_cliente.php">INÍCIO</a></li>
                     <li class="actives">
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
