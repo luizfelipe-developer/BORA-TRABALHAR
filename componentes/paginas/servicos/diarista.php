@@ -55,10 +55,8 @@ display: block;
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="./../entrar/logins_form.html">
-                        <img src="../../imgs/icones/do-utilizador.png" alt="">
-                        <?php echo "<span>$logado</span>";?>
-                    </a>
+                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+                    <?php echo "<span>$logado</span>";?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
@@ -79,7 +77,7 @@ display: block;
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../sobre/sobre.html">Sobre Nós</a></li>
+                                <li><a href="./../sobre/sobre_cliente.php">Sobre Nós</a></li>
                                 <li><a href="./../suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>

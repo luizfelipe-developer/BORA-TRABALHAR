@@ -49,7 +49,7 @@ header {
   flex-direction: row-reverse;
 }
 
-.aba-perfil {
+.aba-perfil{
     width: auto;
     justify-content: center;
     align-items: center;
@@ -63,7 +63,7 @@ header {
   font-size: 700;
 }
 
-.aba-perfil{
+.aba-perfil a{
   width: 100%;
   display: flex;
   border: solid 0.5px #189eb9;
@@ -75,6 +75,10 @@ header {
   color: #189eb9;
   gap: 10px;
   margin-left: 10px;
+}
+
+.aba-perfil a:hover{
+  background-color: #c3e1e7;
 }
 
 .aba-perfil img {
