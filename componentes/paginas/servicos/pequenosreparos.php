@@ -169,7 +169,7 @@
 
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
 
                 </li>
@@ -213,7 +213,7 @@
 
                         </div>
                         </ul>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
 
 
@@ -257,7 +257,7 @@
 
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
 
 
@@ -302,7 +302,7 @@
                                 <span class="txt-categoria">outros</span>
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
 
 
@@ -346,7 +346,7 @@
 
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
 
 
@@ -393,7 +393,7 @@
                             
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
                 </li>
 
@@ -436,7 +436,7 @@
 
                             </ul>
                         </div>
-                        <a class="orcamento" href="perfil/perfil.html">contatar</a>
+                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
 
                 </li>
 

@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('../../php/conexao.php');
+    // print_r($_SESSION);
+     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+     {
+           unset($_SESSION['nome']);
+           unset($_SESSION['senha']);
+           header('Location: login.php');
+     }
+    $logado = $_SESSION['nome'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
+    }
+    $result = $conexao->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -29,23 +51,21 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <a href="./../entrar/pglogins.html">
-                        <img src="./../../../imgs/icones/do-utilizador.png" alt="">
-                        <span>Fazer login</span>
-                    </a>
+                    <img src="./../../../imgs/icones/do-utilizador.png" alt="">
+                    <?php echo "<span>$logado</span>"; ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
-                    <li class=""><a href="../../../../index.html">INÍCIO</a></li>
+                    <li class=""><a href="../../../../index_cliente.php">INÍCIO</a></li>
                     <li class="actives">
                         <p>SERVIÇOS</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../../servicos/pedreiros.html">Pedreiro</a></li>
-                                <li><a href="./../../servicos/pequenosreparos.html">Peq. Reparos</a></li>
-                                <li><a href="./../../servicos/pintores.html">Pintor</a></li>
-                                <li><a href="./../../servicos/diarista.html">Diarista</a></li>
-                                <li><a href="./../../servicos/servico.html">Outros</a></li>
+                                <li><a href="./../../servicos/pedreiros.php">Pedreiro</a></li>
+                                <li><a href="./../../servicos/pequenosreparos.php">Peq. Reparos</a></li>
+                                <li><a href="./../../servicos/pintores.php">Pintor</a></li>
+                                <li><a href="./../../servicos/diarista.php">Diarista</a></li>
+                                <li><a href="./../../servicos/servico.php">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -53,7 +73,7 @@
                         <p>SOBRE</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="#">Sobre Nós</a></li>
+                                <li><a href="../../sobre/sobre_cliente.php">Sobre Nós</a></li>
                                 <li><a href="./../../suporte/suporte.html">Suporte</a></li>
                             </ul>
                         </div>
@@ -62,8 +82,8 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="./../../cadastro/cadastros.html">Cadastrar</a></li>
-                                <li><a href="./../../entrar/login_form.html">Entrar</a></li>
+                                <li><a href="../../perfil/perfil.php">Meu Perfil</a></li>
+                                <li><a href="../../../../exit.php">Sair</a></li>
                             </ul>
                         </div>
                     </li>
@@ -96,8 +116,7 @@
             <p class="details">
                 <b> Desenvolvedor web<br>
                     Especializado nas mais diversas instituiçôes<br>
-                    Experiência no mercado há 6 anos
-                </b>
+                    Experiência no mercado há 6 anos</b>
             </p>
 
 

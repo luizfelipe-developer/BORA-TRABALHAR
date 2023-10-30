@@ -46,7 +46,7 @@
                 <div class="aba-perfil">
                     <img src="componentes/imgs/icones/do-utilizador.png" alt="">
                     <?php
-                        echo "<h3>$logado</h3>";
+                        echo "<span>$logado</span>";
                     ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
