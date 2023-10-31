@@ -99,10 +99,8 @@
             </div>
         </div>
     </header>
-
     <div class="barra-pesquisa">
         <h1 style="color: #555;">O que você procura?</h1><br>
-
         <form class="form">
             <button>
                 <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -124,7 +122,6 @@
     </div>
     <div id="container">
         <h2 id="title">Pintor</h2>
-
         <main>
             <ol id='list'>
                 <li class="pesquisa">
@@ -132,44 +129,33 @@
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Renan</h2>
-            
                             <span class="txt-categoria">renan</span>
-                            
                         </div>
                             <div class="descricao">
                                 <h3>Pintor</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
                                 <nav>
-
                                     <label for="touch"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Paredes</li>
                                         <li>Portas</li>
                                         <li>Pinturas</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
                                 <ul>
                                     <span class="txt-categoria">Parede</span>
                                     <span class="txt-categoria">Portas</span>
                                     <span class="txt-categoria">pinturas</span>
                                     <span class="txt-categoria">outros</span>
-
-
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-            
-                        
+                    </section>
                 </li>
-            
-            
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -182,36 +168,25 @@
                                 <p>☆☆☆☆☆</p>
                                 <br>
                                 <nav>
-
                                     <label for="touch1"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch1">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Casas</li>
                                         <li>Apartamentos</li>
                                         <li>Pinturas</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
                                 <ul>
                                     <span class="txt-categoria">casas</span>
                                     <span class="txt-categoria">apartamentos</span>
                                     <span class="txt-categoria">pinturas</span>
-                                
-                                   
-                                    
                                 </div>
                                 </ul>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-            
-            
-                        
+                    </section>
                 </li>
-            
-            
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -223,175 +198,122 @@
                                 <h3>Pintor</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch2"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch2">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Edificios</li>
                                         <li>Pinturas</li>
                                         <li>Paredes</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">edificios</span>
                                     <span class="txt-categoria">pinturas</span>
                                     <span class="txt-categoria">paredes</span>
                                     <span class="txt-categoria">outros</span>
-
-                                
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-            
-            
-                        
+                    </section>
                 </li>
-            
-            
-            
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/pintora.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Daniela</h2>
                             <span class="txt-categoria">Daniela</span>
-            
                         </div>
                             <div class="descricao">
                                 <h3>Pintora</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch3"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch3">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Pintura de metal</li>
                                         <li>moveis</li>
                                         <li>Pintora</li>
-
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Pintura de metal</span>
                                     <span class="txt-categoria">Moveis</span>
                                     <span class="txt-categoria">pintora</span>
-    
-                        
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-            
-            
-                        
+                    </section>
                 </li>
-            
-            
-            
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/pintora.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Lorena</h2>
                             <span class="txt-categoria">Lorena</span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Pintora</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch4"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch4">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Pintura modernas</li>
                                         <li>Casas</li>
                                         <li>Apartamentos</li>
-
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Pintura modernas</span>
                                     <span class="txt-categoria">casas</span>
                                     <span class="txt-categoria">apartamentos</span>
-        
-                                
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-            
+                    </section>
                 </li>
-            
-            
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Jacinto</h2>
                             <span class="txt-categoria">Jacinto</span>
-    
-            
                         </div>
                             <div class="descricao">
                                 <h3>Pintor</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch5"><span>qualificaçâo</span></label>
                                     <input type="checkbox" id="touch5">
-    
                                     <ul class="slide">
                                         <li>Trabalho com pintura de casas e apartamentos.</li>
                                         <li>Casa</li>
                                         <li>Pintor</li>
                                         <li>Predio</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
-                                  
                                     <span class="txt-categoria">casa</span>
                                     <span class="txt-categoria">pintor</span>
                                     <span class="txt-categoria">predio</span>
                                     <span class="txt-categoria">outros</span>
-
-                                
-                            
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                        
+                    </section>
                 </li>
-            
-                
-            </section>
             </ol>
-            
-   
+        </main>
+    </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
 

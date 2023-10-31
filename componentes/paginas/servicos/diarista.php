@@ -37,15 +37,12 @@
         #container{
             margin-top: 50px;
         }
-
         #title{
-margin-top: 0px;
-color: black;
-text-align: center;
-display: block;
-}
- 
-       
+            margin-top: 0px;
+            color: black;
+            text-align: center;
+            display: block;
+        }      
     </style>
 </head>
 <body>
@@ -97,7 +94,6 @@ display: block;
     </header>
     <div class="barra-pesquisa">
         <h1 style="color: #555;">O que você procura?</h1><br>
-
         <form class="form">
             <button>
                 <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -123,27 +119,20 @@ display: block;
 
         <main>
             <h2 id="title">Diaristas</h2>
-
-
             <ol id='list'>
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/diarista.png" alt="Foto do Trabalhador">
                             <h2 class="nome">Joaquina</h2>
-
                             <span class="txt-categoria">Joaquina</span>
                             <span class="txt-categoria">joaquina</span>
-
-                            
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch">
     
@@ -154,7 +143,6 @@ display: block;
                                         <li>Passar</li>
                                         <li>Outros</li>
                                     </ul>
-    
                                 </nav>
 
                                 <ul>
@@ -170,8 +158,7 @@ display: block;
                             </div>
 
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
-                        
+                    </section>
                 </li>
 
                 
@@ -190,12 +177,9 @@ display: block;
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch1"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch1">
-    
                                     <ul class="slide">
                                         <li>Limpeza em geral, cozinhar e passar</li>
                                         <li>Limpeza</li>
@@ -203,25 +187,18 @@ display: block;
                                         <li>Recolher o lixo</li>
                                         <li>Outros</li>
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Limpeza</span>
                                     <span class="txt-categoria">limpeza</span>
                                     <span class="txt-categoria">passar</span>
                                     <span class="txt-categoria">recolher o lixo</span>
                                     <span class="txt-categoria">outros</span>
-                                    
                                 </div>
                                 </ul>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
-     
-                        
+                    </section>
                 </li>
-
-
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -229,18 +206,14 @@ display: block;
                             <h2 class="nome">Ruti</h2>
                             <span class="txt-categoria">ruti</span>
                             <span class="txt-categoria">Ruti</span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch2"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch2">
-    
                                     <ul class="slide">
                                         <li>Limpeza em geral, cozinhar e passar</li>
                                         <li>Limpeza de vidro</li>
@@ -248,9 +221,7 @@ display: block;
                                         <li>Aspiraçâo</li>
                                         <li>Outros</li>
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Limpeza de vidro</span>
                                     <span class="txt-categoria">limpeza de vidro</span>
@@ -263,9 +234,7 @@ display: block;
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
-     
-                        
+                    </section>
                 </li>
 
 
@@ -276,18 +245,14 @@ display: block;
                             <h2 class="nome">Flavia</h2>
                             <span class="txt-categoria">flavia</span>
                             <span class="txt-categoria">Flavia</span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch3"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch3">
-    
                                     <ul class="slide">
                                         <li>Limpeza em geral, cozinhar e passar</li>
                                         <li>Limpeza de casa</li>
@@ -295,9 +260,7 @@ display: block;
                                         <li>Retirada de pó</li>
                                         <li>Outros</li>
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Limpeza de casa</span>
                                     <span class="txt-categoria">limpeza de casa</span>
@@ -306,18 +269,11 @@ display: block;
                                     <span class="txt-categoria">Retirada de pó</span>
                                     <span class="txt-categoria">retirada de po</span>
                                     <span class="txt-categoria">outros</span>
-
-
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
-     
-                        
+                    </section>
                 </li>
-
-
-
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -325,18 +281,14 @@ display: block;
                             <h2 class="nome">Roberto</h2>
                             <span class="txt-categoria">roberto</span>
                             <span class="txt-categoria">Roberto</span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <nav>
-
                                     <label for="touch4"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch4">
-    
                                     <ul class="slide">
                                         <li>Limpeza em geral, cozinhar e passar</li>
                                         <li>Passar roupas</li>
@@ -344,11 +296,8 @@ display: block;
                                         <li>Varrer e juntar o lixo</li>
                                         <li>Guardar roupas</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">Passar roupas</span>
                                     <span class="txt-categoria">passar roupas</span>
@@ -359,18 +308,11 @@ display: block;
                                     <span class="txt-categoria">Guardar roupas</span>
                                     <span class="txt-categoria">guardar roupas</span>
                                     <span class="txt-categoria">outros</span>
-
-
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
-     
-                        
+                    </section>
                 </li>
-
-
-
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -399,18 +341,13 @@ display: block;
                                     </ul>
     
                                 </nav>
-                                <ul>
-                                 
+                                <ul>            
                                     <span class="txt-categoria">outros</span>
-
-
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-
+                    </section>
                 </li>
-
-
                 <li class="pesquisa">
                     <section class="card">
                         <div class="card-foto">
@@ -418,46 +355,32 @@ display: block;
                             <h2 class="nome">Claudia</h2>
                             <span class="txt-categoria">claudia</span>
                             <span class="txt-categoria"></span>
-
                         </div>
                             <div class="descricao">
                                 <h3>Diarista</h3>
                                 <p>☆☆☆☆☆</p>
                                 <br>
-
                                 <!-- <div style='position:relative; top:0px; left:0px;'> -->
                                 <nav>
-
                                     <label for="touch6"><span>qualificação</span></label>
                                     <input type="checkbox" id="touch6">
-    
                                     <ul class="slide">
                                         <li>Limpeza em geral, cozinhar e passar</li>
                                         <li>Especialidade</li>
                                         <li>Especialidade</li>
                                         <li>Especialidade</li>
                                         <li>Outros</li>
-
                                     </ul>
-    
                                 </nav>
-                                
                                 <ul>
-                                  
                                     <span class="txt-categoria">outros</span>
-
                                 </ul>
                             </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                        
+                    </section>
                 </li>
-
-                
-            </section>
             </ol>
-
     </main>
-        
 </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
