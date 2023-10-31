@@ -19,7 +19,14 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
-    $diaristas = "SELECT * FROM cad_colaborador WHERE profissaodiarista"
+    $diaristas = "SELECT * FROM cad_colaborador WHERE profissao = 'Diarista'";
+    $resultado2 = $conexao->query($diaristas);
+    // if (mysqli_num_rows($resultado2) <1) {
+    //     # code...
+    //     print_r("não existe");
+    // } else{
+    //     print_r("existe");
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -114,8 +121,6 @@
             </button>
         </form>
     </div>
-
-
     <div id="container">
         <main>
             <h2 id="title">Diaristas</h2>
@@ -158,10 +163,16 @@
                     </section>
                 </li>
                <li class="pesquisa">
+                   <?php 
+                    while($dados_colab = $resultado2->fetch_array()){
+                        echo "<h2>".$dados_colab['nome']."</h2>";
+                    }
+                ?>
                 <section class="card">
                     <div class="card-foto">
                        <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">';; ?>
                     </div>
+                    <h2 class="nome"></h2>
                 </section>
                </li>
                <tbody>
