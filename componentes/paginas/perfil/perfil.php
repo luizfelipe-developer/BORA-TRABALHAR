@@ -96,8 +96,8 @@ $resultado = $conexao->query($sql);
                 <form action="../cliente/php/upload_foto.php" method="POST" enctype="multipart/form-data" style="margin: 0;">
                     <div class="ft_perfil">
                         <label for="imagem">Imagem:</label>
-                        <input type="file" name="imagem" />
-                        <input type="submit" value="Enviar" />
+                        <input type="file" name="imagem">
+                        <button value="Enviar">Enviar</button>
                     </div>
                 </form>
                 <!-- <form action="../cliente/php/upload_foto.php" method="post" style="margin: 0;">

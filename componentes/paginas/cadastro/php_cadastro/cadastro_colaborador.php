@@ -10,7 +10,6 @@ function inserirCategorias($id_usuario, $categoriasSelecionadas, $conexao) {
     }
 }
 
-
 // Continuação do seu código existente
 
 $nome = $_POST['nome'];
@@ -39,6 +38,7 @@ if (mysqli_query($conexao, $inserirSql)) {
     inserirCategorias($id_usuario, $categoriasSelecionadas, $conexao); // Chama a função para inserir as categorias
 } else {
     echo "Usuário não cadastrado. Erro: " . mysqli_connect_error($conexao);
+    // em caso de erro ative esse -> echo "Usuário não cadastrado. Erro: " . mysqli_connect_error();
 }
 
 mysqli_close($conexao);
