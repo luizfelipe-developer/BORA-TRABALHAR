@@ -19,6 +19,7 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
+    $diaristas = "SELECT * FROM cad_colaborador WHERE profissaodiarista"
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -143,7 +144,6 @@
                                         <li>Outros</li>
                                     </ul>
                                 </nav>
-
                                 <ul>
                                     <span class="txt-categoria">limpeza</span>
                                     <span class="txt-categoria">Limpeza</span>
@@ -152,51 +152,20 @@
                                     <span class="txt-categoria">passar</span>
                                     <span class="txt-categoria">Passar</span>
                                     <span class="txt-categoria">outros</span>
-
                                 </ul>
                             </div>
-
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
                     </section>
                 </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img  src="../../imgs/servicos-img/trabalhadores/diarista1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Rogerio</h2>
-                            <span class="txt-categoria">rogerio</span>
-                            <span class="txt-categoria">Rogerio</span>
-
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch1"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch1">
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza</li>
-                                        <li>Passar</li>
-                                        <li>Recolher o lixo</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Limpeza</span>
-                                    <span class="txt-categoria">limpeza</span>
-                                    <span class="txt-categoria">passar</span>
-                                    <span class="txt-categoria">recolher o lixo</span>
-                                    <span class="txt-categoria">outros</span>
-                                </div>
-                                </ul>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                <tbody>
-                <?php while ($dados_cliente = $query->fetch_array()) { ?>          
+               <li class="pesquisa">
+                <section class="card">
+                    <div class="card-foto">
+                       <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">';; ?>
+                    </div>
+                </section>
+               </li>
+               <tbody>
+                <?php while ($dados_cliente = $query->fetch_array()) { ?>
                 <tr>
                     <td> <?php echo $dados_cliente['cod_cliente'];?></td>
                     <td id = "td-nome" > <?php echo $dados_cliente['nome'];?></td>
@@ -206,185 +175,6 @@
                 </tr>
                <?php } ?>
             </tbody>
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Ruti</h2>
-                            <span class="txt-categoria">ruti</span>
-                            <span class="txt-categoria">Ruti</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch2"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch2">
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza de vidro</li>
-                                        <li>Limpeza de banheiro</li>
-                                        <li>Aspiraçâo</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Limpeza de vidro</span>
-                                    <span class="txt-categoria">limpeza de vidro</span>
-                                    <span class="txt-categoria">Limpeza de banheiro</span>
-                                    <span class="txt-categoria">limpeza de banheiro</span>
-                                    <span class="txt-categoria">Aspiraçâo</span>
-                                    <span class="txt-categoria">aspiraçâo</span>
-                                    <span class="txt-categoria">outros</span>
-
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-
-
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Flavia</h2>
-                            <span class="txt-categoria">flavia</span>
-                            <span class="txt-categoria">Flavia</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch3"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch3">
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza de casa</li>
-                                        <li>Passar roupas</li>
-                                        <li>Retirada de pó</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Limpeza de casa</span>
-                                    <span class="txt-categoria">limpeza de casa</span>
-                                    <span class="txt-categoria">Passar roupas</span>
-                                    <span class="txt-categoria">passar roupas</span>
-                                    <span class="txt-categoria">Retirada de pó</span>
-                                    <span class="txt-categoria">retirada de po</span>
-                                    <span class="txt-categoria">outros</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Roberto</h2>
-                            <span class="txt-categoria">roberto</span>
-                            <span class="txt-categoria">Roberto</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch4"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch4">
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Passar roupas</li>
-                                        <li>Tirar o lixo</li>
-                                        <li>Varrer e juntar o lixo</li>
-                                        <li>Guardar roupas</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Passar roupas</span>
-                                    <span class="txt-categoria">passar roupas</span>
-                                    <span class="txt-categoria">Tirar o lixo</span>
-                                    <span class="txt-categoria">tirar o lixo</span>
-                                    <span class="txt-categoria">Varrer e juntar o lixo</span>
-                                    <span class="txt-categoria">varrer e juntar o lixo</span>
-                                    <span class="txt-categoria">Guardar roupas</span>
-                                    <span class="txt-categoria">guardar roupas</span>
-                                    <span class="txt-categoria">outros</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Ricardo</h2>
-                            <span class="txt-categoria">Ricardo</span>
-                            <span class="txt-categoria">ricardo</span>
-
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-
-                                    <label for="touch5"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch5">
-    
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Outros</li>
-
-                                    </ul>
-    
-                                </nav>
-                                <ul>            
-                                    <span class="txt-categoria">outros</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Claudia</h2>
-                            <span class="txt-categoria">claudia</span>
-                            <span class="txt-categoria"></span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <!-- <div style='position:relative; top:0px; left:0px;'> -->
-                                <nav>
-                                    <label for="touch6"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch6">
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Especialidade</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">outros</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
             </ol>
     </main>
 </div>
