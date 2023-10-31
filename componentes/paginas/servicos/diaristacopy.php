@@ -195,6 +195,17 @@
                     </section>
                 </li>
                 <li class="pesquisa">
+                <tbody>
+                <?php while ($dados_cliente = $query->fetch_array()) { ?>          
+                <tr>
+                    <td> <?php echo $dados_cliente['cod_cliente'];?></td>
+                    <td id = "td-nome" > <?php echo $dados_cliente['nome'];?></td>
+                    <td> <?php echo $dados_cliente['uf'];?></td>
+                    <td> <?php echo $dados_cliente['cidade'];?></td>
+                    <td> <?php echo $dados_cliente['regiao'];?></td>
+                </tr>
+               <?php } ?>
+            </tbody>
                     <section class="card">
                         <div class="card-foto">
                             <img src="../../imgs/servicos-img/trabalhadores/diarista2.png" alt="Foto do Trabalhador">
