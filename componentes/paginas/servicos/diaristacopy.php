@@ -36,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "shortcut icon" type = "imagem/x-icon" href="../../../ico-sem-fundo.ico.ico"/>
     <link rel="stylesheet" href="../../header/header.css">
-    <link rel="stylesheet" href="../../css/servicocopy.css">
+    <link rel="stylesheet" href="../../css/servicocopy2.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
@@ -125,66 +125,28 @@
         <main>
             <h2 id="title">Diaristas</h2>
             <ol id='list'>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/diarista.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Joaquina</h2>
-                            <span class="txt-categoria">Joaquina</span>
-                            <span class="txt-categoria">joaquina</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch"><span>qualificação</span></label>
-                                    <input type="checkbox" id="touch">
-    
-                                    <ul class="slide">
-                                        <li>Limpeza em geral, cozinhar e passar</li>
-                                        <li>Limpeza</li>
-                                        <li>Faxina</li>
-                                        <li>Passar</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">limpeza</span>
-                                    <span class="txt-categoria">Limpeza</span>
-                                    <span class="txt-categoria">faxina</span>
-                                    <span class="txt-categoria">Faxina</span>
-                                    <span class="txt-categoria">passar</span>
-                                    <span class="txt-categoria">Passar</span>
-                                    <span class="txt-categoria">outros</span>
-                                </ul>
-                            </div>
+               
+                    <?php while($dados_colab = $resultado2->fetch_array()){ ?>
+                        
+                        <li class="pesquisa">
+                            <section class="card">
+                                <div class="card-foto">
+                                    <?php echo '<img src="./path/'.$dados_colab['nome_imagem'].'">'; ?>
+                                    <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
+                                </div>
+                                <div class="descricao">
+                                    <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
+                                    <br>
+                                    <nav>
+                                        <label for=""><span class="quali" onclick="exibirDiv()" >qualificação</span></label>
+                                        <ul class="slide">
+                                            <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
+                                        </ul>
+                                    </nav>
+                                </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <?php while($dados_colab = $resultado2->fetch_array()){ ?>
-
-                    <li class="pesquisa">
-                        <section class="card">
-                            <div class="card-foto">
-                               <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">'; ?>
-                               <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
-                               <?php echo "<span class>".$dados_colab['nome']."</span>"; ?>
-                            </div>
-                            <div class="descricao">
-                                <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
-                                <br>
-                                <nav>
-                                    <label for="touch"><span>qualificação</span></label>
-                                    <?php echo '<input type="checkbox" id="touch'.$dados_colab['id_colaborador'].'">' ;?>
-                                    <ul class="slide">
-                                        <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
-                                    </ul>
-                                </nav>
-                            </div>
                         </section>
                     </li>
-
                 <?php } ?>
             </ol>
     </main>
@@ -192,3 +154,12 @@
 </body>
 <script src="../../js/pesquisa.js"></script>
 </html>
+<script>
+    function exibirDiv() {
+        let clicar = document.querySelector('.quali')
+        let exibir = clicar.style.display
+        if (exibir == 'block'){
+            
+        }
+    }
+</script>
