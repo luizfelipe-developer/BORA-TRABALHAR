@@ -168,28 +168,24 @@
                         <section class="card">
                             <div class="card-foto">
                                <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">'; ?>
-                               echo "<h2>".$dados_colab['nome']."</h2>";
+                               <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
+                               <?php echo "<span class>".$dados_colab['nome']."</span>"; ?>
                             </div>
-
+                            <div class="descricao">
+                                <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
+                                <br>
+                                <nav>
+                                    <label for="touch"><span>qualificação</span></label>
+                                    <?php echo '<input type="checkbox" id="touch'.$dados_colab['id_colaborador'].'">' ;?>
+                                    <ul class="slide">
+                                        <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
+                                    </ul>
+                                </nav>
+                            </div>
                         </section>
                     </li>
 
                 <?php } ?>
-                <section class="card">
-                    <h2 class="nome"></h2>
-                </section>
-               </li>
-               <tbody>
-                <?php while ($dados_cliente = $query->fetch_array()) { ?>
-                <tr>
-                    <td> <?php echo $dados_cliente['cod_cliente'];?></td>
-                    <td id = "td-nome" > <?php echo $dados_cliente['nome'];?></td>
-                    <td> <?php echo $dados_cliente['uf'];?></td>
-                    <td> <?php echo $dados_cliente['cidade'];?></td>
-                    <td> <?php echo $dados_cliente['regiao'];?></td>
-                </tr>
-               <?php } ?>
-            </tbody>
             </ol>
     </main>
 </div>
