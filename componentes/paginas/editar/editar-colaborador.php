@@ -22,7 +22,7 @@
                 $bairro = $dados_colaborador['bairro'];
                 $endereco = $dados_colaborador['endereco'];
                 $numero = $dados_colaborador['numero'];
-                $telefonolaborador['telefone'];
+                $telefone = $dados_colaborador['telefone'];
                 $email = $dados_colaborador['email'];
                 $senha = $dados_colaborador['senha'];
             }
