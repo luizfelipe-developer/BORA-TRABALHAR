@@ -44,3 +44,4 @@ if (mysqli_query($conexao, $inserirSql)) {
 mysqli_close($conexao);
 header('Location: ../../entrar/logins_form.html');
 ?>
+

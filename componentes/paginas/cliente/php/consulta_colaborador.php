@@ -8,6 +8,7 @@ include "../../php/conexao.php";
     
     if(mysqli_connect_error())
     trigger_error(mysqli_connect_error());
+    $sobrenome = $_SESSION['sobrenome'];
 
     $id_user = $_SESSION['idUsu'];
     $user = $_SESSION['nomeUse'];

@@ -108,6 +108,8 @@ $resultado = $conexao->query($sql);
                 </form> -->
                 <div id="subform">
                     <?php echo "<span><u>$logado</u></span>";?>
+                    
+       
                 </div>
                 <button class="edit_button">
 
@@ -124,6 +126,7 @@ $resultado = $conexao->query($sql);
                     echo "</tr>";
                 }
                 ?>
+                
                 </button>
             </div>
             <div>
