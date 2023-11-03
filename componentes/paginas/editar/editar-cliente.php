@@ -10,20 +10,20 @@
         {
             while($dados_cliente = mysqli_fetch_assoc($resultado))
             {   
-                $nome = $_POST['nome'];
-                $sobrenome = $_POST['sobrenome'];
-                $cpf = $_POST['cpf'];
-                $dt_nascimento = $_POST['dt_nascimento'];
-                $genero = $_POST['genero'];
-                $cep = $_POST['cep'];
-                $uf = $_POST['uf'];
-                $cidade = $_POST['cidade'];
-                $bairro = $_POST['bairro'];
-                $endereco = $_POST['endereco'];
-                $numero = $_POST['numero'];
-                $telefone = $_POST['telefone'];
-                $email = $_POST['email'];
-                $senha = $_POST['senha'];
+                $nome = $dados_cliente['nome'];
+                $sobrenome = $dados_cliente['sobrenome'];
+                $cpf = $dados_cliente['cpf'];
+                $dt_nascimento = $dados_cliente['dt_nascimento'];
+                $genero = $dados_cliente['genero'];
+                $cep = $dados_cliente['cep'];
+                $uf = $dados_cliente['uf'];
+                $cidade = $dados_cliente['cidade'];
+                $bairro = $dados_cliente['bairro'];
+                $endereco = $dados_cliente['endereco'];
+                $numero = $dados_cliente['numero'];
+                $telefone = $dados_cliente['telefone'];
+                $email = $dados_cliente['email'];
+                $senha = $dados_cliente['senha'];
             }
         }
         else
@@ -60,7 +60,7 @@
             <div class="input_nome">
                 <div class="nome">
                     <label class="input_label" for="email_field">Nome:</label>
-                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $logado; ?>">
+                    <input placeholder="Nome" title="Primeiro nome" name="nome" type="text" class="input_name" value="<?php echo $nome; ?>"/>
                 </div>
                 <div class="nome">
                     <label class="input_label" for="email_field">Sobrenome:</label>
@@ -86,12 +86,12 @@
             <div class="input_container">
                 <div class="input">
                     <p class="input_label">Genero:</p>
-                    <input type="radio" id="masculino" name="genero" value="masculino" />
+                    <input type="radio" id="masculino" name="genero" value="masculino" <?php echo ($genero == 'masculino') ? 'checked' : '';?> />
                     <label class="input_label" for="masculino">Masculino</label>
-                    <input type="radio" id="feminino" name="genero" value="feminino" placeholder="Feminino" />
+                    <input type="radio" id="feminino" name="genero" value="feminino" <?php echo ($genero == 'feminino') ? 'checked' : '';?> />
                     <label class="input_label" for="feminino">Feminino</label>
 
-                    <input type="radio" id="outro" name="genero" value="outros" />
+                    <input type="radio" id="outro" name="genero" value="outro" <?php echo ($genero == 'outro') ? 'checked' : '';?> />
                     <label class="input_label" for="outro">Outros</label>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     <div class="nome">
                         <label class="input_label" for="cep">CEP</label>
                         <input class="input_name" type="tel" placeholder="Informe o Cep" id="cep" name="cep"
-                            maxlength="8" />
+                            maxlength="8" value="<?php echo $cep; ?>"  />
                         <!-- Repare no maxlength="8", assim apenas 8 digitos do cep são aceitos -->
                     </div>
                     <div class="nome">
@@ -127,21 +127,21 @@
 
                 <label class="input_label" for="nr_end">Número</label>
                 <input class="input_field" type="text" class="big-field" name="numero" placeholder="Número da casa"
-                    name="numero" id="numero" />
+                    name="numero" id="numero" value="<?php echo $numero; ?>"  />
             </div>
             <div class="input_contato">
                 <label class="input_label" for="password_field">Contato:</label>
                 <input onkeyup="handlePhone(event)" maxlength="15" placeholder="(ddd) 00000-0000"
-                    title="Número para Contato" name="telefone" type="text" class="input_field" />
+                    title="Número para Contato" name="telefone" type="text" class="input_field" value="<?php echo $telefone; ?>"  />
                 <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field"
-                    id="email_field" />
+                    id="email_field" value="<?php echo $email; ?>"  />
             </div>
 
             <div class="input_container">
                 <div>
                     <label class="input_label" for="password_field">Senha:</label>
                     <input placeholder="Senha" id="senha" title="Senha" name="senha" type="password" class="input_field"
-                        required />
+                    value="<?php echo $senha; ?>"  />
                     <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                 <div>
                     <label class="input_label" for="password_field">Confirme Senha:</label>
                     <input placeholder="Senha" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha"
-                        type="password" class="input_field"  />
+                        type="password" class="input_field"  value="<?php echo $senha; ?>"  />
                     <i class="bi bi-eye-fill" id="btn-confirmar" onclick="confirmarsenha()"></i>
                 </div>
             </div>
