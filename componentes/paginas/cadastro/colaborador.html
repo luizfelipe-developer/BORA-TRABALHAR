@@ -60,8 +60,17 @@
 
       <div class="input_container" style="margin-top: 15px;">
         <label class="input_label" for="password_field">Profissão Principal:</label>
-        <input placeholder="Ex: Encanador" title="Profissão" name="profissao" type="text" class="input_field" required>
-        <h4 style="margin: 15px 0px 0px;" class="input_label">Selecione outras categorias caso tiver experiência:</h4>
+        <div class="imobSelect">
+          <select name="profissao" id="profissao">
+            <option value="Pedreiro">Pedreiro</option>
+            <option value="Pintor">Pintor</option>
+            <option value="Diarista">Diarista</option>
+            <option value="Eletricista">Eletricista</option>
+            <option value="outro">Outros</option>
+
+          </select>
+         </div>        
+         <h4 style="margin: 15px 0px 0px;" class="input_label">Selecione outras categorias caso tiver experiência:</h4>
         <div style="display: flex; margin: 10px 0px 3px; text-align: center;">
           <label class="input_label"><input type="checkbox" name="categorias[]" value="Pedreiro"> Pedreiro</label>
           <label class="input_label"><input type="checkbox" name="categorias[]" value="Pintor"> Pintor</label>

@@ -297,6 +297,30 @@ body {
   border-radius: 7px;
 }
 
+.imobSelect select {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  width: 100%;
+  color: #474747;
+  padding: 8px 5px 5px 5px;
+  font-size: 12px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  background-color: white;
+}  
+  .imobSelect option {
+      height: 30px;
+      border: 1px solid #cbcbcb;
+      padding-left: 17px;
+      padding-top: 12px;}
+  
+  .imobSelect {
+    width: 90%;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  filter: drop-shadow(0px 1px 0px #efefef) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);}
 
 @media only screen and (max-width: 800px) {
   .container {
@@ -352,3 +376,4 @@ body {
     margin-left: 20px;
   }
 }
+

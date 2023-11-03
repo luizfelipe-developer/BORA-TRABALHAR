@@ -25,6 +25,6 @@
         $resultado = $conexao->query($sqlUpdate);
         print_r($resultado);
     }
-    header('Location: ../../paginas/trabalhador/trabalhador.php');
+    header('Location: ../../paginas/trabalhador/trabalhadorr.php');
 
 ?>  
