@@ -90,8 +90,8 @@
       </div>
       <div class="input_contato">
         <label class="input_label" for="password_field">Contato:</label>
-        <input onkeyup="handlePhone(event)" maxlength="11" placeholder="(ddd) 00000-0000" title="Número para Contato"
-          name="telefone" type="tel" class="input_field" />
+        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="(ddd) 00000-0000" title="Número para Contato"
+          name="telefone" class="input_field" />
         <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field" id="email_field"
           required />
       </div>
@@ -134,31 +134,19 @@
       if (v.length == 3 || v.length == 7) i.value += ".";
       if (v.length == 11) i.value += "-";
     }
-    function mascara_cep(i) {
-      var v = i.value;
 
-      if (isNaN(v[v.length - 1])) {
-        // impede entrar outro caractere que não seja número
-        i.value = v.substring(0, v.length - 1);
-        return;
-      }
+  const handlePhone = (event) => {
+    let input = event.target
+    input.value = phoneMask(input.value)
+  }
 
-      i.setAttribute("maxlength", "9");
-      if (v.length == 5) i.value += "-";
-    }
-    const handlePhone = (event) => {
-      let input = event.target;
-      input.value = phoneMask(input.value);
-    };
-
-    const phoneMask = (value) => {
-      if (!value) return "";
-      value = value.replace(/\D/g, "");
-      value = value.replace(/(\d{2})(\d)/, "($1) $2");
-      value = value.replace(/(\d)(\d{4})$/, "$1-$2");
-      return value;
-    };
-    //cep////
+  const phoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g,'')
+    value = value.replace(/(\d{2})(\d)/,"($1) $2")
+    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+    return value
+  }
 
     //Foca no Cep
     document.getElementById("cep").focus();
