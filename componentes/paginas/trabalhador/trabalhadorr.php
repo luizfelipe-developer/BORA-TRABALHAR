@@ -1,24 +1,24 @@
 <?php
-    session_start();
-    include_once('../php/conexao.php');
-    // print_r($_SESSION);
-     if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-     {
-          unset($_SESSION['nome']);
-          unset($_SESSION['senha']);
-          header('Location: login.php');
-     }
-    $logado = $_SESSION['nome'];
-    if(!empty($_GET['search']))
-    {
-        $data = $_GET['search'];
-        $sql = "SELECT * FROM cad_colaborador WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
-    }
-    else
-    {
-        $sql = "SELECT * FROM cad_colaborador ORDER BY nome DESC";
-    }
-    $result = $conexao->query($sql);
+session_start();
+include_once('../php/conexao.php');
+include "../cliente/php/consulta_colaborador.php";
+
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
+
+$logado = $_SESSION['nome'];
+
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_cliente WHERE (id_colaborador LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_colaborador WHERE nome = '$logado' ORDER BY id_colaborador DESC";
+}
+$resultado = $conexao->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -88,8 +88,21 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="../perfil/perfil_colaborador.php">Meu Perfil</a></li>
-                                <li><a href="../../../exit.php">Exit</a></li>
+                            <?php
+                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                    echo "<tr>";
+                    echo "<td>
+                        <a class='btn btn-sm btn-primary' href='../perfil/user-profile-page-main/user-profile-page-main/index.php?id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
+                            
+                           
+                           EDITAR </a> 
+                           
+                            </td>";
+                    echo "</tr>";
+                }
+                ?>
+                            <li><a href="../../../exit.php">Exit</a></li>
+                                
                             </ul>
                         </div>
                     </li>
