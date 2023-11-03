@@ -51,6 +51,12 @@
             text-align: center;
             display: block;
         }      
+        .hide{
+            visibility: hidden;
+        }
+        .reveal{
+        visibility: visible;
+        }
     </style>
 </head>
 <body>
@@ -127,7 +133,6 @@
             <ol id='list'>
                
                     <?php while($dados_colab = $resultado2->fetch_array()){ ?>
-                        
                         <li class="pesquisa">
                             <section class="card">
                                 <div class="card-foto">
@@ -138,8 +143,8 @@
                                     <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
                                     <br>
                                     <nav>
-                                        <label for=""><span class="quali" onclick="exibirDiv()" >qualificação</span></label>
-                                        <ul class="slide">
+                                        <label for=""><span class="quali" >qualificação</span></label>
+                                        <ul class="slide hide">
                                             <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
                                         </ul>
                                     </nav>
@@ -155,11 +160,10 @@
 <script src="../../js/pesquisa.js"></script>
 </html>
 <script>
-    function exibirDiv() {
-        let clicar = document.querySelector('.quali')
-        let exibir = clicar.style.display
-        if (exibir == 'block'){
-            
-        }
-    }
+    let descricao = document.querySelector('.slide')
+    let clicar = document.querySelector('.quali')
+    clicar.addEventListener("click", ()=>{
+        descricao.classList.toggle('reveal')
+    })
+    
 </script>
