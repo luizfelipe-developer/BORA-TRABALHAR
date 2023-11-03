@@ -162,16 +162,20 @@
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
                     </section>
                 </li>
-               <li class="pesquisa">
-                   <?php 
-                    while($dados_colab = $resultado2->fetch_array()){
-                        echo "<h2>".$dados_colab['nome']."</h2>";
-                    }
-                ?>
+                <?php while($dados_colab = $resultado2->fetch_array()){ ?>
+
+                    <li class="pesquisa">
+                        <section class="card">
+                            <div class="card-foto">
+                               <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">'; ?>
+                               echo "<h2>".$dados_colab['nome']."</h2>";
+                            </div>
+
+                        </section>
+                    </li>
+
+                <?php } ?>
                 <section class="card">
-                    <div class="card-foto">
-                       <?php echo '<img src="./path/'.$variavel['nome_imagem'].'">';; ?>
-                    </div>
                     <h2 class="nome"></h2>
                 </section>
                </li>
