@@ -14,7 +14,7 @@ $logado = $_SESSION['nome'];
 // Verificar se há uma consulta para exibir apenas o usuário logado
 if (!empty($_GET['search'])) {
     $data = $_GET['search'];
-    $sql = "SELECT * FROM cad_cliente WHERE (id_colaborador LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+    $sql = "SELECT * FROM cad_colaborador WHERE (id_colaborador LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
 } else {
     $sql = "SELECT * FROM cad_colaborador WHERE nome = '$logado' ORDER BY id_colaborador DESC";
 }
@@ -92,10 +92,10 @@ $resultado = $conexao->query($sql);
                 while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
                     echo "<tr>";
                     echo "<td>
-                        <a class='btn btn-sm btn-primary' href='componentes/paginas/perfil/perfil.php??id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
+                        <a class='btn btn-sm btn-primary' href='../perfil/perfil_colaborador.php?id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
                             
                            
-                           EDITAR </a> 
+                           Meu Perfil </a> 
                            
                             </td>";
                     echo "</tr>";

@@ -1,5 +1,5 @@
 <?php
-    include_once('../../../php/conexao.php');
+    include_once('../php/conexao.php');
 
     if(!empty($_GET['id_colaborador']))
     {
@@ -31,12 +31,12 @@
         }
         else
         {
-            header('Location: index.php');
+            header('Location: perfil_colaborador.php');
         }
     }
     else
     {
-        header('Location: index.php');
+        header('Location: perfil_colaborador.php');
     }
     
 ?>
@@ -52,7 +52,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 
-  <link rel="stylesheet" href="src/css/bootstrap.css">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
   <script src="src/js/main.js" type="module" async></script>
 </head>
 <style>
