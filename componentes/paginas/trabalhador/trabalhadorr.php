@@ -89,10 +89,10 @@ $resultado = $conexao->query($sql);
                         <div class="sub-menu-1">
                             <ul>
                             <?php
-                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                while ($dados_colaborador = mysqli_fetch_assoc($resultado)) {
                     echo "<tr>";
                     echo "<td>
-                        <a class='btn btn-sm btn-primary' href='../perfil/perfil_colaborador.php?id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
+                        <a class='btn btn-sm btn-primary' href='../perfil/perfil_colaborador.php?id_colaborador=$dados_colaborador[id_colaborador]' title='Editar'>
                             
                            
                            Meu Perfil </a> 
