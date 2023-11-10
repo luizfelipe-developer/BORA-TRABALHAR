@@ -32,6 +32,8 @@ $resultado = $conexao->query($sql);
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../../js/script.js" defer></script>
+    <script src="src/js/main.js" type="module" async></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API" defer></script>
     <title>Bora Trabalhar</title>
 </head>
@@ -67,10 +69,13 @@ $resultado = $conexao->query($sql);
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+                    
+              <span class="foto_perfil" id="picture_img"></span>
+              
                     <?php
                         echo "<span>$logado</span>";
                     ?>
+                    
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
