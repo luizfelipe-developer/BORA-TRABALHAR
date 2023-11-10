@@ -13,7 +13,7 @@
 
 <body>
   <div class="container">
-    <form class="form_container" action="../cadastro/php_cadastro/cadastro_colaborador.php" method="post">
+    <form class="form_container" action="./php_cadastro/cadastro_colaborador.php" method="post">
       <div class="title_container">
         <p class="title">CADASTRE-SE COMO COLABORADOR</p>
         <span class="subtitle">Comece a usar nosso site, basta criar uma conta e aproveitar a experiência.</span>
@@ -72,13 +72,13 @@
          </div>        
          <h4 style="margin: 15px 0px 0px;" class="input_label">Selecione outras categorias caso tiver experiência:</h4>
         <div style="display: flex; margin: 10px 0px 3px; text-align: center;">
-        <label class="input_label"><input type="checkbox" name="categorias[]" value="Pedreiro"> Pedreiro</label>
-        <label class="input_label"><input type="checkbox" name="categorias[]" value="Pintor"> Pintor</label>
-        <label class="input_label"><input type="checkbox" name="categorias[]" value="Diarista"> Diarista</label>
-        <label class="input_label"><input type="checkbox" name="categorias[]" value="Eletricista"> Eletricista</label>
-        <label class="input_label"><input type="checkbox" name="categorias[]" value="Outro"> Outros</label>
+          <label class="input_label"><input type="checkbox" name="categorias[]" value="Pedreiro"> Pedreiro</label>
+          <label class="input_label"><input type="checkbox" name="categorias[]" value="Pintor"> Pintor</label>
+          <label class="input_label"><input type="checkbox" name="categorias[]" value="Diarista"> Diarista</label>
+          <label class="input_label"><input type="checkbox" name="categorias[]" value="Eletricista"> Eletricista</label>
+          <label class="input_label"><input type="checkbox" name="categorias[]" value="Outro"> Outros</label>
+        </div>
       </div>
-    </div>
 
 
       <div class="input_container">
@@ -130,11 +130,10 @@
       </div>
       <div class="input_contato">
         <label class="input_label" for="password_field">Contato:</label>
-        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="(ddd) 00000-0000" title="Número para Contato"
-          name="telefone" class="input_field">
-          <label class="input_label" for="password_field">Email:</label>
-        <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field" id="email_field"
-          required>
+        <input type="tel" maxlength="15" onkeyup="handlePhone(event)" placeholder="(ddd) 00000-0000" title="Número para Contato" name="telefone" class="input_field">
+        <label class="input_label" for="password_field">Email:</label>
+        <input placeholder="E-mail" title="E-Mail" name="email" type="email" class="input_field" id="email_field" required />
+        <input type="file" name="cad_foto" class="input_field">
       </div>
 
       <div class="input_container">
@@ -149,17 +148,16 @@
       <div class="input_container">
         <div>
             <label class="input_label" for="password_field">Confirme Senha:</label>
-            <input placeholder="Senha" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha"
-                type="password" class="input_field" required />
+            <input placeholder="Senha" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha" type="password" class="input_field" required />
             <i class="bi bi-eye-fill" id="btn-confirmar" onclick="confirmarsenha()"></i>
         </div>
       </div>
 
 
-      <button title="Sign In" type="submit" class="sign-in_btn">
+      <button title="Sign In" type="submit" class="sign-in_btn" name="cadastrar">
         <span>Cadastrar</span>
       </button>
-      <a id="home" href="../../../index.html"> Voltar a página inicial</a>
+      <a id="home" href="../../../index.html">Voltar a página inicial</a>
     </form>
   </div>
   <script>
