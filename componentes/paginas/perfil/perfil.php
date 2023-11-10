@@ -228,10 +228,10 @@
             <div class="container mt-3">
 
               <input type="hidden" name="id_cliente" value=<?php echo $id_cliente; ?>>
-              <input type="submit" name="update" id="submit"
+              <input type="submit" name="update" id="submit" value="Atualizar"
                 class="btn shadow-sm bg-transparent text-light border-opacity-100 border-light border-1" id="btnSubmit">
 
-              <a id="home" href="../../../index.html"
+              <a id="home" href="../../../index_cliente.php"
                 class="btn shadow-sm bg-transparent text-light border-opacity-100 border-light border-1" id="btnSubmit">
                 Voltar a página inicial</a>
             </div>

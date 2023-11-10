@@ -142,12 +142,12 @@
                                 <div class="descricao">
                                     <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
                                     <br>
-                                    <nav>
-                                        <label for=""><span class="quali" >qualificação</span></label>
+                                    <label for=""><span class="quali" >qualificação</span></label>
+                                    <div>
                                         <ul class="slide hide">
                                             <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
                                         </ul>
-                                    </nav>
+                                    </div>
                                 </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
                         </section>
@@ -163,7 +163,7 @@
     let descricao = document.querySelector('.slide')
     let clicar = document.querySelector('.quali')
     clicar.addEventListener("click", ()=>{
-        descricao.classList.toggle('reveal')
+        descricao.classList.toggle('reveal');
     })
     
 </script>
