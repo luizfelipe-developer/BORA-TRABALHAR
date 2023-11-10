@@ -28,16 +28,7 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$uploaddir = '../../../imgs/imagemColaborador/'; //directório onde será gravado a imagem
-
-if (move_uploaded_file($_FILES['cad_foto']['tmp_name'], $uploaddir . $_FILES['cad_foto']['name'])) {
-    $uploadfile = $uploaddir . $_FILES['cad_foto']['name'];
-    //grava na base de dados, no campo imagem, somente o nome da imagem que ficou gravado na variável $uploadfile que criamos acima.
-} else {
-    //não foi possível concluir o upload da imagem.
-}
-
-$inserirSql = "INSERT INTO cad_colaborador(nome, sobrenome, cpf, dt_nascimento, genero, profissao, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha, cad_foto) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$profissao', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha', '$uploadfile')";
+$inserirSql = "INSERT INTO cad_colaborador(nome, sobrenome, cpf, dt_nascimento, genero, profissao, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$profissao', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha')";
 
 if (mysqli_query($conexao, $inserirSql)) {
     echo "Usuário cadastrado!";
