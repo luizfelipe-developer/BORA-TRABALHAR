@@ -1,27 +1,24 @@
 <?php
-    session_start();
-    include_once('componentes/paginas/php/conexao.php');
+session_start();
+include_once('componentes/paginas/php/conexao.php');
     include "componentes/paginas/cliente/php/consulta_cliente.php";
 
-    
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
 
-    // print_r($_SESSION);
-    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
-    {
-        unset($_SESSION['nome']);
-        unset($_SESSION['senha']);
-        header('Location: login.php');
-    }
-    $logado = $_SESSION['nome'];
-    if(!empty($_GET['search']))
-    {
-        $data = $_GET['search'];
-        $sql = "SELECT * FROM cad_cliente WHERE nome LIKE '%$data%' or nome LIKE '%$data%' or nome LIKE '%$data%' ORDER BY nome DESC";
-    }
-    else
-    {
-        $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
-    }
+$logado = $_SESSION['nome'];
+
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_cliente WHERE (id_cliente LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_cliente WHERE nome = '$logado' ORDER BY id_cliente DESC";
+}
+$resultado = $conexao->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +74,20 @@
                         <p>CONTA</p>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="componentes/paginas/perfil/perfil.php">Meu Perfil</a></li>
+                                
+                                <?php
+                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                    echo "<tr>";
+                    echo "<td>
+                        <a class='btn btn-sm btn-primary' href='componentes/paginas/perfil/perfil.php?id_cliente=$dados_cliente[id_cliente]' title='Meu Perfil'>
+                            
+                           
+                           Meu Perfil </a> 
+                           
+                            </td>";
+                    echo "</tr>";
+                }
+                ?>
                                 <li><a href="exit.php">Exit</a></li>
                              
                             </ul>

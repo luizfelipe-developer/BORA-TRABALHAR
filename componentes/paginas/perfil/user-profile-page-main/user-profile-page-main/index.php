@@ -50,6 +50,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
   <link rel="stylesheet" href="src/css/bootstrap.css">
   <script src="src/js/main.js" type="module" async></script>
 </head>
@@ -60,9 +62,7 @@
 </style>
 <body class="text-black">
   <header class="bg-gradient navbar-nav mb-2">
-    <a href="index.html" class="text-decoration-none">
-      <h1 class="text-center text-light  py-2 h1">Profile Page</h1>
-    </a>
+    
   </header>
   <main class="text-light">
     <div class="container bg-gradient rounded-3">
@@ -77,11 +77,11 @@
             </label>
           </div>
 
-          <h2 class="h4 mb-3" id="profileName">Meu Nome</h2>
+          <h2 class="h4 mb-3" id="profileName"><?php echo $nome; ?></h2>
           <label for="profession" class="d-block mb-2">Profissão: <span id="userProfession"
-              class="text-white-50 m-2">Sua profissão</span></label>
-          <label for="numberDocument" class="d-block mb-2">Documento: <span id="userNumberDocument"
-              class="text-white-50 m-2">Seu documento</span></label>
+              class="text-white-50 m-2"><?php echo $profissao; ?></span></label>
+          <label for="numberDocument" class="d-block mb-2">Gênero: <span id="userNumberDocument"
+              class="text-white-50 m-2"><?php echo $genero; ?></span></label>
           <h2 class="h5 mt-4">Minhas Redes</h2>
           <div class="mb-3 mt-4">
             <a href="https://www.linkedin.com/" target="_blank" class="link-light m-1"><i class="fa-brands
@@ -97,22 +97,22 @@
 
         <div class="col-12 col-md-9 shadow-lg p-3 bg-body bg-opacity-10 rounded-3">
           <h2 class="h4 mb-4 mt-5 text-center">Minhas Informações</h2>
-          <div class="row mb-3">
+          <div class="centro">
             <div class="col-12 col-md-5 m-2">
               <label for="name" class="form-label"><strong>Nome:</strong> </label>
-              <span class="text-white-50 m-2" id="userName">Seu nome</span>
+              <span class="text-white-50 m-2" id="userName"><?php echo $nome; ?></span>
             </div>
             <div class="col-12 col-md-5 m-2">
-              <label for="age" class="form-label">Idade:</label>
-              <span class="text-white-50 m-2" id="userAge">Sua idade</span>
+              <label for="age" class="form-label">CPF:</label>
+              <span class="text-white-50 m-2" id="userAge"><?php echo $cpf; ?></span>
             </div>
             <div class="col-12 col-md-5 m-2">
-              <label for="location" class="form-label">Endereço:</label>
-              <span class="text-white-50 m-2" id="userLocation">Seu endereço</span>
+              <label for="location" class="form-label">Email:</label>
+              <span class="text-white-50 m-2" id="userLocation"><?php echo $email; ?></span>
             </div>
             <div class="col-12 col-md-5 m-2">
               <label for="phone" class="form-label">Telefone:</label>
-              <span class="text-white-50 m-2" id="userPhone">Seu telefone</span>
+              <span class="text-white-50 m-2" id="userPhone"><?php echo $telefone; ?></span>
             </div>
           </div>
           <div class="mb-3 text-center text-capitalize">
@@ -136,16 +136,16 @@
               <input placeholder="Sobrenome" type="text" id="sobrenome" name="sobrenome"
                 class="form-control form-control text-light bg-transparent placeholder" value="<?php echo $sobrenome; ?>" />
 
-              <label for="cpf" class="form-label">cpf</label>
+              <label for="cpf" class="form-label">CPF</label>
               <input oninput="mascara(this)" placeholder="123.456.789-10" name="cpf" type="text"
                 class="form-control form-control text-light bg-transparent placeholder" value="<?php echo $cpf; ?>" />
 
-              <label for="location" class="form-label">dt_nascimento</label>
+              <label for="location" class="form-label">Nascimento</label>
               <input placeholder="Guitarrista" type="date" id="dt_nascimento" name="dt_nascimento"
                 class="form-control form-control text-light bg-transparent placeholder" value="<?php echo $dt_nascimento; ?>"  />
 
               <div class="input">
-                <p class="input_label">Genero:</p>
+                <p class="form-label">Genero:</p>
                 <input type="radio" id="masculino" name="genero" value="masculino" <?php echo ($genero == 'masculino') ? 'checked' : ''; ?> />
                 <label class="input_label" for="masculino">Masculino</label>
                 <input type="radio" id="feminino" name="genero" value="feminino" <?php echo ($genero == 'feminino') ? 'checked' : ''; ?> />
@@ -154,9 +154,7 @@
                 <input type="radio" id="outro" name="genero" value="outro" <?php echo ($genero == 'outro') ? 'checked' : ''; ?> />
                 <label class="input_label" for="outro">Outros</label>
               </div>
-            </div>
-
-            <div class="mb-1 alert">
+           <br>
 
               <label class="form-label" for="password_field">Profissão Principal:</label>
               <div class="imobSelect">
@@ -170,18 +168,16 @@
 
                 </select>
               </div>
-            </div>
-
-            <div class="mb-1 alert">
+          
               <div class="input_nome">
                 <div class="nome">
-                  <label class="input_label" for="cep">CEP</label>
+                  <label class="form-label" for="cep">CEP</label>
                   <input class="form-control form-control text-light bg-transparent placeholder" type="tel"
                     placeholder="Informe o Cep" id="cep" name="cep" maxlength="8" value="<?php echo $cep; ?>" />
                   <!-- Repare no maxlength="8", assim apenas 8 digitos do cep são aceitos -->
                 </div>
                 <div class="nome">
-                  <label class="input_label" for="uf">UF</label>
+                  <label class="form-label" for="uf">UF</label>
                   <input class="form-control form-control text-light bg-transparent placeholder" type="text"
                     placeholder="UF" name="uf" id="uf" />
                 </div>
@@ -189,36 +185,33 @@
 
               <div class="input_nome">
                 <div class="nome">
-                  <label class="input_label" for="cidade">Cidade</label>
+                  <label class="form-label" for="cidade">Cidade</label>
                   <input class="form-control form-control text-light bg-transparent placeholder" type="text"
                     placeholder="Cidade" id="cidade" name="cidade" />
                   <!-- Repare no maxlength="8", assim apenas 8 digitos do cep são aceitos -->
                 </div>
                 <div class="nome">
-                  <label class="input_label" for="bairro">Bairro</label>
+                  <label class="form-label" for="bairro">Bairro</label>
                   <input class="form-control form-control text-light bg-transparent placeholder" type="text"
                     placeholder="Bairro" name="bairro" id="bairro" />
                 </div>
               </div>
 
-              <label class="input_label" for="endereco">Endereço</label>
+              <label class="form-label" for="endereco">Endereço</label>
               <input class="form-control form-control text-light bg-transparent placeholder" type="text"
                 class="big-field" placeholder="Rua da Consolação" name="endereco" id="endereco" />
 
-              <label class="input_label" for="nr_end">Número</label>
+              <label class="form-label" for="nr_end">Número</label>
               <input class="form-control form-control text-light bg-transparent placeholder" type="text"
                 class="big-field" name="numero" placeholder="Número da casa" name="numero" id="numero"
                 value="<?php echo $numero; ?>" />
-            </div>
-
-
-            <div class="mb-1 alert">
-              <label class="input_label" for="password_field">Contato:</label>
+           
+              <label class="form-label" for="password_field">Contato:</label>
               <input onkeyup="handlePhone(event)" maxlength="15" placeholder="(ddd) 00000-0000"
                 title="Número para Contato" name="telefone" type="text"
                 class="form-control form-control text-light bg-transparent placeholder"
                 value="<?php echo $telefone; ?>" />
-              <label class="input_label" for="password_field">Email:</label>
+              <label class="form-label" for="password_field">Email:</label>
 
               <input placeholder="E-mail" title="E-Mail" name="email" type="email"
                 class="form-control form-control text-light bg-transparent placeholder" id="email_field"
@@ -226,7 +219,7 @@
 
 
 
-              <label class="input_label" for="password_field">Senha:</label>
+              <label class="form-label" for="password_field">Senha:</label>
               <input placeholder="Senha" id="senha" title="Senha" name="senha" type="password"
                 class="form-control form-control text-light bg-transparent placeholder" value="<?php echo $senha; ?>" />
               <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()"></i>
@@ -234,7 +227,7 @@
 
 
 
-              <label class="input_label" for="password_field">Confirme Senha:</label>
+              <label class="form-label" for="password_field">Confirme Senha:</label>
               <input placeholder="Senha" id="senhaa" title="Insira sua senha novamente" name="confirmacao_senha"
                 type="password" class="form-control form-control text-light bg-transparent placeholder"
                 value="<?php echo $senha; ?>" />
@@ -340,9 +333,8 @@
       };
     });
   </script>
-  <script src="../../js/olho.js"></script>
-  <script src="../../js/cep.js"></script>
-  <script src="../../js/senha.js"></script>
+  <script src="../../../../js/senha.js"></script>
+  <script src="../../../../js/cep.js"></script>
 </body>
 
 </html>

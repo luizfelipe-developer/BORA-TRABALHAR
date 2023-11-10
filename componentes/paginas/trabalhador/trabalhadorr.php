@@ -92,7 +92,7 @@ $resultado = $conexao->query($sql);
                 while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
                     echo "<tr>";
                     echo "<td>
-                        <a class='btn btn-sm btn-primary' href='../perfil/user-profile-page-main/user-profile-page-main/index.php?id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
+                        <a class='btn btn-sm btn-primary' href='componentes/paginas/perfil/perfil.php??id_colaborador=$dados_cliente[id_colaborador]' title='Editar'>
                             
                            
                            EDITAR </a> 
