@@ -17,15 +17,14 @@
         $numero = $_POST['numero'];
         $telefone = $_POST['telefone'];
         $descricao = $_POST['descricao'];
-        $caminho = $_POST['caminho'];
-
+        
 
         $email = $_POST['email'];
         $senha = $_POST['senha'];
         $id_colaborador = $_POST['id_colaborador'];
         
         $sqlUpdate = "UPDATE cad_colaborador
-        SET nome='$nome', sobrenome='$sobrenome', cpf='$cpf', dt_nascimento='$dt_nascimento', genero='$genero', profissao='$profissao', cep='$cep', uf='$uf', cidade='$cidade', bairro='$bairro', endereco='$endereco', numero='$numero', telefone='$telefone', descricao='$descricao',caminho='$caminho', email='$email', senha='$senha' WHERE id_colaborador='$id_colaborador'";
+        SET nome='$nome', sobrenome='$sobrenome', cpf='$cpf', dt_nascimento='$dt_nascimento', genero='$genero', profissao='$profissao', cep='$cep', uf='$uf', cidade='$cidade', bairro='$bairro', endereco='$endereco', numero='$numero', telefone='$telefone', descricao='$descricao', email='$email', senha='$senha' WHERE id_colaborador='$id_colaborador'";
         $resultado = $conexao->query($sqlUpdate);
         print_r($resultado);
     }
