@@ -1,5 +1,8 @@
 <?php
     include_once('../php/conexao.php');
+    
+
+    
 
     if(!empty($_GET['id_colaborador']))
     {
@@ -38,6 +41,8 @@
     {
         header('Location: perfil_colaborador.php');
     }
+
+    
     
 ?>
 <!DOCTYPE html>
@@ -237,7 +242,7 @@
             <div class="mb-1 alert">
               <label for="bio" class="form-label">Biografia:</label>
               <textarea placeholder="Decreva brevemente sobre você." id="bio" name="descricao"
-                class="form-control form-control text-light bg-transparent placeholder" rows="5"  ></textarea>
+                class="form-control form-control text-light bg-transparent placeholder" rows="5"  ><?php echo $descricao; ?></textarea>
             </div>
             <div class="container mt-3">
 
