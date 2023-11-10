@@ -31,12 +31,12 @@
         }
         else
         {
-            header('Location: index.php');
+            header('Location: perfil_colaborador.php');
         }
     }
     else
     {
-        header('Location: index.php');
+        header('Location: perfil_colaborador.php');
     }
     
 ?>
