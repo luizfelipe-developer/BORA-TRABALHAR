@@ -250,7 +250,7 @@
               <input type="submit" name="updatee" id="submit"
                 class="btn shadow-sm bg-transparent text-light border-opacity-100 border-light border-1" id="btnSubmit">
 
-              <a id="home" href="../../../index.html"
+              <a id="home" href="../trabalhador/trabalhadorr.php"
                 class="btn shadow-sm bg-transparent text-light border-opacity-100 border-light border-1" id="btnSubmit">
                 Voltar a página inicial</a>
             </div>
