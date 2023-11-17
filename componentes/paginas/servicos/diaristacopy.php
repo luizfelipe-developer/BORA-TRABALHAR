@@ -144,7 +144,7 @@
                                     <br>
                                     <label for=""><span class="quali" >qualificação</span></label>
                                     <div>
-                                        <ul class="slide hide">
+                                        <ul class="slide">
                                             <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
                                         </ul>
                                     </div>
@@ -159,11 +159,4 @@
 </body>
 <script src="../../js/pesquisa.js"></script>
 </html>
-<script>
-    let descricao = document.querySelector('.slide')
-    let clicar = document.querySelector('.quali')
-    clicar.addEventListener("click", ()=>{
-        descricao.classList.toggle('reveal');
-    })
-    
-</script>
+
