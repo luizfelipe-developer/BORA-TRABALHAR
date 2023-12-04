@@ -18,7 +18,21 @@ if (!empty($_GET['search'])) {
 } else {
     $sql = "SELECT * FROM cad_cliente WHERE nome = '$logado' ORDER BY id_cliente DESC";
 }
+
+//logica do editar
+$result = $conexao->query($sql);
+
+
+///logica da imagem//
+$query = "SELECT cad_foto, nome FROM cad_cliente WHERE id_cliente = $logado";
+
 $resultado = $conexao->query($sql);
+
+if ($resultado->num_rows == 1) {
+    $row = $resultado->fetch_assoc();
+    $fotoNome = 'componentes/imgs/imagemClientes/' . $row['cad_foto'];
+    $nomeAluno = "<br><b>" . $row['nome'] ."</b>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +55,8 @@ $resultado = $conexao->query($sql);
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <img src="componentes/imgs/icones/do-utilizador.png" alt="">
+                <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
                     <?php
                         echo "<span>$logado</span>";
                     ?>
@@ -76,7 +91,7 @@ $resultado = $conexao->query($sql);
                             <ul>
                                 
                                 <?php
-                while ($dados_cliente = mysqli_fetch_assoc($resultado)) {
+                while ($dados_cliente = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo "<td>
                         <a class='btn btn-sm btn-primary' href='componentes/paginas/perfil/perfil.php?id_cliente=$dados_cliente[id_cliente]' title='Meu Perfil'>

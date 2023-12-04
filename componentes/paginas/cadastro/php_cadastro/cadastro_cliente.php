@@ -15,18 +15,16 @@ $numero = $_POST['numero'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+$fotoNome = $_FILES['cad_foto']['name'];
+$fotoTemp = $_FILES['cad_foto']['tmp_name'];
+$fotoCaminho = '../../../imgs/imagemClientes/' . $fotoNome;
 
-$uploaddir = '../../../imgs/imagemClientes/'; //directório onde será gravado a imagem
 
-if (move_uploaded_file($_FILES['cad_foto']['tmp_name'], $uploaddir . $_FILES['cad_foto']['name'])) {
-    $uploadfile = $uploaddir . $_FILES['cad_foto']['name'];
-    //grava na base de dados, no campo imagem, somente o nome da imagem que ficou gravado na variável $uploadfile que criamos acima.
-} else {
-    //não foi possível concluir o upload da imagem.
-}
+// Manipulação do upload de imagem
+move_uploaded_file($fotoTemp, $fotoCaminho);
 
 //inserir os valores adicionados das variáveis nos campos da tabela cliente do BD
-$inserirSql = "INSERT INTO cad_cliente(nome, sobrenome, cpf, dt_nascimento, genero, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha, cad_foto) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha', '$uploadfile')";
+$inserirSql = "INSERT INTO cad_cliente(nome, sobrenome, cpf, dt_nascimento, genero, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha, cad_foto) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha', '$fotoNome')";
 //sempre que os valores forem do tipo varchar, devem ficar entre 'aspas simples'
 //Verificação
 if (mysqli_query($conexao, $inserirSql)) {

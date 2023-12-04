@@ -66,20 +66,20 @@ header {
 .aba-perfil{
   width: 100%;
   display: flex;
-  border: solid 0.5px #189eb9;
   border-radius: 50px;
   align-items: center;
   justify-content: center;
   padding: 4px 8px;
   text-decoration: none;
   color: #189eb9;
-  gap: 10px;
+  gap: 5px;
   margin-left: 10px;
 }
 
 .aba-perfil img {
-  width: 25px;
-  height: 25px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
 }
 
 .hamburguer {

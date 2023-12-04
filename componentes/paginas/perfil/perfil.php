@@ -39,6 +39,7 @@
         header('Location: perfil.php');
     }
     
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -64,6 +65,7 @@
   <header class="bg-gradient navbar-nav mb-2">
     
   </header>
+  
   <main class="text-light">
     <div class="container bg-gradient rounded-3">
       <div class="rounded-3 row bg-black bg-opacity-25">
@@ -71,9 +73,10 @@
             rounded-3 bg-opacity-50 bg-black shadow-lg">
           <div class="col-10 mb-5 img-fluid mt-4 w-75 m-auto">
             <label class="picture rounded-circle mt-4 w-75 d-flex m-auto" for="picture_input" tabindex="0">
+              
               <input type="file" accept="image/*" class="picture_input d-none" id="picture_input">
-              <span class="text-secondary picture_img rounded-circle w-100" id="picture_img">
-              </span>
+              <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
             </label>
           </div>
 
