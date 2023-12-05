@@ -18,7 +18,21 @@ if (!empty($_GET['search'])) {
 } else {
     $sql = "SELECT * FROM cad_colaborador WHERE nome = '$logado' ORDER BY id_colaborador DESC";
 }
+
+//logica do editar
+$result = $conexao->query($sql);
+
+
+///logica da imagem//
+$query = "SELECT cad_foto, nome FROM cad_colaborador WHERE id_colaborador = $logado";
+
 $resultado = $conexao->query($sql);
+
+if ($resultado->num_rows == 1) {
+    $row = $resultado->fetch_assoc();
+    $fotoNome = '../../imgs/imagemColaboradores/' . $row['cad_foto'];
+    $nomeAluno = "<br><b>" . $row['nome'] ."</b>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -68,8 +82,9 @@ $resultado = $conexao->query($sql);
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    
-                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+
+                <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
                     <?php
                         echo "<span>$logado</span>";
                     ?>
@@ -92,7 +107,7 @@ $resultado = $conexao->query($sql);
                         <div class="sub-menu-1">
                             <ul>
                             <?php
-                while ($dados_colaborador = mysqli_fetch_assoc($resultado)) {
+                while ($dados_colaborador = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo "<td>
                         <a class='btn btn-sm btn-primary' href='../perfil/perfil_colaborador.php?id_colaborador=$dados_colaborador[id_colaborador]' title='Editar'>

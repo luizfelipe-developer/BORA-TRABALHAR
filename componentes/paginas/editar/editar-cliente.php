@@ -22,6 +22,8 @@
                 $endereco = $dados_cliente['endereco'];
                 $numero = $dados_cliente['numero'];
                 $telefone = $dados_cliente['telefone'];
+                $cad_foto = $dados_cliente['cad_foto'];
+
                 $email = $dados_cliente['email'];
                 $senha = $dados_cliente['senha'];
             }

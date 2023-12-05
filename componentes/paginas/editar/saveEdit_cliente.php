@@ -16,13 +16,18 @@
         $numero = $_POST['numero'];
         $telefone = $_POST['telefone'];
         $email = $_POST['email'];
-        $cad_foto = $_POST['cad_foto'];
-
         $senha = $_POST['senha'];
         $id_cliente = $_POST['id_cliente'];
+        $fotoNome = $_FILES['cad_foto']['name'];
+        $fotoTemp = $_FILES['cad_foto']['tmp_name'];
+        $fotoCaminho = '../../imgs/imagemClientes/' . $fotoNome;
+
+
+// Manipulação do upload de imagem
+move_uploaded_file($fotoTemp, $fotoCaminho);
         
         $sqlUpdate = "UPDATE cad_cliente
-        SET nome='$nome', sobrenome='$sobrenome', cpf='$cpf', dt_nascimento='$dt_nascimento', genero='$genero', cep='$cep', uf='$uf', cidade='$cidade', bairro='$bairro', endereco='$endereco', numero='$numero', telefone='$telefone', email='$email', cad_foto='$cad_foto', senha='$senha' WHERE id_cliente='$id_cliente'";
+        SET nome='$nome', sobrenome='$sobrenome', cpf='$cpf', dt_nascimento='$dt_nascimento', genero='$genero', cep='$cep', uf='$uf', cidade='$cidade', bairro='$bairro', endereco='$endereco', numero='$numero', telefone='$telefone', email='$email', cad_foto='$fotoNome', senha='$senha' WHERE id_cliente='$id_cliente'";
         $resultado = $conexao->query($sqlUpdate);
         print_r($resultado);
     }

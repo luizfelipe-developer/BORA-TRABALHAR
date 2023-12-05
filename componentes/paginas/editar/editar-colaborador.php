@@ -25,6 +25,8 @@
                 $telefone = $dados_colaborador['telefone'];
                 $email = $dados_colaborador['email'];
                 $senha = $dados_colaborador['senha'];
+                $cad_foto = $dados_colaborador['cad_foto'];
+
             }
         }
         else

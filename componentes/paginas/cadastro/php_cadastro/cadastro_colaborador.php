@@ -27,8 +27,15 @@ $numero = $_POST['numero'];
 $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+$fotoNome = $_FILES['cad_foto']['name'];
+$fotoTemp = $_FILES['cad_foto']['tmp_name'];
+$fotoCaminho = '../../../imgs/imagemColaboradores/' . $fotoNome;
 
-$inserirSql = "INSERT INTO cad_colaborador(nome, sobrenome, cpf, dt_nascimento, genero, profissao, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$profissao', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha')";
+
+// Manipulação do upload de imagem
+move_uploaded_file($fotoTemp, $fotoCaminho);
+
+$inserirSql = "INSERT INTO cad_colaborador(nome, sobrenome, cpf, dt_nascimento, genero, profissao, cep, uf, cidade, bairro, endereco, numero, telefone, email, senha, cad_foto) VALUES ('$nome', '$sobrenome', '$cpf', '$dt_nascimento', '$genero', '$profissao', '$cep' , '$uf', '$cidade','$bairro', '$endereco', '$numero', '$telefone', '$email', '$senha', '$fotoNome')";
 
 if (mysqli_query($conexao, $inserirSql)) {
     echo "Usuário cadastrado!";
@@ -43,4 +50,3 @@ if (mysqli_query($conexao, $inserirSql)) {
 mysqli_close($conexao);
 header('Location: ../../entrar/logins_form.html');
 ?>
-

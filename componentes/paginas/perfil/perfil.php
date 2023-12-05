@@ -46,12 +46,13 @@
 
 <?php
 session_start();
-include_once('../php/conexao.php');
+include_once('componentes/paginas/php/conexao.php');
     include "componentes/paginas/cliente/php/consulta_cliente.php";
 
 if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
     unset($_SESSION['nome']);
     unset($_SESSION['senha']);
+    header('Location: login.php');
 }
 
 $logado = $_SESSION['nome'];
@@ -64,6 +65,11 @@ if (!empty($_GET['search'])) {
     $sql = "SELECT * FROM cad_cliente WHERE nome = '$logado' ORDER BY id_cliente DESC";
 }
 
+//logica do editar
+$result = $conexao->query($sql);
+
+
+///logica da imagem//
 $query = "SELECT cad_foto, nome FROM cad_cliente WHERE id_cliente = $logado";
 
 $resultado = $conexao->query($sql);
@@ -97,16 +103,15 @@ if ($resultado->num_rows == 1) {
   <header class="bg-gradient navbar-nav mb-2">
     
   </header>
- 
-
+  
   <main class="text-light">
     <div class="container bg-gradient rounded-3">
       <div class="rounded-3 row bg-black bg-opacity-25">
         <div class="col-12 col-md-3 text-center text-light
             rounded-3 bg-opacity-50 bg-black shadow-lg">
- 
+        
             <div class="col-10 mb-5 img-fluid mt-4 w-75 m-auto">
-            <form action="../editar/saveEdit_cliente.php" method="post" class="alert">
+            <form action="../editar/saveEdit_cliente.php" method="post" enctype="multipart/form-data" class="alert">
             <label class="picture rounded-circle mt-4 w-75 d-flex m-auto" for="picture_input" tabindex="0">
               
               <input type="file" id="picture_input" name="cad_foto" class="picture_input d-none" accept="image/imagemClientes*">
@@ -165,8 +170,7 @@ if ($resultado->num_rows == 1) {
             </p>
           </div>
           <h2 class="h4 mb-2 mt-5 text-center">Atualizar Informações</h2>
-
-          <div class="mb-1 alert">
+            <div class="mb-1 alert">
               <label for="name" class="form-label">Nome:</label>
               <input placeholder="Nome" type="text" id="name" name="nome"
                 class="form-control form-control text-light bg-transparent placeholder" value="<?php echo $nome; ?>" />
