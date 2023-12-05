@@ -183,6 +183,12 @@
   
 }
 
+#kayo{
+
+  border-radius: 50%;
+  width: 130px;
+
+}
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
