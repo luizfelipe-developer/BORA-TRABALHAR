@@ -44,6 +44,7 @@ CREATE TABLE `cad_cliente` (
   `senha` varchar(225) NOT NULL,
   `id_cliente` int(11) NOT NULL,
   `cad_foto` varchar(255) DEFAULT NULL
+  
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
