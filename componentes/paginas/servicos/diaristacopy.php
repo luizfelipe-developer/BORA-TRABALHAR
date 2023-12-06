@@ -135,7 +135,8 @@
                         <li class="pesquisa">
                             <section class="card">
                                 <div class="card-foto">
-                                    <?php echo '<img src="./path/'.$dados_colab['nome_imagem'].'">'; ?>
+                                    <!-- adicionar o caminho da foto na linha 139, no trecho  '<img src="./path/' -->
+                                    <?php echo '<img src="./path/'.$dados_colab['cad_foto'].'">'; ?>
                                     <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
                                 </div>
                                 <div class="descricao">
@@ -153,8 +154,8 @@
                     </li>
                 <?php } ?>
             </ol>
-    </main>
-</div>
+        </main>
+    </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
 </html>

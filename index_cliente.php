@@ -23,7 +23,7 @@ if (!empty($_GET['search'])) {
 $result = $conexao->query($sql);
 
 
-///logica da imagem//
+///código da imagem//
 $query = "SELECT cad_foto, nome FROM cad_cliente WHERE id_cliente = $logado";
 
 $resultado = $conexao->query($sql);
