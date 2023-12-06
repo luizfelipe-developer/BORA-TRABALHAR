@@ -19,6 +19,8 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+
+
 .aba-perfil {
     width: auto;
     justify-content: center;
@@ -34,22 +36,23 @@ main {
 }
 
 .aba-perfil{
-  width: 100%;
-  display: flex;
-  border: solid 0.5px #189eb9;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  text-decoration: none;
-  color: #189eb9;
-  gap: 10px;
-}
-
-.aba-perfil img {
-  width: 25px;
-  height: 25px;
-}
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #189eb9;
+    gap: 5px;
+    margin-left: 10px;
+  }
+  
+  .aba-perfil img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
 
 h1 {
     font-size: 24px;

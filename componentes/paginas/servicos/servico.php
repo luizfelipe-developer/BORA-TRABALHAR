@@ -126,13 +126,12 @@
                             <section class="card">
                                 <div class="card-foto">
                                     <!-- adicionar o caminho da foto na linha 139, no trecho  '<img src="./path/' -->
-                                    <?php echo '<img src="./path/'.$dados_colab['cad_foto'].'">'; ?>
+                                    <?php echo '<img src="../../imgs/imagemColaboradores/'.$dados_colab['cad_foto'].'">'; ?>
                                     <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
                                 </div>
                                 <div class="descricao">
                                     <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
                                     <br>
-                                    <label for=""><span class="quali" >qualificação</span></label>
                                     <div>
                                         <ul class="slide">
                                             <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>

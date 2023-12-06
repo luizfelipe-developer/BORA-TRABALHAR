@@ -115,7 +115,7 @@ if ($resultado->num_rows == 1) {
             rounded-3 bg-opacity-50 bg-black shadow-lg">
         
             <div class="col-10 mb-5 img-fluid mt-4 w-75 m-auto">
-            <form action="../editar/saveEdit_coloborador.php" method="post" enctype="multipart/form-data" class="alert">
+            <form action="../editar/saveEdit_colaborador.php" method="post" enctype="multipart/form-data" class="alert">
             <label class="picture rounded-circle mt-4 w-75 d-flex m-auto" for="picture_input" tabindex="0">
               
               <input type="file" id="picture_input" name="cad_foto" class="picture_input d-none" accept="image/imagemColaboradores*">
