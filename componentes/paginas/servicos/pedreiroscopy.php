@@ -19,14 +19,8 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
-    $diaristas = "SELECT * FROM cad_colaborador WHERE profissao = 'Diarista'";
-    $resultado2 = $conexao->query($diaristas);
-    // if (mysqli_num_rows($resultado2) <1) {
-    //     # code...
-    //     print_r("não existe");
-    // } else{
-    //     print_r("existe");
-    // }
+    $pedreiros = "SELECT * FROM cad_colaborador WHERE profissao = 'Pedreiro'";
+    $resultado2 = $conexao->query($pedreiros);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -34,30 +28,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "shortcut icon" type = "imagem/x-icon" href="../../../ico-sem-fundo.ico.ico"/>
+    <link rel="shortcut icon" type="imagem/x-icon" href="../../../ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../header/header.css">
-    <link rel="stylesheet" href="../../css/servicocopy2.css">
+    <link rel="stylesheet" href="../../css/servicocopy.css">
+    <!-- O CSS ACIMA É ELE OU O "/servicocopy2.css" -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
-    <title>Diarista</title>
     <style>
-        #container{
+      
+      #container{
             margin-top: 50px;
         }
+
         #title{
             margin-top: 0px;
             color: black;
             text-align: center;
             display: block;
-        }      
-        .hide{
-            visibility: hidden;
-        }
-        .reveal{
-        visibility: visible;
         }
     </style>
+    <title>Pedreiros</title>
 </head>
 <body>
     <header>
@@ -67,7 +58,7 @@
             <div class="align-left">
                 <div class="aba-perfil">
                     <img src="../../imgs/icones/do-utilizador.png" alt="">
-                    <?php echo "<span>$logado</span>";?>
+                    <?php echo "<span>$logado</span>"; ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
@@ -77,10 +68,10 @@
                         <div class="sub-menu-1">
                             <ul>
                                 <li><a href="pedreiros.php">Pedreiro</a></li>
-                                <li><a href="pequenosreparos.php">Peq. Reparos</a></li>
-                                <li><a href="pintores.php">Pintor</a></li>
+                                <li><a href="./pequenosreparos.php">Peq. Reparos</a></li>
+                                <li><a href="./pintores.php">Pintor</a></li>
                                 <li><a href="diarista.php">Diarista</a></li>
-                                <li><a href="servico.php">Outros</a></li>
+                                <li><a href="./servico.php">Outros</a></li>
                             </ul>
                         </div>
                     </li>
@@ -108,6 +99,7 @@
     </header>
     <div class="barra-pesquisa">
         <h1 style="color: #555;">O que você procura?</h1><br>
+
         <form class="form">
             <button>
                 <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
@@ -118,7 +110,7 @@
                 </svg>
             </button>
             <input class="input" id="searchbar" onkeyup="search_pesquisa()" type="text" name="search"
-                placeholder="Ex. diarista" required="">
+                placeholder="Ex. reboco" required="">
             <button class="reset" type="reset">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -128,34 +120,34 @@
         </form>
     </div>
     <div id="container">
+        <h2 id="title">Pedreiros</h2>
         <main>
-            <h2 id="title">Diaristas</h2>
             <ol id='list'>
-                    <?php while($dados_colab = $resultado2->fetch_array()){ ?>
-                        <li class="pesquisa">
-                            <section class="card">
-                                <div class="card-foto">
-                                    <?php echo '<img src="./path/'.$dados_colab['nome_imagem'].'">'; ?>
-                                    <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
-                                </div>
-                                <div class="descricao">
-                                    <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
-                                    <br>
-                                    <label for=""><span class="quali" >qualificação</span></label>
-                                    <div>
-                                        <ul class="slide">
-                                            <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
-                                        </ul>
+                <?php while($dados_colab = $resultado2->fetch_array()){ ?>
+                            <li class="pesquisa">
+                                <section class="card">
+                                    <div class="card-foto">
+                                        <?php echo '<img src="./path/'.$dados_colab['nome_imagem'].'">'; ?>
+                                        <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
                                     </div>
-                                </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                        </section>
-                    </li>
-                <?php } ?>
+                                    <div class="descricao">
+                                        <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
+                                        <br>
+                                        <label for=""><span class="quali" >qualificação</span></label>
+                                        <div>
+                                            <ul class="slide">
+                                                <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <a class="orcamento" href="perfil/perfil.php">contatar</a>
+                            </section>
+                        </li>
+                    <?php } ?>
             </ol>
-    </main>
-</div>
+        </main>
+    </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
-</html>
 
+</html>
