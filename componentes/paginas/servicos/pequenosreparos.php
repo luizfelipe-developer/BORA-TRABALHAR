@@ -19,6 +19,8 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
+    $reparos = "SELECT * FROM cad_colaborador WHERE profissao = 'Eletricista'";
+    $resultado2 = $conexao->query($reparos);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,7 +40,6 @@
         #container {
             margin-top: 50px;
         }
-
         #title {
             margin-top: 0px;
             color: black;
@@ -116,238 +117,31 @@
         </form>
     </div>
     <div id="container">
-        <main>
-            <h2 id="title">Pequenos reparos</h2>
+    <main>
+            <h2 id="title">Diaristas</h2>
             <ol id='list'>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reaparos2.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Rogerio</h2>
-                            <span class="txt-categoria">Rogerio</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Concerto de fechadura</li>
-                                    <li>Troca de lampadas</li>
-                                    <li>Instalaçâo de chuveiro</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">Concerto de fechadura</span>
-                                <span class="txt-categoria">troca de lampadas</span>
-                                <span class="txt-categoria">instalaçâo de chuveiro</span>
-                                <span class="txt-categoria">outros</span>
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reparo.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Roberto</h2>
-                            <span class="txt-categoria">roberto</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch1"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch1">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Calhas metalicas</li>
-                                    <li>Paredes</li>
-                                    <li>Telhas</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">calhas metalicas</span>
-                                <span class="txt-categoria">paredes</span>
-                                <span class="txt-categoria">telhas</span>
-                                <span class="txt-categoria">outros</span>
-                        </div>
-                        </ul>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reparo1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Joâo</h2>
-                            <span class="txt-categoria">joao</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch2"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch2">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Limpeza de vidro</li>
-                                    <li>Montagem de móveis</li>
-                                    <li>Instalaçâo</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">limpeza de vidro</span>
-                                <span class="txt-categoria">montagem de moveis</span>
-                                <span class="txt-categoria">instalaçâo</span>
-                                <span class="txt-categoria">outros</span>
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reaparos2.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Saflaete</h2>
-                            <span class="txt-categoria">saflaete</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch3"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch3">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Limpeza de casa</li>
-                                    <li>Passar roupas</li>
-                                    <li>Retirada de pó</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">Limpeza de casa</span>
-                                <span class="txt-categoria">limpeza de casa</span>
-                                <span class="txt-categoria">Passar roupas</span>
-                                <span class="txt-categoria">passar roupas</span>
-                                <span class="txt-categoria">Retirada de pó</span>
-                                <span class="txt-categoria">retirada de po</span>
-                                <span class="txt-categoria">outros</span>
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Roberto</h2>
-                            <span class="txt-categoria">roberto</span>
-                            <span class="txt-categoria">Roberto</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch4"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch4">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Troca de chuveiro</li>
-                                    <li>Instalaçâo de lâmpadas</li>
-                                    <li>Poda de árvores</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">troca de chuveiro</span>
-                                <span class="txt-categoria">instalaçâo de lâmpadas</span>
-                                <span class="txt-categoria">poda de árvores</span>
-                                <span class="txt-categoria">outros</span>
-
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reaparos2.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Ricardo</h2>
-                            <span class="txt-categoria">Ricardo</span>
-                            <span class="txt-categoria">ricardo</span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch5"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch5">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Troca de chuveiro</li>
-                                    <li>Instalaçâo de lâmpadas</li>
-                                    <li>Tpoda de árvores</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">troca de chuveiro</span>
-                                <span class="txt-categoria">instalaçâo de lâmpadas</span>
-                                <span class="txt-categoria">poda de árvores</span>
-                                <span class="txt-categoria">outros</span>
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/reparo1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Alguem</h2>
-                            <span class="txt-categoria">Alguem</span>
-                            <span class="txt-categoria"></span>
-                        </div>
-                        <div class="descricao">
-                            <h3>Técnico em pequenos reparos</h3>
-                            <p>☆☆☆☆☆</p>
-                            <br>
-                            <nav>
-                                <label for="touch6"><span>qualificaçâo</span></label>
-                                <input type="checkbox" id="touch6">
-                                <ul class="slide">
-                                    <li>Executo pequenos reparos no geral.</li>
-                                    <li>Troca de chuveiro</li>
-                                    <li>Instalaçâo de lâmpadas</li>
-                                    <li>Poda de árvores</li>
-                                    <li>Outros</li>
-                                </ul>
-                            </nav>
-                            <ul>
-                                <span class="txt-categoria">troca de chuveiro</span>
-                                <span class="txt-categoria">instalaçâo de lâmpadas</span>
-                                <span class="txt-categoria">poda de árvores</span>
-                                <span class="txt-categoria">outros</span>
-                            </ul>
-                        </div>
-                        <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
+                    <?php while($dados_colab = $resultado2->fetch_array()){ ?>
+                        <li class="pesquisa">
+                            <section class="card">
+                                <div class="card-foto">
+                                    <!-- adicionar o caminho da foto na linha 139, no trecho  '<img src="./path/' -->
+                                    <?php echo '<img src="./path/'.$dados_colab['cad_foto'].'">'; ?>
+                                    <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
+                                </div>
+                                <div class="descricao">
+                                    <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
+                                    <br>
+                                    <label for=""><span class="quali" >qualificação</span></label>
+                                    <div>
+                                        <ul class="slide">
+                                            <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
+                        </section>
+                    </li>
+                <?php } ?>
             </ol>
         </main>
     </div>
