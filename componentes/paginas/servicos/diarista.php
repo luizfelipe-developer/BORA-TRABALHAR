@@ -28,6 +28,43 @@
     //     print_r("existe");
     // }
 ?>
+
+<?php
+session_start();
+include_once('componentes/paginas/php/conexao.php');
+    include "componentes/paginas/cliente/php/consulta_cliente.php";
+
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
+
+$logado = $_SESSION['nome'];
+
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_cliente WHERE (id_cliente LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_cliente WHERE nome = '$logado' ORDER BY id_cliente DESC";
+}
+
+//logica do editar
+$result = $conexao->query($sql);
+
+
+    ///código da imagem//
+    $query = "SELECT cad_foto, nome FROM cad_cliente WHERE id_cliente = $logado";
+
+    $resultado = $conexao->query($sql);
+    
+    if ($resultado->num_rows == 1) {
+        $row = $resultado->fetch_assoc();
+        $fotoNome = '../../imgs/imagemClientes/' . $row['cad_foto'];
+        $nomeAluno = "<br><b>" . $row['nome'] ."</b>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,7 +73,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "shortcut icon" type = "imagem/x-icon" href="../../../ico-sem-fundo.ico.ico"/>
     <link rel="stylesheet" href="../../header/header.css">
-    <link rel="stylesheet" href="../../css/servicocopy2.css">
+    <link rel="stylesheet" href="../../css/servicocopy.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
@@ -66,7 +103,8 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <img src="../../imgs/icones/do-utilizador.png" alt="">
+                    <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
                     <?php echo "<span>$logado</span>";?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>

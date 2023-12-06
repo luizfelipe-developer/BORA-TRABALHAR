@@ -70,7 +70,25 @@ nav{
     border: solid 1px #189eb9;
   }
 
-
+  .aba-perfil{
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #189eb9;
+    gap: 5px;
+    margin-left: 10px;
+  }
+  
+  .aba-perfil img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
+  
 
   .input {
     font-size: 0.9rem;
