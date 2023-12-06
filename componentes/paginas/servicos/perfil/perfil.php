@@ -20,6 +20,44 @@
     }
     $result = $conexao->query($sql);
 ?>
+
+
+<?php
+session_start();
+include_once('componentes/paginas/php/conexao.php');
+    include "componentes/paginas/cliente/php/consulta_cliente.php";
+
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
+
+$logado = $_SESSION['nome'];
+
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_cliente WHERE (id_cliente LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_cliente WHERE nome = '$logado' ORDER BY id_cliente DESC";
+}
+
+//logica do editar
+$result = $conexao->query($sql);
+
+
+    ///código da imagem//
+    $query = "SELECT cad_foto, nome FROM cad_cliente WHERE id_cliente = $logado";
+
+    $resultado = $conexao->query($sql);
+    
+    if ($resultado->num_rows == 1) {
+        $row = $resultado->fetch_assoc();
+        $fotoNome = '../../../imgs/imagemClientes/' . $row['cad_foto'];
+        $nomeAluno = "<br><b>" . $row['nome'] ."</b>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,12 +84,15 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><a href="../../../../index.html"><img src="../../../imgs/logo/logo-sem-fundo.png"></a>
+            <div class="logo"><a href="../../../../index_cliente.php"><img src="../../../imgs/logo/logo-sem-fundo.png"></a>
             </div>
             <!-- Menu -->
             <div class="align-left">
-                <div class="aba-perfil">
-                    <img src="./../../../imgs/icones/do-utilizador.png" alt="">
+ 
+            <div class="aba-perfil">
+
+            <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
                     <?php echo "<span>$logado</span>"; ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
