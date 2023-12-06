@@ -98,6 +98,12 @@ if ($resultado->num_rows == 1) {
   .text{
   background-color: black;
   }
+
+  .border-light {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-light-rgb), var(--bs-border-opacity)) !important;
+  margin-top: 30px;
+}
 </style>
 <body class="text-black">
   <header class="bg-gradient navbar-nav mb-2">
@@ -111,7 +117,7 @@ if ($resultado->num_rows == 1) {
             rounded-3 bg-opacity-50 bg-black shadow-lg">
         
             <div class="col-10 mb-5 img-fluid mt-4 w-75 m-auto">
-            <form action="../editar/saveEdit_cliente.php" method="post" enctype="multipart/form-data" class="alert">
+            <form action="../editar/savefotoCli.php" method="post" enctype="multipart/form-data" class="alert">
             <label class="picture rounded-circle mt-4 w-75 d-flex m-auto" for="picture_input" tabindex="0">
               
               <input type="file" id="picture_input" name="cad_foto" class="picture_input d-none" accept="image/imagemClientes*">
@@ -119,6 +125,12 @@ if ($resultado->num_rows == 1) {
               <img id="kayo" class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
 
             </label>
+
+            <input type="hidden" name="id_cliente" value=<?php echo $id_cliente; ?>>
+              <input type="submit" name="fotocli" id="submit" value="Atualizar"
+                class="btn shadow-sm bg-transparent text-light border-opacity-100 border-light border-1" id="btnSubmit">
+
+            </form>
           </div>
 
           <h2 class="h4 mb-3" id="profileName"><?php echo $nome; ?></h2>
@@ -170,6 +182,9 @@ if ($resultado->num_rows == 1) {
             </p>
           </div>
           <h2 class="h4 mb-2 mt-5 text-center">Atualizar Informações</h2>
+
+          <form action="../editar/saveEdit_cliente.php" method="post" enctype="multipart/form-data" class="alert">
+
             <div class="mb-1 alert">
               <label for="name" class="form-label">Nome:</label>
               <input placeholder="Nome" type="text" id="name" name="nome"

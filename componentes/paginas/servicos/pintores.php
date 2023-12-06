@@ -19,8 +19,8 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
-    $pintores = "SELECT * FROM cad_colaborador WHERE profissao = 'Pintores'";
-    $resultado2 = $conexao->query($pintores);
+    $pintor = "SELECT * FROM cad_colaborador WHERE profissao = 'Pintor'";
+    $resultado2 = $conexao->query($pintor);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
