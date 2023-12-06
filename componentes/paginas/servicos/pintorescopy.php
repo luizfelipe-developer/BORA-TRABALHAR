@@ -19,8 +19,8 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
-    $reparos = "SELECT * FROM cad_colaborador WHERE profissao = 'Eletricista'";
-    $resultado2 = $conexao->query($reparos);
+    $pintores = "SELECT * FROM cad_colaborador WHERE profissao = 'Pintores'";
+    $resultado2 = $conexao->query($pintores);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -36,9 +36,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
-    <title>Pequenos reparos</title>
     <style>
-        #container {
+      
+      #container {
             margin-top: 50px;
         }
         #title {
@@ -47,7 +47,9 @@
             text-align: center;
             display: block;
         }
+
     </style>
+    <title>Pintores</title>
 </head>
 <body>
     <header>
@@ -57,7 +59,9 @@
             <div class="align-left">
                 <div class="aba-perfil">
                     <img src="../../imgs/icones/do-utilizador.png" alt="">
-                    <?php echo "<span>$logado</span>"; ?>
+                    <?php
+                        echo "<h3>$logado</h3>";
+                    ?>
                 </div>
                 <div class="hamburguer active">&#9776;</div>
                 <ul class="menu active">
@@ -67,8 +71,8 @@
                         <div class="sub-menu-1">
                             <ul>
                                 <li><a href="./pedreiros.php">Pedreiro</a></li>
-                                <li><a href="#">Peq. Reparos</a></li>
-                                <li><a href="./pintores.php">Pintor</a></li>
+                                <li><a href="./pequenosreparos.php">Peq. Reparos</a></li>
+                                <li><a href="#">Pintor</a></li>
                                 <li><a href="./diarista.php">Diarista</a></li>
                                 <li><a href="./servico.php">Outros</a></li>
                             </ul>
@@ -108,7 +112,7 @@
                 </svg>
             </button>
             <input class="input" id="searchbar" onkeyup="search_pesquisa()" type="text" name="search"
-                placeholder="Ex. técnico em pequenos reparos" required="">
+                placeholder="Ex. pinturas" required="">
             <button class="reset" type="reset">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
@@ -119,7 +123,7 @@
     </div>
     <div id="container">
     <main>
-            <h2 id="title">Pequenos Reparos</h2>
+            <h2 id="title">Pintores</h2>
             <ol id='list'>
                     <?php while($dados_colab = $resultado2->fetch_array()){ ?>
                         <li class="pesquisa">
@@ -148,4 +152,5 @@
     </div>
 </body>
 <script src="../../js/pesquisa.js"></script>
+
 </html>
