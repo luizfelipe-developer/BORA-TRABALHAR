@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 30, 2023 at 06:33 PM
+-- Generation Time: Dec 06, 2023 at 05:59 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.0.1
 
@@ -42,17 +42,9 @@ CREATE TABLE `cad_cliente` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(225) NOT NULL,
-  `id_cliente` int(11) NOT NULL
+  `id_cliente` int(11) NOT NULL,
+  `cad_foto` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `cad_cliente`
---
-
-INSERT INTO `cad_cliente` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `id_cliente`) VALUES
-('Ciclano', 'silva', '123.456.789-12', '2000-04-05', 'masculino', '65907410', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Projetada D', '1755', '(99) 99999-9999', 'ciclano@gmail.com', '1234', 1),
-('teste', 'teste', '172.897.319-87', '2312-09-08', 'masculino', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '12', '(12) 31231-7289', 'aaaa.@gmail.com', '123', 2),
-('anna', 'morais', '623.442.293-45', '2004-08-08', 'feminino', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '514140007', '(99) 98040-5150', 'annaklara57@gmai.com', '123', 3);
 
 -- --------------------------------------------------------
 
@@ -66,7 +58,7 @@ CREATE TABLE `cad_colaborador` (
   `cpf` varchar(14) NOT NULL,
   `dt_nascimento` varchar(10) DEFAULT NULL,
   `genero` varchar(10) DEFAULT NULL,
-  `profissao` varchar(255) DEFAULT NULL,
+  `profissao` varchar(255) NOT NULL,
   `cep` varchar(9) DEFAULT NULL,
   `uf` varchar(2) DEFAULT NULL,
   `cidade` varchar(50) DEFAULT NULL,
@@ -76,18 +68,61 @@ CREATE TABLE `cad_colaborador` (
   `telefone` varchar(15) NOT NULL,
   `email` varchar(100) NOT NULL,
   `senha` varchar(225) NOT NULL,
-  `id_colaborador` int(11) NOT NULL
+  `id_colaborador` int(11) NOT NULL,
+  `cad_foto` varchar(255) DEFAULT NULL,
+  `descricao` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categorias_selecionadas`
+--
+
+CREATE TABLE `categorias_selecionadas` (
+  `id` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `categoria` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fotos`
+--
+
+CREATE TABLE `fotos` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `caminho` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `cad_colaborador`
+-- Dumping data for table `fotos`
 --
 
-INSERT INTO `cad_colaborador` (`nome`, `sobrenome`, `cpf`, `dt_nascimento`, `genero`, `profissao`, `cep`, `uf`, `cidade`, `bairro`, `endereco`, `numero`, `telefone`, `email`, `senha`, `id_colaborador`) VALUES
-('htrjsrtjstr', 'fgjfgsjtjrtsjtsrj', '856.845.538-84', '2023-10-18', 'masculino', 'thjtfjfgjfgjkrtktk', '65906752', 'MA', 'Imperatriz', 'Residencial Sebastião Régis', 'Rua A', '457', '(79) 76065-6543', 'dwdgd@gmail.com', '456', 1),
-('felipe', 'sylva', '123.123.12', '2000-01-23', 'masculino', '', '65907410', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Projetada D', '1755', '(99) 99999-9999', 'pedreiro@gmail.com', '123', 22),
-('gustavinho', 'aa', '123.971.927-98', '1223-03-12', 'masculino', '', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '123', '(12) 87937-9817', 'gusta@gmail.com', '123', 23),
-('kayo', 'kayo', '120.987.312-90', '0123-09-07', 'masculino', 'Pedreiro', '65907420', 'MA', 'Imperatriz', 'Nova Imperatriz', 'Rua Santo Antônio', '02', '(12) 31678-2637', 'kayo@gmail.com', '123', 24);
+INSERT INTO `fotos` (`id`, `nome`, `caminho`) VALUES
+(1, 'saradao', 'med.png'),
+(2, 'fasd', 'saradao-academia.png'),
+(3, 'alfaiate', 'Dia do alfaiate post stories data comemorativa(1).png'),
+(4, 'alo', 'RobloxScreenShot20230627_165824596.png'),
+(5, 'top', 'RobloxScreenShot20230627_165824596.png'),
+(6, '', 'academia.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tabela_solicitacao`
+--
+
+CREATE TABLE `tabela_solicitacao` (
+  `id` int(11) NOT NULL,
+  `colaborador_id` int(11) NOT NULL,
+  `nome_cliente` varchar(255) NOT NULL,
+  `descricao_servico` text NOT NULL,
+  `data_solicitacao` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `status` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Indexes for dumped tables
@@ -107,6 +142,26 @@ ALTER TABLE `cad_colaborador`
   ADD PRIMARY KEY (`id_colaborador`);
 
 --
+-- Indexes for table `categorias_selecionadas`
+--
+ALTER TABLE `categorias_selecionadas`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
+-- Indexes for table `fotos`
+--
+ALTER TABLE `fotos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tabela_solicitacao`
+--
+ALTER TABLE `tabela_solicitacao`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `colaborador_id` (`colaborador_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -114,13 +169,47 @@ ALTER TABLE `cad_colaborador`
 -- AUTO_INCREMENT for table `cad_cliente`
 --
 ALTER TABLE `cad_cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `cad_colaborador`
 --
 ALTER TABLE `cad_colaborador`
-  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_colaborador` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
+-- AUTO_INCREMENT for table `categorias_selecionadas`
+--
+ALTER TABLE `categorias_selecionadas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `fotos`
+--
+ALTER TABLE `fotos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tabela_solicitacao`
+--
+ALTER TABLE `tabela_solicitacao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `categorias_selecionadas`
+--
+ALTER TABLE `categorias_selecionadas`
+  ADD CONSTRAINT `categorias_selecionadas_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `cad_colaborador` (`id_colaborador`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `tabela_solicitacao`
+--
+ALTER TABLE `tabela_solicitacao`
+  ADD CONSTRAINT `tabela_solicitacao_ibfk_1` FOREIGN KEY (`colaborador_id`) REFERENCES `cad_colaborador` (`id_colaborador`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
