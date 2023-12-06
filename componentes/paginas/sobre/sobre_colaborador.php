@@ -20,6 +20,43 @@
     }
     $result = $conexao->query($sql);
 ?>
+
+<?php
+session_start();
+include_once('../php/conexao.php');
+include "../cliente/php/consulta_colaborador.php";
+
+if ((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['nome']);
+    unset($_SESSION['senha']);
+    header('Location: login.php');
+}
+
+$logado = $_SESSION['nome'];
+
+// Verificar se há uma consulta para exibir apenas o usuário logado
+if (!empty($_GET['search'])) {
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM cad_colaborador WHERE (id_colaborador LIKE '%$data%' or nome LIKE '%$data%') AND nome = '$logado' ORDER BY nome DESC";
+} else {
+    $sql = "SELECT * FROM cad_colaborador WHERE nome = '$logado' ORDER BY id_colaborador DESC";
+}
+
+//logica do editar
+$result = $conexao->query($sql);
+
+
+///logica da imagem//
+$query = "SELECT cad_foto, nome FROM cad_colaborador WHERE id_colaborador = $logado";
+
+$resultado = $conexao->query($sql);
+
+if ($resultado->num_rows == 1) {
+    $row = $resultado->fetch_assoc();
+    $fotoNome = '../../imgs/imagemColaboradores/' . $row['cad_foto'];
+    $nomeAluno = "<br><b>" . $row['nome'] . "</b>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,8 +81,10 @@
             <!-- Menu -->
             <div class="align-left">
                 <div class="aba-perfil">
-                    <img src="../../imgs/icones/do-utilizador.png">
-                    <?php
+
+                <img class="image" src="<?php echo $fotoNome; ?>" alt="Foto">
+
+<?php
                         echo "<span>$logado</span>";
                     ?>
                 </div>

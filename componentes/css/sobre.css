@@ -28,24 +28,23 @@ main{
 }
 
 .aba-perfil{
-  width: 100%;
-  display: flex;
-  border: solid 0.5px #189eb9;
-  border-radius: 50px;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  text-decoration: none;
-  color: #189eb9;
-  gap: 10px;
-  margin-left: 10px;
-}
-
-.aba-perfil img {
-  width: 25px;
-  height: 25px;
-}
-
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: #189eb9;
+    gap: 5px;
+    margin-left: 10px;
+  }
+  
+  .aba-perfil img {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+  }
 
 /*==============================CARD=================================*/
 
@@ -120,7 +119,7 @@ p{
     text-align: justify;
 }
 #img1{
-    background-image: url("../imgs/img-paralax.jpg");
+    background-image: url("../imgs/sobre/primeiro-lanche.jpeg");
     height: 90vh;
     background-repeat: no-repeat;
     background-position: center;
