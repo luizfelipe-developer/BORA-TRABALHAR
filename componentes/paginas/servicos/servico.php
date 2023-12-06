@@ -19,6 +19,8 @@
         $sql = "SELECT * FROM cad_cliente ORDER BY nome DESC";
     }
     $result = $conexao->query($sql);
+    $outros = "SELECT * FROM cad_colaborador WHERE profissao = 'Outro'";
+    $resultado2 = $conexao->query($outros);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -29,6 +31,7 @@
     <link rel="shortcut icon" type="imagem/x-icon" href="../../../ico-sem-fundo.ico.ico" />
     <link rel="stylesheet" href="../../header/header.css">
     <link rel="stylesheet" href="../../css/servicocopy.css">
+        <!-- O CSS ACIMA É ELE OU O "/servicocopy2.css" -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./../../js/script.js" defer></script>
@@ -37,16 +40,14 @@
       #container{
             margin-top: 50px;
         }
-
         #title{
             margin-top: 0px;
             color: black;
             text-align: center;
             display: block;
         }
-
     </style>
-    <title>Pedreiros</title>
+    <title>Geral</title>
 </head>
 <body>
     <header>
@@ -120,159 +121,28 @@
         <h2 id="title">Outros</h2>
         <main>
             <ol id='list'>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pintor.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Luan</h2>
-                            <span class="txt-categoria">luan</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Pedreiro</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch"><span>qualificaçâo</span></label>
-                                    <input type="checkbox" id="touch">
-                                    <ul class="slide">
-                                        <li>trabalho com portas,cêramicas e também com pinturas</li>
-                                        <li>Portas</li>
-                                        <li>Pinturas</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">portas</span>
-                                    <span class="txt-categoria">Pintura</span>
-                                    <span class="txt-categoria">cêramica</span>      
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.html">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pedreiro.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">kayo</h2>
-                            <span class="txt-categoria">kayo</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Diarista</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch1"><span>qualificaçâo</span></label>
-                                    <input type="checkbox" id="touch1">
-                                    <ul class="slide">
-                                        <li>trabalho com portas,cêramicas e também com pinturas</li>
-                                        <li>Paredes</li>
-                                        <li>Muros</li>
-                                        <li>Pílares</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Paredes</span>
-                                    <span class="txt-categoria">Muros</span>
-                                    <span class="txt-categoria">Pilares</span>       
+                    <?php while($dados_colab = $resultado2->fetch_array()){ ?>
+                        <li class="pesquisa">
+                            <section class="card">
+                                <div class="card-foto">
+                                    <!-- adicionar o caminho da foto na linha 139, no trecho  '<img src="./path/' -->
+                                    <?php echo '<img src="./path/'.$dados_colab['cad_foto'].'">'; ?>
+                                    <?php echo "<h2>".$dados_colab['nome']."</h2>"; ?>
                                 </div>
-                                </ul>
+                                <div class="descricao">
+                                    <?php echo "<h3>".$dados_colab['profissao']."</h3>" ;?>
+                                    <br>
+                                    <label for=""><span class="quali" >qualificação</span></label>
+                                    <div>
+                                        <ul class="slide">
+                                            <?php echo "<li>".$dados_colab['descricao']."</li>" ; ?>
+                                        </ul>
+                                    </div>
+                                </div>
                             <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>      
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pintor1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Felipe</h2>
-                            <span class="txt-categoria">nome do trabalhador</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Pedreiro</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch2"><span>qualificaçâo</span></label>
-                                    <input type="checkbox" id="touch2">
-                                    <ul class="slide">
-                                        <li>Reboco de paredes, montagem de estruturas e piso</li>
-                                        <li>Reboco</li>
-                                        <li>estruturas</li>
-                                        <li>Preparo de piso</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Reboco</span>
-                                    <span class="txt-categoria">estruturas</span>
-                                    <span class="txt-categoria">Preparo de piso</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section> 
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/trabalhadores/pedreiro1.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Gustavo</h2>
-                            <span class="txt-categoria">Gustavo</span>
-                            <span class="txt-categoria">Gustavo</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Pedreiro</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch3"><span>qualificaçâo</span></label>
-                                    <input type="checkbox" id="touch3">
-                                    <ul class="slide">
-                                        <li>Assentar tijolos, ladrilhos, alvenarias preço a combinar </li>
-                                        <li>Portas</li>
-                                        <li>Pinturas</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">Assentar tijolos</span>
-                                    <span class="txt-categoria">ladrinho</span>
-                                    <span class="txt-categoria">alvenarias</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
-                <li class="pesquisa">
-                    <section class="card">
-                        <div class="card-foto">
-                            <img src="../../imgs/servicos-img/foto-de-perfil-de-usuario-masculino.png" alt="Foto do Trabalhador">
-                            <h2 class="nome">Felipe</h2>
-                            <span class="txt-categoria">Felipe</span>
-                            <span class="txt-categoria">Felipe</span>
-                        </div>
-                            <div class="descricao">
-                                <h3>Pedreiro</h3>
-                                <p>☆☆☆☆☆</p>
-                                <br>
-                                <nav>
-                                    <label for="touch4"><span>qualificaçâo</span></label>
-                                    <input type="checkbox" id="touch4">
-                                    <ul class="slide">
-                                        <li>Faço alicerces, levanto paredes, muros e contruçôes similares.</li>
-                                        <li>Portas</li>
-                                        <li>Pinturas</li>
-                                        <li>Outros</li>
-                                    </ul>
-                                </nav>
-                                <ul>
-                                    <span class="txt-categoria">alicerces</span>
-                                    <span class="txt-categoria">Portas</span>
-                                    <span class="txt-categoria">Pinturas</span>
-                                    <span class="txt-categoria">Outros</span>
-                                </ul>
-                            </div>
-                            <a class="orcamento" href="perfil/perfil.php">contatar</a>
-                    </section>
-                </li>
+                        </section>
+                    </li>
+                <?php } ?>
             </ol>
         </main>
     </div>
